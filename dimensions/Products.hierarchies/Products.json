@@ -32,6 +32,10 @@
 			"Type":"Numeric"
 		},
 		{
+			"Name":"NewCampingDev",
+			"Type":"Numeric"
+		},
+		{
 			"Name":"Golf Equipment",
 			"Type":"Consolidated"
 		},
@@ -181,6 +185,11 @@
 			"Weight":1
 		},
 		{
+			"ParentName":"Camping Equipment",
+			"ComponentName":"NewCampingDev",
+			"Weight":1
+		},
+		{
 			"ParentName":"Golf Equipment",
 			"ComponentName":"Golf Accessories",
 			"Weight":1
@@ -287,6 +296,7 @@
 		"Products.subsets/Productos_ES.json",
 		"Products.subsets/Produits_FR.json",
 		"Products.subsets/Produkte_DE.json",
+		"Products.subsets/Subset1.json",
 		"Products.subsets/产品_SC.json",
 		"Products.subsets/製品_JA.json"
 	]
