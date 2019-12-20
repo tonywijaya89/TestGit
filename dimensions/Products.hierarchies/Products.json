@@ -56,7 +56,7 @@
 			"Type":"Numeric"
 		},
 		{
-			"Name":"golfprd",
+			"Name":"golfdev_",
 			"Type":"Numeric"
 		},
 		{
@@ -215,7 +215,7 @@
 		},
 		{
 			"ParentName":"Golf Equipment",
-			"ComponentName":"golfprd",
+			"ComponentName":"golfdev_",
 			"Weight":1
 		},
 		{
@@ -305,6 +305,7 @@
 		"Products.subsets/Productos_ES.json",
 		"Products.subsets/Produits_FR.json",
 		"Products.subsets/Produkte_DE.json",
+		"Products.subsets/Subset1.json",
 		"Products.subsets/产品_SC.json",
 		"Products.subsets/製品_JA.json"
 	]
