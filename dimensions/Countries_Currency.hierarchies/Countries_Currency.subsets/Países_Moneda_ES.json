@@ -1,0 +1,94 @@
+{
+	"@type":"Subset",
+	"Name":"Países_Moneda_ES",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('TOTAL COMPANY')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Asia Pacific')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('China')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Singapore')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Japan')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Korea')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Australia')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Americas')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Mexico')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('United States')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Brazil')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Canada')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('All Europe')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Southern Europe')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Austria')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Italy')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Spain')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Switzerland')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Northern Europe')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Finland')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Sweden')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('United Kingdom')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Central Europe')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('France')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Germany')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Netherlands')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Belgium')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('GO Accessories')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Switzerland (Genève)')"
+		}
+	]
+}

@@ -1,0 +1,88 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Asset Type');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Asset Type'));
+      DimensionCreate('Asset Type');
+      AttrInsert('Asset Type', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Asset Type', 'DIMENSION_TYPE');
+      AttrInsert('Asset Type', '', 'Format', 'S');
+      AttrInsert('Asset Type', '', 'Picklist', 'S');
+      AttrInsert('Asset Type', '', 'calculation', 'S');
+      AttrInsert('Asset Type', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Asset Type].MEMBERS', 'Asset Type');
+      SubsetAliasSet('Asset Type', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Asset Type', '', 'Typ aktiva_CS', 'A');
+   ATTRINSERT('Asset Type', '', 'Aktivtype_DA', 'A');
+   ATTRINSERT('Asset Type', '', 'Anlagevermögenstyp_DE', 'A');
+   ATTRINSERT('Asset Type', '', 'Tipo de activo_ES', 'A');
+   ATTRINSERT('Asset Type', '', 'Omaisuuden tyyppi_FI', 'A');
+   ATTRINSERT('Asset Type', '', 'Type d''actif_FR', 'A');
+   ATTRINSERT('Asset Type', '', '資産タイプ_JA', 'A');
+   ATTRINSERT('Asset Type', '', 'Tip sredstva_HR', 'A');
+   ATTRINSERT('Asset Type', '', 'Vagyontárgytípus_HU', 'A');
+   ATTRINSERT('Asset Type', '', 'Tipo attività_IT', 'A');
+   ATTRINSERT('Asset Type', '', '자산 유형_KO', 'A');
+   ATTRINSERT('Asset Type', '', 'Anleggsmiddeltype_NO', 'A');
+   ATTRINSERT('Asset Type', '', 'Typ zasobu_PL', 'A');
+   ATTRINSERT('Asset Type', '', 'Tipo de ativo_PT', 'A');
+   ATTRINSERT('Asset Type', '', 'Tip de activ_RO', 'A');
+   ATTRINSERT('Asset Type', '', 'Тип актива_RU', 'A');
+   ATTRINSERT('Asset Type', '', '资产类型_SC', 'A');
+   ATTRINSERT('Asset Type', '', 'Tillgångsslag_SV', 'A');
+   ATTRINSERT('Asset Type', '', '資產類型_TC', 'A');
+   ATTRINSERT('Asset Type', '', 'Aktif Tipi_TR', 'A');
+endif;
+CellPutS('Asset Type', '}DimensionAttributes', 'Asset Type', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DIMENSIONSORTORDER('Asset Type','','','BYINPUT','DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('Asset Type','',v_Asset_Type_0,'n');
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Header****
+If(v_Asset_Type_0@='');
+   v_Asset_Type_0='Default Asset Type';
+EndIf;
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+ATTRPUTS(v_Typ_aktiva_CS_1,'Asset Type',v_Asset_Type_0,'Typ aktiva_CS');
+ATTRPUTS(v_Aktivtype_DA_2,'Asset Type',v_Asset_Type_0,'Aktivtype_DA');
+ATTRPUTS(v_Anlageverm_genstyp_DE_3,'Asset Type',v_Asset_Type_0,'Anlagevermögenstyp_DE');
+ATTRPUTS(v_Tipo_de_activo_ES_4,'Asset Type',v_Asset_Type_0,'Tipo de activo_ES');
+ATTRPUTS(v_Omaisuuden_tyyppi_FI_5,'Asset Type',v_Asset_Type_0,'Omaisuuden tyyppi_FI');
+ATTRPUTS(v_Type_d_actif_FR_6,'Asset Type',v_Asset_Type_0,'Type d''actif_FR');
+ATTRPUTS(v_______JA_7,'Asset Type',v_Asset_Type_0,'資産タイプ_JA');
+ATTRPUTS(v_Tip_sredstva_HR_8,'Asset Type',v_Asset_Type_0,'Tip sredstva_HR');
+ATTRPUTS(v_Vagyont_rgyt_pus_HU_9,'Asset Type',v_Asset_Type_0,'Vagyontárgytípus_HU');
+ATTRPUTS(v_Tipo_attivit__IT_10,'Asset Type',v_Asset_Type_0,'Tipo attività_IT');
+ATTRPUTS(v_______KO_11,'Asset Type',v_Asset_Type_0,'자산 유형_KO');
+ATTRPUTS(v_Anleggsmiddeltype_NO_12,'Asset Type',v_Asset_Type_0,'Anleggsmiddeltype_NO');
+ATTRPUTS(v_Typ_zasobu_PL_13,'Asset Type',v_Asset_Type_0,'Typ zasobu_PL');
+ATTRPUTS(v_Tipo_de_ativo_PT_14,'Asset Type',v_Asset_Type_0,'Tipo de ativo_PT');
+ATTRPUTS(v_Tip_de_activ_RO_15,'Asset Type',v_Asset_Type_0,'Tip de activ_RO');
+ATTRPUTS(v____________RU_16,'Asset Type',v_Asset_Type_0,'Тип актива_RU');
+ATTRPUTS(v______SC_17,'Asset Type',v_Asset_Type_0,'资产类型_SC');
+ATTRPUTS(v_Tillg_ngsslag_SV_18,'Asset Type',v_Asset_Type_0,'Tillgångsslag_SV');
+ATTRPUTS(v______TC_19,'Asset Type',v_Asset_Type_0,'資產類型_TC');
+ATTRPUTS(v_Aktif_Tipi_TR_20,'Asset Type',v_Asset_Type_0,'Aktif Tipi_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

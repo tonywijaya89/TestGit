@@ -1,0 +1,94 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Local Currency');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Local Currency'));
+      DimensionCreate('Local Currency');
+      AttrInsert('Local Currency', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Local Currency', 'DIMENSION_TYPE');
+      AttrInsert('Local Currency', '', 'Format', 'S');
+      AttrInsert('Local Currency', '', 'Picklist', 'S');
+      AttrInsert('Local Currency', '', 'calculation', 'S');
+      AttrInsert('Local Currency', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Local Currency].MEMBERS', 'Local Currency');
+      SubsetAliasSet('Local Currency', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Local Currency', '', 'Místní měna_CS', 'A');
+   ATTRINSERT('Local Currency', '', 'Lokal valuta_DA', 'A');
+   ATTRINSERT('Local Currency', '', 'Lokale Währung_DE', 'A');
+   ATTRINSERT('Local Currency', '', 'Moneda local_ES', 'A');
+   ATTRINSERT('Local Currency', '', 'Paikallinen valuutta_FI', 'A');
+   ATTRINSERT('Local Currency', '', 'Devise locale_FR', 'A');
+   ATTRINSERT('Local Currency', '', '現地通貨_JA', 'A');
+   ATTRINSERT('Local Currency', '', 'Lokalna valuta_HR', 'A');
+   ATTRINSERT('Local Currency', '', 'Helyi pénznem_HU', 'A');
+   ATTRINSERT('Local Currency', '', 'Valuta locale_IT', 'A');
+   ATTRINSERT('Local Currency', '', '지역 통화_KO', 'A');
+   ATTRINSERT('Local Currency', '', 'Lokal valuta_NO', 'A');
+   ATTRINSERT('Local Currency', '', 'Waluta lokalna_PL', 'A');
+   ATTRINSERT('Local Currency', '', 'Moeda Local_PT', 'A');
+   ATTRINSERT('Local Currency', '', 'Monedă locală_RO', 'A');
+   ATTRINSERT('Local Currency', '', 'Местная валюта_RU', 'A');
+   ATTRINSERT('Local Currency', '', '本地货币_SC', 'A');
+   ATTRINSERT('Local Currency', '', 'Lokal valuta_SV', 'A');
+   ATTRINSERT('Local Currency', '', '當地貨幣_TC', 'A');
+   ATTRINSERT('Local Currency', '', 'Yerel Para Birimi_TR', 'A');
+endif;
+CellPutS('Local Currency', '}DimensionAttributes', 'Local Currency', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Local Currency', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Local Currency', '', Local_Currency, 'n');
+ATTRPUTS(Místní_měna_CS, 'Local Currency', Local_Currency, 'Místní měna_CS', 0);
+ATTRPUTS(Lokal_valuta_DA, 'Local Currency', Local_Currency, 'Lokal valuta_DA', 0);
+ATTRPUTS(Lokale_Währung_DE, 'Local Currency', Local_Currency, 'Lokale Währung_DE', 0);
+ATTRPUTS(Moneda_local_ES, 'Local Currency', Local_Currency, 'Moneda local_ES', 0);
+ATTRPUTS(Paikallinen_valuutta_FI, 'Local Currency', Local_Currency, 'Paikallinen valuutta_FI', 0);
+ATTRPUTS(Devise_locale_FR, 'Local Currency', Local_Currency, 'Devise locale_FR', 0);
+ATTRPUTS(現地通貨_JA, 'Local Currency', Local_Currency, '現地通貨_JA', 0);
+ATTRPUTS(Lokalna_valuta_HR, 'Local Currency', Local_Currency, 'Lokalna valuta_HR', 0);
+ATTRPUTS(Helyi_pénznem_HU, 'Local Currency', Local_Currency, 'Helyi pénznem_HU', 0);
+ATTRPUTS(Valuta_locale_IT, 'Local Currency', Local_Currency, 'Valuta locale_IT', 0);
+ATTRPUTS(지역_통화_KO, 'Local Currency', Local_Currency, '지역 통화_KO', 0);
+ATTRPUTS(Lokal_valuta_NO, 'Local Currency', Local_Currency, 'Lokal valuta_NO', 0);
+ATTRPUTS(Waluta_lokalna_PL, 'Local Currency', Local_Currency, 'Waluta lokalna_PL', 0);
+ATTRPUTS(Moeda_Local_PT, 'Local Currency', Local_Currency, 'Moeda Local_PT', 0);
+ATTRPUTS(Monedă_locală_RO, 'Local Currency', Local_Currency, 'Monedă locală_RO', 0);
+ATTRPUTS(Местная_валюта_RU, 'Local Currency', Local_Currency, 'Местная валюта_RU', 0);
+ATTRPUTS(本地货币_SC, 'Local Currency', Local_Currency, '本地货币_SC', 0);
+ATTRPUTS(Lokal_valuta_SV, 'Local Currency', Local_Currency, 'Lokal valuta_SV', 0);
+ATTRPUTS(當地貨幣_TC, 'Local Currency', Local_Currency, '當地貨幣_TC', 0);
+ATTRPUTS(Yerel_Para_Birimi_TR, 'Local Currency', Local_Currency, 'Yerel Para Birimi_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Local Currency') = 1);
+   CellPutS('Local Currency', '}HierarchyProperties', 'Local Currency', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Local Currency" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Local Currency');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

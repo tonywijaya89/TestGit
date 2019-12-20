@@ -1,0 +1,85 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Month');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Month'));
+      DimensionCreate('Month');
+      AttrInsert('Month', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Month', 'DIMENSION_TYPE');
+      AttrInsert('Month', '', 'Format', 'S');
+      AttrInsert('Month', '', 'Picklist', 'S');
+      AttrInsert('Month', '', 'calculation', 'S');
+      AttrInsert('Month', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Month].MEMBERS', 'Month');
+      SubsetAliasSet('Month', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Month', '', 'Měsíce_CS', 'A');
+   ATTRINSERT('Month', '', 'Måneder_DA', 'A');
+   ATTRINSERT('Month', '', 'Monate_DE', 'A');
+   ATTRINSERT('Month', '', 'Meses_ES', 'A');
+   ATTRINSERT('Month', '', 'Kuukaudet_FI', 'A');
+   ATTRINSERT('Month', '', 'Mois_FR', 'A');
+   ATTRINSERT('Month', '', '月_JA', 'A');
+   ATTRINSERT('Month', '', 'Mjeseci_HR', 'A');
+   ATTRINSERT('Month', '', 'Hónap_HU', 'A');
+   ATTRINSERT('Month', '', 'Mesi_IT', 'A');
+   ATTRINSERT('Month', '', '월_KO', 'A');
+   ATTRINSERT('Month', '', 'Måneder_NO', 'A');
+   ATTRINSERT('Month', '', 'Miesiące_PL', 'A');
+   ATTRINSERT('Month', '', 'Meses_PT', 'A');
+   ATTRINSERT('Month', '', 'Lunile_RO', 'A');
+   ATTRINSERT('Month', '', 'Месяцы_RU', 'A');
+   ATTRINSERT('Month', '', '月份_SC', 'A');
+   ATTRINSERT('Month', '', 'Månader_SV', 'A');
+   ATTRINSERT('Month', '', '月_TC', 'A');
+   ATTRINSERT('Month', '', 'Aylar_TR', 'A');
+endif;
+CellPutS('Month', '}DimensionAttributes', 'Month', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DIMENSIONSORTORDER('Month','','','BYINPUT','DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('Month','',v_Month_0,'n');
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+
+#****Begin: Generated Statements***
+ATTRPUTS(v_M_s_ce_CS_1,'Month',v_Month_0,'Měsíce_CS');
+ATTRPUTS(v_M_neder_DA_2,'Month',v_Month_0,'Måneder_DA');
+ATTRPUTS(v_Monate_DE_3,'Month',v_Month_0,'Monate_DE');
+ATTRPUTS(v_Meses_ES_4,'Month',v_Month_0,'Meses_ES');
+ATTRPUTS(v_Kuukaudet_FI_5,'Month',v_Month_0,'Kuukaudet_FI');
+ATTRPUTS(v_Mois_FR_6,'Month',v_Month_0,'Mois_FR');
+ATTRPUTS(v___JA_7,'Month',v_Month_0,'月_JA');
+ATTRPUTS(v_Mjeseci_HR_8,'Month',v_Month_0,'Mjeseci_HR');
+ATTRPUTS(v_H_nap_HU_9,'Month',v_Month_0,'Hónap_HU');
+ATTRPUTS(v_Mesi_IT_10,'Month',v_Month_0,'Mesi_IT');
+ATTRPUTS(v___KO_11,'Month',v_Month_0,'월_KO');
+ATTRPUTS(v_M_neder_NO_12,'Month',v_Month_0,'Måneder_NO');
+ATTRPUTS(v_Miesi_ce_PL_13,'Month',v_Month_0,'Miesiące_PL');
+ATTRPUTS(v_Meses_PT_14,'Month',v_Month_0,'Meses_PT');
+ATTRPUTS(v_Lunile_RO_15,'Month',v_Month_0,'Lunile_RO');
+ATTRPUTS(v________RU_16,'Month',v_Month_0,'Месяцы_RU');
+ATTRPUTS(v____SC_17,'Month',v_Month_0,'月份_SC');
+ATTRPUTS(v_M_nader_SV_18,'Month',v_Month_0,'Månader_SV');
+ATTRPUTS(v___TC_19,'Month',v_Month_0,'月_TC');
+ATTRPUTS(v_Aylar_TR_20,'Month',v_Month_0,'Aylar_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

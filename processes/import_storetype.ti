@@ -1,0 +1,85 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Store Type');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Store Type'));
+      DimensionCreate('Store Type');
+      AttrInsert('Store Type', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Store Type', 'DIMENSION_TYPE');
+      AttrInsert('Store Type', '', 'Format', 'S');
+      AttrInsert('Store Type', '', 'Picklist', 'S');
+      AttrInsert('Store Type', '', 'calculation', 'S');
+      AttrInsert('Store Type', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Store Type].MEMBERS', 'Store Type');
+      SubsetAliasSet('Store Type', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Store Type', '', 'Typ prodejny_CS', 'A');
+   ATTRINSERT('Store Type', '', 'Butikstype_DA', 'A');
+   ATTRINSERT('Store Type', '', 'Geschäftstyp_DE', 'A');
+   ATTRINSERT('Store Type', '', 'Tipo de tienda_ES', 'A');
+   ATTRINSERT('Store Type', '', 'Myymälätyyppi_FI', 'A');
+   ATTRINSERT('Store Type', '', 'Type de magasin_FR', 'A');
+   ATTRINSERT('Store Type', '', '店舗タイプ_JA', 'A');
+   ATTRINSERT('Store Type', '', 'Tip  dućana_HR', 'A');
+   ATTRINSERT('Store Type', '', 'Az áruház típusa_HU', 'A');
+   ATTRINSERT('Store Type', '', 'Tipo negozio_IT', 'A');
+   ATTRINSERT('Store Type', '', '상점 유형_KO', 'A');
+   ATTRINSERT('Store Type', '', 'Butikktype_NO', 'A');
+   ATTRINSERT('Store Type', '', 'Typ salonu_PL', 'A');
+   ATTRINSERT('Store Type', '', 'Tipo de Loja_PT', 'A');
+   ATTRINSERT('Store Type', '', 'Tip Magazin_RO', 'A');
+   ATTRINSERT('Store Type', '', 'Тип магазина_RU', 'A');
+   ATTRINSERT('Store Type', '', '商店类型_SC', 'A');
+   ATTRINSERT('Store Type', '', 'Butikstyp_SV', 'A');
+   ATTRINSERT('Store Type', '', '商店類型_TC', 'A');
+   ATTRINSERT('Store Type', '', 'Mağaza Tipi_TR', 'A');
+endif;
+CellPutS('Store Type', '}DimensionAttributes', 'Store Type', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DIMENSIONSORTORDER('Store Type','','','BYINPUT','DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('Store Type','',v_Store_Type_0,'n');
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+
+#****Begin: Generated Statements***
+ATTRPUTS(v_Typ_prodejny_CS_1,'Store Type',v_Store_Type_0,'Typ prodejny_CS');
+ATTRPUTS(v_Butikstype_DA_2,'Store Type',v_Store_Type_0,'Butikstype_DA');
+ATTRPUTS(v_Gesch_ftstyp_DE_3,'Store Type',v_Store_Type_0,'Geschäftstyp_DE');
+ATTRPUTS(v_Tipo_de_tienda_ES_4,'Store Type',v_Store_Type_0,'Tipo de tienda_ES');
+ATTRPUTS(v_Myym_l_tyyppi_FI_5,'Store Type',v_Store_Type_0,'Myymälätyyppi_FI');
+ATTRPUTS(v_Type_de_magasin_FR_6,'Store Type',v_Store_Type_0,'Type de magasin_FR');
+ATTRPUTS(v_______JA_7,'Store Type',v_Store_Type_0,'店舗タイプ_JA');
+ATTRPUTS(v_Tip__du_ana_HR_8,'Store Type',v_Store_Type_0,'Tip  dućana_HR');
+ATTRPUTS(v_Az__ruh_z_t_pusa_HU_9,'Store Type',v_Store_Type_0,'Az áruház típusa_HU');
+ATTRPUTS(v_Tipo_negozio_IT_10,'Store Type',v_Store_Type_0,'Tipo negozio_IT');
+ATTRPUTS(v_______KO_11,'Store Type',v_Store_Type_0,'상점 유형_KO');
+ATTRPUTS(v_Butikktype_NO_12,'Store Type',v_Store_Type_0,'Butikktype_NO');
+ATTRPUTS(v_Typ_salonu_PL_13,'Store Type',v_Store_Type_0,'Typ salonu_PL');
+ATTRPUTS(v_Tipo_de_Loja_PT_14,'Store Type',v_Store_Type_0,'Tipo de Loja_PT');
+ATTRPUTS(v_Tip_Magazin_RO_15,'Store Type',v_Store_Type_0,'Tip Magazin_RO');
+ATTRPUTS(v______________RU_16,'Store Type',v_Store_Type_0,'Тип магазина_RU');
+ATTRPUTS(v______SC_17,'Store Type',v_Store_Type_0,'商店类型_SC');
+ATTRPUTS(v_Butikstyp_SV_18,'Store Type',v_Store_Type_0,'Butikstyp_SV');
+ATTRPUTS(v______TC_19,'Store Type',v_Store_Type_0,'商店類型_TC');
+ATTRPUTS(v_Ma_aza_Tipi_TR_20,'Store Type',v_Store_Type_0,'Mağaza Tipi_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

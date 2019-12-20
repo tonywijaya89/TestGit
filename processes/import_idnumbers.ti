@@ -1,0 +1,85 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('ID numbers');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('ID numbers'));
+      DimensionCreate('ID numbers');
+      AttrInsert('ID numbers', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'ID numbers', 'DIMENSION_TYPE');
+      AttrInsert('ID numbers', '', 'Format', 'S');
+      AttrInsert('ID numbers', '', 'Picklist', 'S');
+      AttrInsert('ID numbers', '', 'calculation', 'S');
+      AttrInsert('ID numbers', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[ID numbers].MEMBERS', 'ID numbers');
+      SubsetAliasSet('ID numbers', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('ID numbers', '', 'Čísla ID_CS', 'A');
+   ATTRINSERT('ID numbers', '', 'Id-numre_DA', 'A');
+   ATTRINSERT('ID numbers', '', 'ID-Nummern_DE', 'A');
+   ATTRINSERT('ID numbers', '', 'Números de ID_ES', 'A');
+   ATTRINSERT('ID numbers', '', 'Tunnusnumerot_FI', 'A');
+   ATTRINSERT('ID numbers', '', 'Numéros ID_FR', 'A');
+   ATTRINSERT('ID numbers', '', 'ID 番号_JA', 'A');
+   ATTRINSERT('ID numbers', '', 'ID brojevi_HR', 'A');
+   ATTRINSERT('ID numbers', '', 'Azonosítószámok_HU', 'A');
+   ATTRINSERT('ID numbers', '', 'Numeri ID_IT', 'A');
+   ATTRINSERT('ID numbers', '', 'ID 번호_KO', 'A');
+   ATTRINSERT('ID numbers', '', 'ID-numre_NO', 'A');
+   ATTRINSERT('ID numbers', '', 'Identyfikatory_PL', 'A');
+   ATTRINSERT('ID numbers', '', 'Números de IDs_PT', 'A');
+   ATTRINSERT('ID numbers', '', 'Numere ID_RO', 'A');
+   ATTRINSERT('ID numbers', '', 'Числовые ID_RU', 'A');
+   ATTRINSERT('ID numbers', '', '身份证号码_SC', 'A');
+   ATTRINSERT('ID numbers', '', 'ID-nummer_SV', 'A');
+   ATTRINSERT('ID numbers', '', 'ID 號碼_TC', 'A');
+   ATTRINSERT('ID numbers', '', 'Tanıtıcı numaralar_TR', 'A');
+endif;
+CellPutS('ID numbers', '}DimensionAttributes', 'ID numbers', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DIMENSIONSORTORDER('ID numbers','','','BYINPUT','DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('ID numbers','',v_ID_numbers_0,'n');
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+
+#****Begin: Generated Statements***
+ATTRPUTS(v___sla_ID_CS_1,'ID numbers',v_ID_numbers_0,'Čísla ID_CS');
+ATTRPUTS(v_Id_numre_DA_2,'ID numbers',v_ID_numbers_0,'Id-numre_DA');
+ATTRPUTS(v_ID_Nummern_DE_3,'ID numbers',v_ID_numbers_0,'ID-Nummern_DE');
+ATTRPUTS(v_N_meros_de_ID_ES_4,'ID numbers',v_ID_numbers_0,'Números de ID_ES');
+ATTRPUTS(v_Tunnusnumerot_FI_5,'ID numbers',v_ID_numbers_0,'Tunnusnumerot_FI');
+ATTRPUTS(v_Num_ros_ID_FR_6,'ID numbers',v_ID_numbers_0,'Numéros ID_FR');
+ATTRPUTS(v_ID____JA_7,'ID numbers',v_ID_numbers_0,'ID 番号_JA');
+ATTRPUTS(v_ID_brojevi_HR_8,'ID numbers',v_ID_numbers_0,'ID brojevi_HR');
+ATTRPUTS(v_Azonos_t_sz_mok_HU_9,'ID numbers',v_ID_numbers_0,'Azonosítószámok_HU');
+ATTRPUTS(v_Numeri_ID_IT_10,'ID numbers',v_ID_numbers_0,'Numeri ID_IT');
+ATTRPUTS(v_ID____KO_11,'ID numbers',v_ID_numbers_0,'ID 번호_KO');
+ATTRPUTS(v_ID_numre_NO_12,'ID numbers',v_ID_numbers_0,'ID-numre_NO');
+ATTRPUTS(v_Identyfikatory_PL_13,'ID numbers',v_ID_numbers_0,'Identyfikatory_PL');
+ATTRPUTS(v_N_meros_de_IDs_PT_14,'ID numbers',v_ID_numbers_0,'Números de IDs_PT');
+ATTRPUTS(v_Numere_ID_RO_15,'ID numbers',v_ID_numbers_0,'Numere ID_RO');
+ATTRPUTS(v__________ID_RU_16,'ID numbers',v_ID_numbers_0,'Числовые ID_RU');
+ATTRPUTS(v_______SC_17,'ID numbers',v_ID_numbers_0,'身份证号码_SC');
+ATTRPUTS(v_ID_nummer_SV_18,'ID numbers',v_ID_numbers_0,'ID-nummer_SV');
+ATTRPUTS(v_ID____TC_19,'ID numbers',v_ID_numbers_0,'ID 號碼_TC');
+ATTRPUTS(v_Tan_t_c__numaralar_TR_20,'ID numbers',v_ID_numbers_0,'Tanıtıcı numaralar_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

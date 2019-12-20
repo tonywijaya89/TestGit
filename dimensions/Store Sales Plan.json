@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Store Sales Plan",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Store Sales Plan.hierarchies/Store Sales Plan.json"
+	]
+}

@@ -1,0 +1,102 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Retailers",
+	"Elements":
+	[
+		{
+			"Name":"ALL RETAILERS",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Department Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Direct Marketing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Equipment Rental Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Eyewear Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Golf Shop",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Outdoors Shop",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sports Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Warehouse Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"ALL RETAILERS",
+			"ComponentName":"Department Store",
+			"Weight":1
+		},
+		{
+			"ParentName":"ALL RETAILERS",
+			"ComponentName":"Direct Marketing",
+			"Weight":1
+		},
+		{
+			"ParentName":"ALL RETAILERS",
+			"ComponentName":"Equipment Rental Store",
+			"Weight":1
+		},
+		{
+			"ParentName":"ALL RETAILERS",
+			"ComponentName":"Eyewear Store",
+			"Weight":1
+		},
+		{
+			"ParentName":"ALL RETAILERS",
+			"ComponentName":"Golf Shop",
+			"Weight":1
+		},
+		{
+			"ParentName":"ALL RETAILERS",
+			"ComponentName":"Outdoors Shop",
+			"Weight":1
+		},
+		{
+			"ParentName":"ALL RETAILERS",
+			"ComponentName":"Sports Store",
+			"Weight":1
+		},
+		{
+			"ParentName":"ALL RETAILERS",
+			"ComponentName":"Warehouse Store",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Retailers.subsets/All Members.json",
+		"Retailers.subsets/Détaillants_FR.json",
+		"Retailers.subsets/Einzelhändler_DE.json",
+		"Retailers.subsets/Minoristas_ES.json",
+		"Retailers.subsets/Retailers.json",
+		"Retailers.subsets/Retailers All.json",
+		"Retailers.subsets/Retailer Types.json",
+		"Retailers.subsets/小売業者_JA.json",
+		"Retailers.subsets/零售商_SC.json"
+	]
+}

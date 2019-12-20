@@ -1,0 +1,102 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Gross Sales Margin",
+	"Elements":
+	[
+		{
+			"Name":"Existing Stores Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Store Opening (hide)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Stores revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS REVENUE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Population Growth",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Economic Growth",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Effect of  Single Retailer Promotions",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Effect of All Store Promotions",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ADJUSTED GROSS REVENUE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS MARGIN %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS MARGIN BEFORE COSTS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TOTAL DISCOUNTS AND ALLOWANCES",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns and Allowances",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Volume Discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Freight",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS MARGIN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PGWA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EGWA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SRWA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ASPWA",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Gross Sales Margin.subsets/__BACKUP_All Members.json",
+		"Gross Sales Margin.subsets/__BACKUP_{94e143c1-61a1-488a-a478-15f0420b5aa2}.json",
+		"Gross Sales Margin.subsets/All Members.json",
+		"Gross Sales Margin.subsets/Bruttoverkaufsgewinnspanne_DE.json",
+		"Gross Sales Margin.subsets/Marge des ventes brutes_FR.json",
+		"Gross Sales Margin.subsets/Margen por ventas bruto_ES.json",
+		"Gross Sales Margin.subsets/毛销售利润_SC.json",
+		"Gross Sales Margin.subsets/販売総利益_JA.json"
+	]
+}

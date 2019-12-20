@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Price and Cost",
+	"Elements":
+	[
+		{
+			"Name":"Unit sale price",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unit cost",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Price and Cost.subsets/All Members.json",
+		"Price and Cost.subsets/Precio y coste_ES.json",
+		"Price and Cost.subsets/Preise und Kosten_DE.json",
+		"Price and Cost.subsets/Prix et coûts_FR.json",
+		"Price and Cost.subsets/价格和成本_SC.json",
+		"Price and Cost.subsets/価格と原価_JA.json"
+	]
+}

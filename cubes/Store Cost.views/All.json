@@ -1,0 +1,68 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('All Members')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Subsets('All Members')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Franchise Store')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Size')/Hierarchies('Store Size')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Size')/Hierarchies('Store Size')/Elements('Full Size Store')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('Americas')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Elements('DATA')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"货币信息_SC",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Currency Info')/Hierarchies('Currency Info')/Elements('Currency')"
+		}
+	]
+}

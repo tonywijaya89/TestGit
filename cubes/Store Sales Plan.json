@@ -1,0 +1,37 @@
+{
+	"@type":"Cube",
+	"Name":"Store Sales Plan",
+	"Rules@Code.link":"Store Sales Plan.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Retailers')"
+		},
+		{
+			"@id":"Dimensions('Countries_Currency')"
+		},
+		{
+			"@id":"Dimensions('Products')"
+		},
+		{
+			"@id":"Dimensions('Month')"
+		},
+		{
+			"@id":"Dimensions('Budget version')"
+		},
+		{
+			"@id":"Dimensions('Store Sales Plan')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Store Sales Plan.views/Absatzplan des Geschäfts_DE.json",
+		"Store Sales Plan.views/All.json",
+		"Store Sales Plan.views/Plan de ventas de tienda_ES.json",
+		"Store Sales Plan.views/Prévisions de ventes du magasin_FR.json",
+		"Store Sales Plan.views/Sale_Plan.json",
+		"Store Sales Plan.views/Store Sales Plan.json",
+		"Store Sales Plan.views/商店销售计划_SC.json",
+		"Store Sales Plan.views/店舗販売計画_JA.json"
+	]
+}

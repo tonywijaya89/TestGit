@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"DONNEES_FR",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('DATA')/Hierarchies('DATA')/Elements('DATA')"
+		}
+	]
+}

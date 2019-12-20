@@ -1,0 +1,85 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Store Size');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Store Size'));
+      DimensionCreate('Store Size');
+      AttrInsert('Store Size', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Store Size', 'DIMENSION_TYPE');
+      AttrInsert('Store Size', '', 'Format', 'S');
+      AttrInsert('Store Size', '', 'Picklist', 'S');
+      AttrInsert('Store Size', '', 'calculation', 'S');
+      AttrInsert('Store Size', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Store Size].MEMBERS', 'Store Size');
+      SubsetAliasSet('Store Size', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Store Size', '', 'Velikost prodejen_CS', 'A');
+   ATTRINSERT('Store Size', '', 'Butiksstørrelse_DA', 'A');
+   ATTRINSERT('Store Size', '', 'Geschäftsgröße_DE', 'A');
+   ATTRINSERT('Store Size', '', 'Tamaño de la tienda_ES', 'A');
+   ATTRINSERT('Store Size', '', 'Myymälän koko_FI', 'A');
+   ATTRINSERT('Store Size', '', 'Taille de magasin_FR', 'A');
+   ATTRINSERT('Store Size', '', '店舗サイズ_JA', 'A');
+   ATTRINSERT('Store Size', '', 'Veličina dućana_HR', 'A');
+   ATTRINSERT('Store Size', '', 'Az áruház mérete_HU', 'A');
+   ATTRINSERT('Store Size', '', 'Dimensione negozio_IT', 'A');
+   ATTRINSERT('Store Size', '', '상점 규모_KO', 'A');
+   ATTRINSERT('Store Size', '', 'Butikkstørrelse_NO', 'A');
+   ATTRINSERT('Store Size', '', 'Wielkość salonu_PL', 'A');
+   ATTRINSERT('Store Size', '', 'Tamanho da Loja_PT', 'A');
+   ATTRINSERT('Store Size', '', 'Dimensiune Magazin_RO', 'A');
+   ATTRINSERT('Store Size', '', 'Размер магазина_RU', 'A');
+   ATTRINSERT('Store Size', '', '商店规模_SC', 'A');
+   ATTRINSERT('Store Size', '', 'Butiksstorlek_SV', 'A');
+   ATTRINSERT('Store Size', '', '商店規模_TC', 'A');
+   ATTRINSERT('Store Size', '', 'Mağaza Büyüklüğü_TR', 'A');
+endif;
+CellPutS('Store Size', '}DimensionAttributes', 'Store Size', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DIMENSIONSORTORDER('Store Size','','','BYINPUT','DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('Store Size','',v_Store_Size_0,'n');
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+
+#****Begin: Generated Statements***
+ATTRPUTS(v_Velikost_prodejen_CS_1,'Store Size',v_Store_Size_0,'Velikost prodejen_CS');
+ATTRPUTS(v_Butiksst_rrelse_DA_2,'Store Size',v_Store_Size_0,'Butiksstørrelse_DA');
+ATTRPUTS(v_Gesch_ftsgr__e_DE_3,'Store Size',v_Store_Size_0,'Geschäftsgröße_DE');
+ATTRPUTS(v_Tama_o_de_la_tienda_ES_4,'Store Size',v_Store_Size_0,'Tamaño de la tienda_ES');
+ATTRPUTS(v_Myym_l_n_koko_FI_5,'Store Size',v_Store_Size_0,'Myymälän koko_FI');
+ATTRPUTS(v_Taille_de_magasin_FR_6,'Store Size',v_Store_Size_0,'Taille de magasin_FR');
+ATTRPUTS(v_______JA_7,'Store Size',v_Store_Size_0,'店舗サイズ_JA');
+ATTRPUTS(v_Veli_ina_du_ana_HR_8,'Store Size',v_Store_Size_0,'Veličina dućana_HR');
+ATTRPUTS(v_Az__ruh_z_m_rete_HU_9,'Store Size',v_Store_Size_0,'Az áruház mérete_HU');
+ATTRPUTS(v_Dimensione_negozio_IT_10,'Store Size',v_Store_Size_0,'Dimensione negozio_IT');
+ATTRPUTS(v_______KO_11,'Store Size',v_Store_Size_0,'상점 규모_KO');
+ATTRPUTS(v_Butikkst_rrelse_NO_12,'Store Size',v_Store_Size_0,'Butikkstørrelse_NO');
+ATTRPUTS(v_Wielko___salonu_PL_13,'Store Size',v_Store_Size_0,'Wielkość salonu_PL');
+ATTRPUTS(v_Tamanho_da_Loja_PT_14,'Store Size',v_Store_Size_0,'Tamanho da Loja_PT');
+ATTRPUTS(v_Dimensiune_Magazin_RO_15,'Store Size',v_Store_Size_0,'Dimensiune Magazin_RO');
+ATTRPUTS(v_________________RU_16,'Store Size',v_Store_Size_0,'Размер магазина_RU');
+ATTRPUTS(v______SC_17,'Store Size',v_Store_Size_0,'商店规模_SC');
+ATTRPUTS(v_Butiksstorlek_SV_18,'Store Size',v_Store_Size_0,'Butiksstorlek_SV');
+ATTRPUTS(v______TC_19,'Store Size',v_Store_Size_0,'商店規模_TC');
+ATTRPUTS(v_Ma_aza_B_y_kl____TR_20,'Store Size',v_Store_Size_0,'Mağaza Büyüklüğü_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"价格和成本_SC",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Price and Cost')/Hierarchies('Price and Cost')/Elements('Unit sale price')"
+		},
+		{
+			"@id":"Dimensions('Price and Cost')/Hierarchies('Price and Cost')/Elements('Unit cost')"
+		}
+	]
+}

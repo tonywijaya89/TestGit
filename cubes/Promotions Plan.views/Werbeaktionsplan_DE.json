@@ -1,0 +1,48 @@
+{
+	"@type":"NativeView",
+	"Name":"Werbeaktionsplan_DE",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Subsets('ID-Nummern_DE')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Subsets('Werbeaktionen_DE')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('Land und Region_DE')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('Budgetplan Version_DE')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

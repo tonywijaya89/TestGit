@@ -1,0 +1,36 @@
+{
+	"@type":"Cube",
+	"Name":"Gross Margin Calculation",
+	"Rules@Code.link":"Gross Margin Calculation.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Retailers')"
+		},
+		{
+			"@id":"Dimensions('Country and Region')"
+		},
+		{
+			"@id":"Dimensions('Store Type')"
+		},
+		{
+			"@id":"Dimensions('Month')"
+		},
+		{
+			"@id":"Dimensions('Budget version')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Gross Margin Calculation.views/All.json",
+		"Gross Margin Calculation.views/Bruttogewinnspannenberechnung_DE.json",
+		"Gross Margin Calculation.views/Calcul marge brute_FR.json",
+		"Gross Margin Calculation.views/Cálc. margen bruto_ES.json",
+		"Gross Margin Calculation.views/Gross Margin Calculation.json",
+		"Gross Margin Calculation.views/毛利率计算_SC.json",
+		"Gross Margin Calculation.views/粗利益計算_JA.json"
+	]
+}

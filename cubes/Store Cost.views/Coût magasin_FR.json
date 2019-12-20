@@ -1,0 +1,68 @@
+{
+	"@type":"NativeView",
+	"Name":"Coût magasin_FR",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Size')/Hierarchies('Store Size')/Subsets('Taille de magasin_FR')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('Détaillants_FR')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('Pays et région_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Average Monthly Revenue')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Subsets('Type de magasin_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Franchise Store')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Subsets('DONNEES_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Elements('DATA')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

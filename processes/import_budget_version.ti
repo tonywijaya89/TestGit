@@ -1,0 +1,84 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Budget version');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Budget version'));
+      DimensionCreate('Budget version');
+      AttrInsert('Budget version', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Budget version', 'DIMENSION_TYPE');
+      AttrInsert('Budget version', '', 'Format', 'S');
+      AttrInsert('Budget version', '', 'Picklist', 'S');
+      AttrInsert('Budget version', '', 'calculation', 'S');
+      AttrInsert('Budget version', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Budget version].MEMBERS', 'Budget version');
+      SubsetAliasSet('Budget version', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Budget version', '', 'Presupuesto versión_ES', 'A');
+   ATTRINSERT('Budget version', '', 'Budjettiversio_FI', 'A');
+   ATTRINSERT('Budget version', '', 'Budgetplan Version_DE', 'A');
+   ATTRINSERT('Budget version', '', 'Version du budget_FR', 'A');
+   ATTRINSERT('Budget version', '', '予算案_JA', 'A');
+   ATTRINSERT('Budget version', '', 'Proračun, verzija_HR', 'A');
+   ATTRINSERT('Budget version', '', 'Költségvetési változat_HU', 'A');
+   ATTRINSERT('Budget version', '', 'Versione budget_IT', 'A');
+   ATTRINSERT('Budget version', '', '예산 버전_KO', 'A');
+   ATTRINSERT('Budget version', '', 'Budsjettversjon_NO', 'A');
+   ATTRINSERT('Budget version', '', 'Budżet, wersja_PL', 'A');
+   ATTRINSERT('Budget version', '', 'Versão do orçamento_PT', 'A');
+   ATTRINSERT('Budget version', '', 'Versiunea de buget_RO', 'A');
+   ATTRINSERT('Budget version', '', 'Версия бюджета_RU', 'A');
+   ATTRINSERT('Budget version', '', '预算版本_SC', 'A');
+   ATTRINSERT('Budget version', '', 'Budgetversion_SV', 'A');
+   ATTRINSERT('Budget version', '', '預算版本_TC', 'A');
+   ATTRINSERT('Budget version', '', 'Bütçe sürüm_TR', 'S');
+endif;
+CellPutS('Budget version', '}DimensionAttributes', 'Budget version', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DIMENSIONSORTORDER('Budget version','','','BYINPUT','DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('Budget version','',v_Budget_version_0,'n');
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Header****
+If(v_Budget_version_0@='');
+   v_Budget_version_0='Default Budget version';
+EndIf;
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+ATTRPUTS(v_Presupuesto_versi_n_ES_1,'Budget version',v_Budget_version_0,'Presupuesto versión_ES');
+ATTRPUTS(v_Budjettiversio_FI_2,'Budget version',v_Budget_version_0,'Budjettiversio_FI');
+ATTRPUTS(v_Budgetplan_Version_DE_3,'Budget version',v_Budget_version_0,'Budgetplan Version_DE');
+ATTRPUTS(v_Version_du_budget_FR_4,'Budget version',v_Budget_version_0,'Version du budget_FR');
+ATTRPUTS(v_____JA_5,'Budget version',v_Budget_version_0,'予算案_JA');
+ATTRPUTS(v_Prora_un__verzija_HR_6,'Budget version',v_Budget_version_0,'Proračun, verzija_HR');
+ATTRPUTS(v_K_lts_gvet_si_v_ltozat_HU_7,'Budget version',v_Budget_version_0,'Költségvetési változat_HU');
+ATTRPUTS(v_Versione_budget_IT_8,'Budget version',v_Budget_version_0,'Versione budget_IT');
+ATTRPUTS(v_______KO_9,'Budget version',v_Budget_version_0,'예산 버전_KO');
+ATTRPUTS(v_Budsjettversjon_NO_10,'Budget version',v_Budget_version_0,'Budsjettversjon_NO');
+ATTRPUTS(v_Bud_et__wersja_PL_11,'Budget version',v_Budget_version_0,'Budżet, wersja_PL');
+ATTRPUTS(v_Vers_o_do_or_amento_PT_12,'Budget version',v_Budget_version_0,'Versão do orçamento_PT');
+ATTRPUTS(v_Versiunea_de_buget_RO_13,'Budget version',v_Budget_version_0,'Versiunea de buget_RO');
+ATTRPUTS(v________________RU_14,'Budget version',v_Budget_version_0,'Версия бюджета_RU');
+ATTRPUTS(v______SC_15,'Budget version',v_Budget_version_0,'预算版本_SC');
+ATTRPUTS(v_Budgetversion_SV_16,'Budget version',v_Budget_version_0,'Budgetversion_SV');
+ATTRPUTS(v______TC_17,'Budget version',v_Budget_version_0,'預算版本_TC');
+ATTRPUTS(v_B_t_e_s_r_m_TR_18,'Budget version',v_Budget_version_0,'Bütçe sürüm_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

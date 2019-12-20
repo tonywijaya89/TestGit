@@ -1,0 +1,94 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Currency Info');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Currency Info'));
+      DimensionCreate('Currency Info');
+      AttrInsert('Currency Info', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Currency Info', 'DIMENSION_TYPE');
+      AttrInsert('Currency Info', '', 'Format', 'S');
+      AttrInsert('Currency Info', '', 'Picklist', 'S');
+      AttrInsert('Currency Info', '', 'calculation', 'S');
+      AttrInsert('Currency Info', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Currency Info].MEMBERS', 'Currency Info');
+      SubsetAliasSet('Currency Info', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Currency Info', '', 'Informace o měně_CS', 'A');
+   ATTRINSERT('Currency Info', '', 'Valutainfo_DA', 'A');
+   ATTRINSERT('Currency Info', '', 'Währungsinformationen_DE', 'A');
+   ATTRINSERT('Currency Info', '', 'Información de moneda_ES', 'A');
+   ATTRINSERT('Currency Info', '', 'Valuuttatiedot_FI', 'A');
+   ATTRINSERT('Currency Info', '', 'Informations relatives à la devise_FR', 'A');
+   ATTRINSERT('Currency Info', '', '通貨情報_JA', 'A');
+   ATTRINSERT('Currency Info', '', 'Informacije o valuti_HR', 'A');
+   ATTRINSERT('Currency Info', '', 'Pénznem információ_HU', 'A');
+   ATTRINSERT('Currency Info', '', 'Informazioni valuta_IT', 'A');
+   ATTRINSERT('Currency Info', '', '통화 정보_KO', 'A');
+   ATTRINSERT('Currency Info', '', 'Valutainfo_NO', 'A');
+   ATTRINSERT('Currency Info', '', 'Inf. o walucie_PL', 'A');
+   ATTRINSERT('Currency Info', '', 'Informações de Moeda_PT', 'A');
+   ATTRINSERT('Currency Info', '', 'Informaţii monedă_RO', 'A');
+   ATTRINSERT('Currency Info', '', 'Информация о валюте_RU', 'A');
+   ATTRINSERT('Currency Info', '', '货币信息_SC', 'A');
+   ATTRINSERT('Currency Info', '', 'Valutainfo_SV', 'A');
+   ATTRINSERT('Currency Info', '', '貨幣資訊_TC', 'A');
+   ATTRINSERT('Currency Info', '', 'Para Birimi Bilgileri_TR', 'A');
+endif;
+CellPutS('Currency Info', '}DimensionAttributes', 'Currency Info', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Currency Info', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Currency Info', '', Currency_Info, 'n');
+ATTRPUTS(Informace_o_měně_CS, 'Currency Info', Currency_Info, 'Informace o měně_CS', 0);
+ATTRPUTS(Valutainfo_DA, 'Currency Info', Currency_Info, 'Valutainfo_DA', 0);
+ATTRPUTS(Währungsinformationen_DE, 'Currency Info', Currency_Info, 'Währungsinformationen_DE', 0);
+ATTRPUTS(Información_de_moneda_ES, 'Currency Info', Currency_Info, 'Información de moneda_ES', 0);
+ATTRPUTS(Valuuttatiedot_FI, 'Currency Info', Currency_Info, 'Valuuttatiedot_FI', 0);
+ATTRPUTS(Informations_relatives_à_la_devise_FR, 'Currency Info', Currency_Info, 'Informations relatives à la devise_FR', 0);
+ATTRPUTS(通貨情報_JA, 'Currency Info', Currency_Info, '通貨情報_JA', 0);
+ATTRPUTS(Informacije_o_valuti_HR, 'Currency Info', Currency_Info, 'Informacije o valuti_HR', 0);
+ATTRPUTS(Pénznem_információ_HU, 'Currency Info', Currency_Info, 'Pénznem információ_HU', 0);
+ATTRPUTS(Informazioni_valuta_IT, 'Currency Info', Currency_Info, 'Informazioni valuta_IT', 0);
+ATTRPUTS(통화_정보_KO, 'Currency Info', Currency_Info, '통화 정보_KO', 0);
+ATTRPUTS(Valutainfo_NO, 'Currency Info', Currency_Info, 'Valutainfo_NO', 0);
+ATTRPUTS(Inf._o_walucie_PL, 'Currency Info', Currency_Info, 'Inf. o walucie_PL', 0);
+ATTRPUTS(Informações_de_Moeda_PT, 'Currency Info', Currency_Info, 'Informações de Moeda_PT', 0);
+ATTRPUTS(Informaţii_monedă_RO, 'Currency Info', Currency_Info, 'Informaţii monedă_RO', 0);
+ATTRPUTS(Информация_о_валюте_RU, 'Currency Info', Currency_Info, 'Информация о валюте_RU', 0);
+ATTRPUTS(货币信息_SC, 'Currency Info', Currency_Info, '货币信息_SC', 0);
+ATTRPUTS(Valutainfo_SV, 'Currency Info', Currency_Info, 'Valutainfo_SV', 0);
+ATTRPUTS(貨幣資訊_TC, 'Currency Info', Currency_Info, '貨幣資訊_TC', 0);
+ATTRPUTS(Para_Birimi_Bilgileri_TR, 'Currency Info', Currency_Info, 'Para Birimi Bilgileri_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Currency Info') = 1);
+   CellPutS('Currency Info', '}HierarchyProperties', 'Currency Info', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Currency Info" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Currency Info');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

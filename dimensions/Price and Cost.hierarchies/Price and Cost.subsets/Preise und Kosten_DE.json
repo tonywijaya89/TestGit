@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Preise und Kosten_DE",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Price and Cost')/Hierarchies('Price and Cost')/Elements('Unit sale price')"
+		},
+		{
+			"@id":"Dimensions('Price and Cost')/Hierarchies('Price and Cost')/Elements('Unit cost')"
+		}
+	]
+}

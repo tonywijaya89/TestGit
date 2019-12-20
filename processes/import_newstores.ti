@@ -1,0 +1,85 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('New Stores');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('New Stores'));
+      DimensionCreate('New Stores');
+      AttrInsert('New Stores', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'New Stores', 'DIMENSION_TYPE');
+      AttrInsert('New Stores', '', 'Format', 'S');
+      AttrInsert('New Stores', '', 'Picklist', 'S');
+      AttrInsert('New Stores', '', 'calculation', 'S');
+      AttrInsert('New Stores', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[New Stores].MEMBERS', 'New Stores');
+      SubsetAliasSet('New Stores', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('New Stores', '', 'Nové prodejny_CS', 'A');
+   ATTRINSERT('New Stores', '', 'Nye butikker_DA', 'A');
+   ATTRINSERT('New Stores', '', 'Neue Geschäfte_DE', 'A');
+   ATTRINSERT('New Stores', '', 'Nuevas tiendas_ES', 'A');
+   ATTRINSERT('New Stores', '', 'Uudet myymälät_FI', 'A');
+   ATTRINSERT('New Stores', '', 'Nouveaux magasins_FR', 'A');
+   ATTRINSERT('New Stores', '', '新規店_JA', 'A');
+   ATTRINSERT('New Stores', '', 'Novi dućani_HR', 'A');
+   ATTRINSERT('New Stores', '', 'Új áruházak_HU', 'A');
+   ATTRINSERT('New Stores', '', 'Nuovi negozi_IT', 'A');
+   ATTRINSERT('New Stores', '', '신규 상점_KO', 'A');
+   ATTRINSERT('New Stores', '', 'Nye butikker_NO', 'A');
+   ATTRINSERT('New Stores', '', 'Nowe salony_PL', 'A');
+   ATTRINSERT('New Stores', '', 'Novas Lojas_PT', 'A');
+   ATTRINSERT('New Stores', '', 'Noi Magazine_RO', 'A');
+   ATTRINSERT('New Stores', '', 'Новые магазины_RU', 'A');
+   ATTRINSERT('New Stores', '', '新商店_SC', 'A');
+   ATTRINSERT('New Stores', '', 'Nya butiker_SV', 'A');
+   ATTRINSERT('New Stores', '', '新商店_TC', 'A');
+   ATTRINSERT('New Stores', '', 'Yeni Mağazalar_TR', 'A');
+endif;
+CellPutS('New Stores', '}DimensionAttributes', 'New Stores', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DIMENSIONSORTORDER('New Stores','','','BYINPUT','DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('New Stores','',v_New_Stores_0,'n');
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+
+#****Begin: Generated Statements***
+ATTRPUTS(v_Nov__prodejny_CS_1,'New Stores',v_New_Stores_0,'Nové prodejny_CS');
+ATTRPUTS(v_Nye_butikker_DA_2,'New Stores',v_New_Stores_0,'Nye butikker_DA');
+ATTRPUTS(v_Neue_Gesch_fte_DE_3,'New Stores',v_New_Stores_0,'Neue Geschäfte_DE');
+ATTRPUTS(v_Nuevas_tiendas_ES_4,'New Stores',v_New_Stores_0,'Nuevas tiendas_ES');
+ATTRPUTS(v_Uudet_myym_l_t_FI_5,'New Stores',v_New_Stores_0,'Uudet myymälät_FI');
+ATTRPUTS(v_Nouveaux_magasins_FR_6,'New Stores',v_New_Stores_0,'Nouveaux magasins_FR');
+ATTRPUTS(v_____JA_7,'New Stores',v_New_Stores_0,'新規店_JA');
+ATTRPUTS(v_Novi_du_ani_HR_8,'New Stores',v_New_Stores_0,'Novi dućani_HR');
+ATTRPUTS(v__j__ruh_zak_HU_9,'New Stores',v_New_Stores_0,'Új áruházak_HU');
+ATTRPUTS(v_Nuovi_negozi_IT_10,'New Stores',v_New_Stores_0,'Nuovi negozi_IT');
+ATTRPUTS(v_______KO_11,'New Stores',v_New_Stores_0,'신규 상점_KO');
+ATTRPUTS(v_Nye_butikker_NO_12,'New Stores',v_New_Stores_0,'Nye butikker_NO');
+ATTRPUTS(v_Nowe_salony_PL_13,'New Stores',v_New_Stores_0,'Nowe salony_PL');
+ATTRPUTS(v_Novas_Lojas_PT_14,'New Stores',v_New_Stores_0,'Novas Lojas_PT');
+ATTRPUTS(v_Noi_Magazine_RO_15,'New Stores',v_New_Stores_0,'Noi Magazine_RO');
+ATTRPUTS(v________________RU_16,'New Stores',v_New_Stores_0,'Новые магазины_RU');
+ATTRPUTS(v_____SC_17,'New Stores',v_New_Stores_0,'新商店_SC');
+ATTRPUTS(v_Nya_butiker_SV_18,'New Stores',v_New_Stores_0,'Nya butiker_SV');
+ATTRPUTS(v_____TC_19,'New Stores',v_New_Stores_0,'新商店_TC');
+ATTRPUTS(v_Yeni_Ma_azalar_TR_20,'New Stores',v_New_Stores_0,'Yeni Mağazalar_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

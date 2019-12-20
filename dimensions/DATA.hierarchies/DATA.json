@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"DATA",
+	"Elements":
+	[
+		{
+			"Name":"DATA",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"DATA.subsets/All Members.json",
+		"DATA.subsets/DATA_JA.json",
+		"DATA.subsets/DATEN_DE.json",
+		"DATA.subsets/DATOS_ES.json",
+		"DATA.subsets/DONNEES_FR.json",
+		"DATA.subsets/数据_SC.json"
+	]
+}

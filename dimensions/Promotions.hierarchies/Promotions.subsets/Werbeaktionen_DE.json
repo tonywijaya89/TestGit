@@ -1,0 +1,43 @@
+{
+	"@type":"Subset",
+	"Name":"Werbeaktionen_DE",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Retailer Type')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Franchise/Corporate')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Month of Promotion')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Sales Increase %')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Advertising Costs')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Promotion Costs')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Base Monthly Sales')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Planned Promotion Value')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Min % Planned Promotion Value')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('% Planned Promotion Value')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Test flag')"
+		},
+		{
+			"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Elements('Select Comment')"
+		}
+	]
+}

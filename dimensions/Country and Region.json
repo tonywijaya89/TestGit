@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Country and Region",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Country and Region.hierarchies/Country and Region.json"
+	]
+}

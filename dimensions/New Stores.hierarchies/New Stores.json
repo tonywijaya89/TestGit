@@ -1,0 +1,92 @@
+{
+	"@type":"Hierarchy",
+	"Name":"New Stores",
+	"Elements":
+	[
+		{
+			"Name":"Retailer Type",
+			"Type":"String"
+		},
+		{
+			"Name":"Franchise/Corporate",
+			"Type":"String"
+		},
+		{
+			"Name":"Asset Type",
+			"Type":"String"
+		},
+		{
+			"Name":"Size",
+			"Type":"String"
+		},
+		{
+			"Name":"Month of Opening",
+			"Type":"String"
+		},
+		{
+			"Name":"Months Remaining this year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Number of New Stores",
+			"Type":"String"
+		},
+		{
+			"Name":"Average Monthly Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sum of Average Monthly Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Remaining Revenue this year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Amount of Revenue increase this year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS MARGIN %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Average Monthly Gross Profit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total opening Costs per store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Opening Cost P&L per store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Opening Costs Capital per store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Opening Costs P&L",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Payback period (months)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Store Index",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"New Stores.subsets/All Members.json",
+		"New Stores.subsets/Neue Geschäfte_DE.json",
+		"New Stores.subsets/Nouveaux magasins_FR.json",
+		"New Stores.subsets/Nuevas tiendas_ES.json",
+		"New Stores.subsets/新商店_SC.json",
+		"New Stores.subsets/新規店_JA.json"
+	]
+}

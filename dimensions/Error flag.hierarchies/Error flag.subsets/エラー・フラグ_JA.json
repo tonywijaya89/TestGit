@@ -1,0 +1,19 @@
+{
+	"@type":"Subset",
+	"Name":"エラー・フラグ_JA",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Error flag')/Hierarchies('Error flag')/Elements('OK')"
+		},
+		{
+			"@id":"Dimensions('Error flag')/Hierarchies('Error flag')/Elements('Very Good')"
+		},
+		{
+			"@id":"Dimensions('Error flag')/Hierarchies('Error flag')/Elements('Considerable')"
+		},
+		{
+			"@id":"Dimensions('Error flag')/Hierarchies('Error flag')/Elements('Planned Promotion Value % too low')"
+		}
+	]
+}

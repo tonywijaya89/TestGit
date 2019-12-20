@@ -1,0 +1,88 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Country and Region",
+	"Elements":
+	[
+		{
+			"Name":"All Subsidiaries",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Americas",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Central Europe",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Northern Europe",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GO Accessories",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Southern Europe",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Asia Pacific",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Europe",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Subsidiaries",
+			"ComponentName":"Americas",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Subsidiaries",
+			"ComponentName":"Asia Pacific",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Subsidiaries",
+			"ComponentName":"Europe",
+			"Weight":1
+		},
+		{
+			"ParentName":"Europe",
+			"ComponentName":"Central Europe",
+			"Weight":1
+		},
+		{
+			"ParentName":"Europe",
+			"ComponentName":"Northern Europe",
+			"Weight":1
+		},
+		{
+			"ParentName":"Europe",
+			"ComponentName":"GO Accessories",
+			"Weight":1
+		},
+		{
+			"ParentName":"Europe",
+			"ComponentName":"Southern Europe",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Country and Region.subsets/All Members.json",
+		"Country and Region.subsets/Approval Hierarchy.json",
+		"Country and Region.subsets/Countries Only.json",
+		"Country and Region.subsets/Land und Region_DE.json",
+		"Country and Region.subsets/Pays et région_FR.json",
+		"Country and Region.subsets/País y región_ES.json",
+		"Country and Region.subsets/国および地域_JA.json",
+		"Country and Region.subsets/国家和地区_SC.json"
+	]
+}
