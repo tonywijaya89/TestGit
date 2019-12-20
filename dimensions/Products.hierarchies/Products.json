@@ -56,6 +56,10 @@
 			"Type":"Numeric"
 		},
 		{
+			"Name":"golfprd",
+			"Type":"Numeric"
+		},
+		{
 			"Name":"Mountaineering Equipment",
 			"Type":"Consolidated"
 		},
@@ -210,6 +214,11 @@
 			"Weight":1
 		},
 		{
+			"ParentName":"Golf Equipment",
+			"ComponentName":"golfprd",
+			"Weight":1
+		},
+		{
 			"ParentName":"Mountaineering Equipment",
 			"ComponentName":"Climbing Accessories",
 			"Weight":1
@@ -296,7 +305,6 @@
 		"Products.subsets/Productos_ES.json",
 		"Products.subsets/Produits_FR.json",
 		"Products.subsets/Produkte_DE.json",
-		"Products.subsets/Subset1.json",
 		"Products.subsets/产品_SC.json",
 		"Products.subsets/製品_JA.json"
 	]
