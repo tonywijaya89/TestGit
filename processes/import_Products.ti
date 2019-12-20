@@ -1,0 +1,145 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   CubeDestroy('product');
+   DimensionDestroy('Products');
+   DimensionDestroy('Budget version');
+   DimensionDestroy('Price and Cost');
+   if (param_createIfNotExist = 0);
+      ProcessQuit;
+   endif;
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Products'));
+      DimensionCreate('Products');
+      AttrInsert('Products', '', 'Caption', 'A');
+      CellPutS('HIERARCHY', '}DimensionAttributes', 'Products', 'DIMENSION_TYPE');
+      SubsetCreateByMDX('All Members', '[Products].MEMBERS', 'Products');
+   endif;
+   if (0 = DimensionExists('Budget version'));
+      DimensionCreate('Budget version');
+      AttrInsert('Budget version', '', 'Caption', 'A');
+      CellPutS('VERSIONS', '}DimensionAttributes', 'Budget version', 'DIMENSION_TYPE');
+      AttrInsert('Budget version', '', 'Format', 'S');
+      AttrInsert('Budget version', '', 'permittedcalculations_n_and_c', 'S');
+      SubsetCreateByMDX('All Members', '[Budget version].MEMBERS', 'Budget version');
+   endif;
+   if (0 = DimensionExists('Price and Cost'));
+      DimensionCreate('Price and Cost');
+      AttrInsert('Price and Cost', '', 'Caption', 'A');
+      CellPutS('CALCULATION', '}DimensionAttributes', 'Price and Cost', 'DIMENSION_TYPE');
+      AttrInsert('Price and Cost', '', 'Format', 'S');
+      AttrInsert('Price and Cost', '', 'Picklist', 'S');
+      AttrInsert('Price and Cost', '', 'signswitch', 'N');
+      AttrInsert('Price and Cost', '', 'calculation', 'S');
+      AttrInsert('Price and Cost', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Price and Cost].MEMBERS', 'Price and Cost');
+   endif;
+   if (0 = CubeExists('product'));
+      CubeCreate('product', 'Products', 'Budget version', 'Price and Cost');
+      CubeSetLogChanges('product', 1);
+      CellPutS('Product', '}CubeAttributes', 'product', 'Caption_Default');
+      if (0 = ViewExists('product', 'All'));
+         ViewCreate('product', 'All');
+         ViewRowDimensionSet('product', 'All', 'Products', 1);
+         if (1 = SubsetExists('Products', 'All Members'));
+            ViewSubsetAssign('product', 'All', 'Products', 'All Members');
+         endif;
+         ViewColumnDimensionSet('product', 'All', 'Budget version', 1);
+         if (1 = SubsetExists('Budget version', 'All Members'));
+            ViewSubsetAssign('product', 'All', 'Budget version', 'All Members');
+         endif;
+         ViewTitleDimensionSet('product', 'All', 'Price and Cost');
+         if (1 = SubsetExists('Price and Cost', 'All Members'));
+            ViewSubsetAssign('product', 'All', 'Price and Cost', 'All Members');
+         endif;
+         ViewTitleElementSet('product', 'All', 'Price and Cost', 0);
+      endif;
+      if (0 = ViewExists('product', 'product'));
+         ViewCreate('product', 'product');
+         ViewRowDimensionSet('product', 'product', 'Products', 1);
+         if (1 = SubsetExists('Products', 'All Members'));
+            ViewSubsetAssign('product', 'product', 'Products', 'All Members');
+         endif;
+         ViewColumnDimensionSet('product', 'product', 'Price and Cost', 1);
+         if (1 = SubsetExists('Price and Cost', 'All Members'));
+            ViewSubsetAssign('product', 'product', 'Price and Cost', 'All Members');
+         endif;
+         ViewTitleDimensionSet('product', 'product', 'Budget version');
+         if (1 = SubsetExists('Budget version', 'All Members'));
+            ViewSubsetAssign('product', 'product', 'Budget version', 'All Members');
+         endif;
+         ViewTitleElementSet('product', 'product', 'Budget version', 0);
+      endif;
+      CellPutS('Price and Cost', '}CubeProperties', 'product', 'MEASURES_DIMENSION');
+   endif;
+endif;
+CellPutS('Products', '}DimensionAttributes', 'Products', 'Caption_Default');
+CellPutS('Budget version', '}DimensionAttributes', 'Budget version', 'Caption_Default');
+CellPutS('Price and Cost', '}DimensionAttributes', 'Price and Cost', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+if (DIMIX('Price and Cost', 'Unit cost') = 0);
+   DimensionElementInsertDirect('Price and Cost', '', 'Unit cost', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Price and Cost', 'Unit cost', 'Format');
+endif;
+if (DIMIX('Price and Cost', 'Unit sale price') = 0);
+   DimensionElementInsertDirect('Price and Cost', '', 'Unit sale price', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Price and Cost', 'Unit sale price', 'Format');
+endif;
+DimensionSortOrder('Products', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Budget version', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Price and Cost', '', '', 'ByInput', 'Ascending');
+OldCubeLogChanges = CubeGetLogChanges('product');
+CubeSetLogChanges('product', 0);
+ViewZeroOut('product', 'product');
+#****End: Generated Statements****
+
+
+
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+
+#endregion
+#region Data
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Products', '', Product, 'n');
+DimensionElementInsertDirect('Budget version', '', Version, 'n');
+CellPutN(Unit_cost, 'product', Product, Version, 'Unit cost');
+CellPutN(Unit_sale_price, 'product', Product, Version, 'Unit sale price');
+#****End: Generated Statements****
+
+
+
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+CubeSetLogChanges('product', OldCubeLogChanges);
+v_errMsgs = '';
+if (DNLEV('Budget version') = 1);
+   CellPutS('Level 1', '}HierarchyProperties', 'Budget version', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Budget version" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Budget version');
+if (DNLEV('Products') = 3);
+   CellPutS('Level 1', '}HierarchyProperties', 'Products', 'hierarchy0', 'level000');
+   CellPutS('Level 2', '}HierarchyProperties', 'Products', 'hierarchy0', 'level001');
+   CellPutS('Level 3', '}HierarchyProperties', 'Products', 'hierarchy0', 'level002');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Products" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Products');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+
+#endregion

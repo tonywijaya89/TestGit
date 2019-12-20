@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Exchange Rate",
+	"Elements":
+	[
+		{
+			"Name":"Exchange Rate",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Exchange Rate.subsets/All Members.json",
+		"Exchange Rate.subsets/Taux de change_FR.json",
+		"Exchange Rate.subsets/Tipo de cambio_ES.json",
+		"Exchange Rate.subsets/Wechselkurs_DE.json",
+		"Exchange Rate.subsets/交換レート_JA.json",
+		"Exchange Rate.subsets/汇率_SC.json"
+	]
+}

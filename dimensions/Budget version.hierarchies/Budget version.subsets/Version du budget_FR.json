@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Version du budget_FR",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+		},
+		{
+			"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 2')"
+		}
+	]
+}

@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"汇率_SC",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Elements('Exchange Rate')"
+		}
+	]
+}

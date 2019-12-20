@@ -1,0 +1,68 @@
+{
+	"@type":"NativeView",
+	"Name":"Absatzplan des Geschäfts_DE",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('Monate_DE')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Products')/Hierarchies('Products')/Subsets('Produkte_DE')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Subsets('Länder_Währung_DE')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('Germany')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Subsets('Absatzplan des Geschäfts_DE')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('GROSS SALES REVENUE_USD')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('Budgetplan Version_DE')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('Einzelhändler_DE')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Department Store')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

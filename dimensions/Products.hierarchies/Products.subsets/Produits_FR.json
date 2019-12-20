@@ -1,0 +1,88 @@
+{
+	"@type":"Subset",
+	"Name":"Produits_FR",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('TOTAL PRODUCTS')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Camping Equipment')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Cooking Gear')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Lanterns')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Packs')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Sleeping Bags')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Tents')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Golf Equipment')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Golf Accessories')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Irons')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Putters')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Woods')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Mountaineering Equipment')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Climbing Accessories')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Rope')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Safety')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Tools')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Outdoor Protection')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('First Aid')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Insect Repellents')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Sunscreen')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Personal Accessories')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Binoculars')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Eyewear')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Knives')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Navigation')"
+		},
+		{
+			"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Watches')"
+		}
+	]
+}

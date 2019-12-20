@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"资产类型_SC",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Asset Type')/Hierarchies('Asset Type')/Elements('Freehold')"
+		},
+		{
+			"@id":"Dimensions('Asset Type')/Hierarchies('Asset Type')/Elements('Leasehold')"
+		}
+	]
+}

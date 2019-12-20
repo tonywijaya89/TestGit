@@ -1,0 +1,46 @@
+{
+	"@type":"Subset",
+	"Name":"Devise locale_FR",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('CAD')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('EUR')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('JPY')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('USD')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('SGD')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('CNY')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('KRW')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('AUD')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('BRL')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('MXN')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('CHF')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('SEK')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Elements('GBP')"
+		}
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Asset Type",
+	"Elements":
+	[
+		{
+			"Name":"Freehold",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Leasehold",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Asset Type.subsets/All Members.json",
+		"Asset Type.subsets/Anlagevermögenstyp_DE.json",
+		"Asset Type.subsets/Tipo de activo_ES.json",
+		"Asset Type.subsets/Type d’actif_FR.json",
+		"Asset Type.subsets/資産タイプ_JA.json",
+		"Asset Type.subsets/资产类型_SC.json"
+	]
+}

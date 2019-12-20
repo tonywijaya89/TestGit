@@ -1,0 +1,26 @@
+{
+	"@type":"NativeView",
+	"Name":"货币信息_SC",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Currency Info')/Hierarchies('Currency Info')/Subsets('货币信息_SC')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Subsets('国家或地区_货币_SC')"
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

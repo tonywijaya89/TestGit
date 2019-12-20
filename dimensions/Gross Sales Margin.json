@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Gross Sales Margin",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Gross Sales Margin.hierarchies/Gross Sales Margin.json"
+	]
+}

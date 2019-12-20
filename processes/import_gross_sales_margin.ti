@@ -1,0 +1,90 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Gross Sales Margin');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Gross Sales Margin'));
+      DimensionCreate('Gross Sales Margin');
+      AttrInsert('Gross Sales Margin', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Gross Sales Margin', 'DIMENSION_TYPE');
+      AttrInsert('Gross Sales Margin', '', 'Format', 'S');
+      AttrInsert('Gross Sales Margin', '', 'Picklist', 'S');
+      AttrInsert('Gross Sales Margin', '', 'calculation', 'S');
+      AttrInsert('Gross Sales Margin', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Gross Sales Margin].MEMBERS', 'Gross Sales Margin');
+      SubsetAliasSet('Gross Sales Margin', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Gross Sales Margin', '', 'Hrubá marže_CS', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Bruttoomsætningsmargin_DA', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Bruttoverkaufsgewinnspanne_DE', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Margen por ventas bruto_ES', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Myyntikate_FI', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Marge des ventes brutes_FR', 'A');
+   ATTRINSERT('Gross Sales Margin', '', '販売総利益_JA', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Bruto margina prodaje_HR', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Bruttó haszonkulcs_HU', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Margine fatturato lordo_IT', 'A');
+   ATTRINSERT('Gross Sales Margin', '', '총 판매 이윤_KO', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Brutto salgsmargin_NO', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Marża brutto ze sprzedaży_PL', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Margem de Vendas Bruta_PT', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Marja brută de vânzări_RO', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Норма валовой прибыли_RU', 'A');
+   ATTRINSERT('Gross Sales Margin', '', '毛销售利润_SC', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Bruttoförsäljningsmarginal_SV', 'A');
+   ATTRINSERT('Gross Sales Margin', '', '銷售毛利_TC', 'A');
+   ATTRINSERT('Gross Sales Margin', '', 'Brüt Satış Marjı_TR', 'A');
+endif;
+CellPutS('Gross Sales Margin', '}DimensionAttributes', 'Gross Sales Margin', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Gross Sales Margin', '', '', 'ByInput', 'DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Gross Sales Margin', '', v_Gross_Sales_Margin_0, 'n');
+ATTRPUTS(v_Hrub__mar_e_CS_1, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Hrubá marže_CS');
+ATTRPUTS(v_Bruttooms_tningsmargin_DA_2, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Bruttoomsætningsmargin_DA');
+ATTRPUTS(v_Bruttoverkaufsgewinnspanne_DE_3, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Bruttoverkaufsgewinnspanne_DE');
+ATTRPUTS(v_Margen_por_ventas_bruto_ES_4, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Margen por ventas bruto_ES');
+ATTRPUTS(v_Myyntikate_FI_5, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Myyntikate_FI');
+ATTRPUTS(v_Marge_des_ventes_brutes_FR_6, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Marge des ventes brutes_FR');
+ATTRPUTS(v_______JA_7, 'Gross Sales Margin', v_Gross_Sales_Margin_0, '販売総利益_JA');
+ATTRPUTS(v_Bruto_margina_prodaje_HR_8, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Bruto margina prodaje_HR');
+ATTRPUTS(v_Brutt__haszonkulcs_HU_9, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Bruttó haszonkulcs_HU');
+ATTRPUTS(v_Margine_fatturato_lordo_IT_10, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Margine fatturato lordo_IT');
+ATTRPUTS(v_________KO_11, 'Gross Sales Margin', v_Gross_Sales_Margin_0, '총 판매 이윤_KO');
+ATTRPUTS(v_Brutto_salgsmargin_NO_12, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Brutto salgsmargin_NO');
+ATTRPUTS(v_Mar_a_brutto_ze_sprzeda_y_PL_13, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Marża brutto ze sprzedaży_PL');
+ATTRPUTS(v_Margem_de_Vendas_Bruta_PT_14, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Margem de Vendas Bruta_PT');
+ATTRPUTS(v_Marja_brut__de_v_nz_ri_RO_15, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Marja brută de vânzări_RO');
+ATTRPUTS(v_______________________RU_16, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Норма валовой прибыли_RU');
+ATTRPUTS(v_______SC_17, 'Gross Sales Margin', v_Gross_Sales_Margin_0, '毛销售利润_SC');
+ATTRPUTS(v_Bruttof_rs_ljningsmarginal_SV_18, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Bruttoförsäljningsmarginal_SV');
+ATTRPUTS(v______TC_19, 'Gross Sales Margin', v_Gross_Sales_Margin_0, '銷售毛利_TC');
+ATTRPUTS(v_Br_t_Sat___Marj__TR_20, 'Gross Sales Margin', v_Gross_Sales_Margin_0, 'Brüt Satış Marjı_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+if (DNLEV('Gross Sales Margin') = 1);
+   CellPutS('Gross Sales Margin', '}HierarchyProperties', 'Gross Sales Margin', 'hierarchy0', 'level000');
+else; itemReject('The resulting hierarchy for the dimension "Gross Sales Margin" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.');
+endif;
+RefreshMDXHierarchy('Gross Sales Margin');
+#****End: Generated Statements****
+#endregion

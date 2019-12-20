@@ -1,0 +1,68 @@
+{
+	"@type":"NativeView",
+	"Name":"毛利率计算_SC",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('月份_SC')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Subsets('毛销售利润_SC')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('预算版本_SC')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('国家和地区_SC')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('零售商_SC')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('ALL RETAILERS')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Subsets('商店类型_SC')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Franchise Store')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

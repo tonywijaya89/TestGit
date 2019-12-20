@@ -1,0 +1,31 @@
+{
+	"@type":"Subset",
+	"Name":"Approval Hierarchy",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+		},
+		{
+			"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('Americas')"
+		},
+		{
+			"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('Asia Pacific')"
+		},
+		{
+			"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('Europe')"
+		},
+		{
+			"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('Central Europe')"
+		},
+		{
+			"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('Northern Europe')"
+		},
+		{
+			"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('GO Accessories')"
+		},
+		{
+			"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('Southern Europe')"
+		}
+	]
+}

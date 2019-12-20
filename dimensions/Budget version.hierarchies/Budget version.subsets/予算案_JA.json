@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"予算案_JA",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+		},
+		{
+			"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 2')"
+		}
+	]
+}

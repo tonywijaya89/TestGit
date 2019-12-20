@@ -1,0 +1,36 @@
+{
+	"@type":"Cube",
+	"Name":"Base Sales Forecast",
+	"Rules@Code.link":"Base Sales Forecast.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Country and Region')"
+		},
+		{
+			"@id":"Dimensions('Retailers')"
+		},
+		{
+			"@id":"Dimensions('Existing Stores Revenue')"
+		},
+		{
+			"@id":"Dimensions('Store Type')"
+		},
+		{
+			"@id":"Dimensions('Budget version')"
+		},
+		{
+			"@id":"Dimensions('Month')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Base Sales Forecast.views/All.json",
+		"Base Sales Forecast.views/Base Sales Forecast.json",
+		"Base Sales Forecast.views/Basisabsatzprognose_DE.json",
+		"Base Sales Forecast.views/Previsión de las ventas base_ES.json",
+		"Base Sales Forecast.views/Prévisions de ventes de base_FR.json",
+		"Base Sales Forecast.views/基本販売予測_JA.json",
+		"Base Sales Forecast.views/基本销售预测_SC.json"
+	]
+}

@@ -1,0 +1,19 @@
+{
+	"@type":"Subset",
+	"Name":"Number of New Stores",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('1')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('2')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('3')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('4')"
+		}
+	]
+}

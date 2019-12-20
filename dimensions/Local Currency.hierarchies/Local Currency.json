@@ -1,0 +1,68 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Local Currency",
+	"Elements":
+	[
+		{
+			"Name":"CAD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EUR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"JPY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SGD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CNY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KRW",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AUD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BRL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"MXN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CHF",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SEK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GBP",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Local Currency.subsets/All Members.json",
+		"Local Currency.subsets/Devise locale_FR.json",
+		"Local Currency.subsets/Lokale Währung_DE.json",
+		"Local Currency.subsets/Moneda local_ES.json",
+		"Local Currency.subsets/本地货币_SC.json",
+		"Local Currency.subsets/現地通貨_JA.json"
+	]
+}

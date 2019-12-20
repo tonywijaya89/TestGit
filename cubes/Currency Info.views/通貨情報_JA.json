@@ -1,0 +1,26 @@
+{
+	"@type":"NativeView",
+	"Name":"通貨情報_JA",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Currency Info')/Hierarchies('Currency Info')/Subsets('通貨情報_JA')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Subsets('国_通貨_JA')"
+			}
+		}
+	],
+	"Titles":[],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

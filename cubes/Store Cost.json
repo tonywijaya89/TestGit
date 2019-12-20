@@ -1,0 +1,36 @@
+{
+	"@type":"Cube",
+	"Name":"Store Cost",
+	"Rules@Code.link":"Store Cost.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Country and Region')"
+		},
+		{
+			"@id":"Dimensions('Retailers')"
+		},
+		{
+			"@id":"Dimensions('Assumptions')"
+		},
+		{
+			"@id":"Dimensions('Store Size')"
+		},
+		{
+			"@id":"Dimensions('Store Type')"
+		},
+		{
+			"@id":"Dimensions('DATA')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Store Cost.views/All.json",
+		"Store Cost.views/Coste de la tienda_ES.json",
+		"Store Cost.views/Coût magasin_FR.json",
+		"Store Cost.views/Kosten für Geschäfte_DE.json",
+		"Store Cost.views/Store Cost.json",
+		"Store Cost.views/商店成本_SC.json",
+		"Store Cost.views/店舗費用_JA.json"
+	]
+}

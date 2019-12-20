@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Geschäftstyp_DE",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Franchise Store')"
+		},
+		{
+			"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Corporate Store')"
+		}
+	]
+}

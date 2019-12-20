@@ -1,0 +1,125 @@
+{
+	"@type":"NativeView",
+	"Name":"Gross Margin Calculation",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('All Members')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Existing Stores Revenue')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('New Store Opening (hide)')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('New Stores revenue')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('GROSS REVENUE')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Population Growth')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Economic Growth')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Effect of  Single Retailer Promotions')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Effect of All Store Promotions')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('ADJUSTED GROSS REVENUE')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('GROSS MARGIN %')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('GROSS MARGIN BEFORE COSTS')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('TOTAL DISCOUNTS AND ALLOWANCES')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Returns and Allowances')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Volume Discount')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Cash Discount')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Freight')"
+					},
+					{
+						"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('GROSS MARGIN')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Franchise Store')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('Retailers All')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('ALL RETAILERS')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

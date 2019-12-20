@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Taille de magasin_FR",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Store Size')/Hierarchies('Store Size')/Elements('Full Size Store')"
+		},
+		{
+			"@id":"Dimensions('Store Size')/Hierarchies('Store Size')/Elements('Mini Size Store')"
+		}
+	]
+}

@@ -1,0 +1,38 @@
+{
+	"@type":"NativeView",
+	"Name":"交換レート_JA",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('月_JA')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Subsets('現地通貨_JA')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Subsets('交換レート_JA')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Elements('Exchange Rate')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

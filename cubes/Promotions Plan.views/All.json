@@ -1,0 +1,48 @@
+{
+	"@type":"NativeView",
+	"Name":"All",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Subsets('All Members')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Subsets('All Members')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('Asia Pacific')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

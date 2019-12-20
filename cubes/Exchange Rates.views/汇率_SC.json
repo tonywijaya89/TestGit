@@ -1,0 +1,38 @@
+{
+	"@type":"NativeView",
+	"Name":"汇率_SC",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('月份_SC')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Subsets('本地货币_SC')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Subsets('汇率_SC')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Elements('Exchange Rate')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Error flag",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Error flag')/Hierarchies('Error flag')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Error flag.hierarchies/Error flag.json"
+	]
+}

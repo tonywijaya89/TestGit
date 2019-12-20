@@ -1,0 +1,85 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Retailers');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Retailers'));
+      DimensionCreate('Retailers');
+      AttrInsert('Retailers', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Retailers', 'DIMENSION_TYPE');
+      AttrInsert('Retailers', '', 'Format', 'S');
+      AttrInsert('Retailers', '', 'Picklist', 'S');
+      AttrInsert('Retailers', '', 'calculation', 'S');
+      AttrInsert('Retailers', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Retailers].MEMBERS', 'Retailers');
+      SubsetAliasSet('Retailers', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Retailers', '', 'Maloobchodníci_CS', 'A');
+   ATTRINSERT('Retailers', '', 'Forhandlere_DA', 'A');
+   ATTRINSERT('Retailers', '', 'Einzelhändler_DE', 'A');
+   ATTRINSERT('Retailers', '', 'Minoristas_ES', 'A');
+   ATTRINSERT('Retailers', '', 'Jälleenmyyjät_FI', 'A');
+   ATTRINSERT('Retailers', '', 'Détaillants_FR', 'A');
+   ATTRINSERT('Retailers', '', '小売業者_JA', 'A');
+   ATTRINSERT('Retailers', '', 'Prodavači_HR', 'A');
+   ATTRINSERT('Retailers', '', 'Viszonteladók_HU', 'A');
+   ATTRINSERT('Retailers', '', 'Rivenditori_IT', 'A');
+   ATTRINSERT('Retailers', '', '소매업체_KO', 'A');
+   ATTRINSERT('Retailers', '', 'Detaljister_NO', 'A');
+   ATTRINSERT('Retailers', '', 'Detaliczne punkty sprzedaży_PL', 'A');
+   ATTRINSERT('Retailers', '', 'Varejistas_PT', 'A');
+   ATTRINSERT('Retailers', '', 'Vânzători cu amănuntul_RO', 'A');
+   ATTRINSERT('Retailers', '', 'Родничные продавцы_RU', 'A');
+   ATTRINSERT('Retailers', '', '零售商_SC', 'A');
+   ATTRINSERT('Retailers', '', 'Detaljhandlare_SV', 'A');
+   ATTRINSERT('Retailers', '', '零售商_TC', 'A');
+   ATTRINSERT('Retailers', '', 'Perakendeciler_TR', 'A');
+endif;
+CellPutS('Retailers', '}DimensionAttributes', 'Retailers', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DIMENSIONSORTORDER('Retailers','','','BYINPUT','DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('Retailers','',v_Retailers_0,'n');
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+
+#****Begin: Generated Statements***
+ATTRPUTS(v_Maloobchodn_ci_CS_1,'Retailers',v_Retailers_0,'Maloobchodníci_CS');
+ATTRPUTS(v_Forhandlere_DA_2,'Retailers',v_Retailers_0,'Forhandlere_DA');
+ATTRPUTS(v_Einzelh_ndler_DE_3,'Retailers',v_Retailers_0,'Einzelhändler_DE');
+ATTRPUTS(v_Minoristas_ES_4,'Retailers',v_Retailers_0,'Minoristas_ES');
+ATTRPUTS(v_J_lleenmyyj_t_FI_5,'Retailers',v_Retailers_0,'Jälleenmyyjät_FI');
+ATTRPUTS(v_D_taillants_FR_6,'Retailers',v_Retailers_0,'Détaillants_FR');
+ATTRPUTS(v______JA_7,'Retailers',v_Retailers_0,'小売業者_JA');
+ATTRPUTS(v_Prodava_i_HR_8,'Retailers',v_Retailers_0,'Prodavači_HR');
+ATTRPUTS(v_Viszontelad_k_HU_9,'Retailers',v_Retailers_0,'Viszonteladók_HU');
+ATTRPUTS(v_Rivenditori_IT_10,'Retailers',v_Retailers_0,'Rivenditori_IT');
+ATTRPUTS(v______KO_11,'Retailers',v_Retailers_0,'소매업체_KO');
+ATTRPUTS(v_Detaljister_NO_12,'Retailers',v_Retailers_0,'Detaljister_NO');
+ATTRPUTS(v_Detaliczne_punkty_sprzeda_y_PL_13,'Retailers',v_Retailers_0,'Detaliczne punkty sprzedaży_PL');
+ATTRPUTS(v_Varejistas_PT_14,'Retailers',v_Retailers_0,'Varejistas_PT');
+ATTRPUTS(v_V_nz_tori_cu_am_nuntul_RO_15,'Retailers',v_Retailers_0,'Vânzători cu amănuntul_RO');
+ATTRPUTS(v____________________RU_16,'Retailers',v_Retailers_0,'Родничные продавцы_RU');
+ATTRPUTS(v_____SC_17,'Retailers',v_Retailers_0,'零售商_SC');
+ATTRPUTS(v_Detaljhandlare_SV_18,'Retailers',v_Retailers_0,'Detaljhandlare_SV');
+ATTRPUTS(v_____TC_19,'Retailers',v_Retailers_0,'零售商_TC');
+ATTRPUTS(v_Perakendeciler_TR_20,'Retailers',v_Retailers_0,'Perakendeciler_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

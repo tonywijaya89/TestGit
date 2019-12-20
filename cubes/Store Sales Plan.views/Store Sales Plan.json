@@ -1,0 +1,185 @@
+{
+	"@type":"NativeView",
+	"Name":"Store Sales Plan",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('All Members')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Currency')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Quantity')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Unit sale price')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Commissionable Sales Revenue')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Other Sales Revenue')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('GROSS SALES REVENUE')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Volume Discount')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Cash Discount')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Sales Returns and Allowances')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('TOTAL DISCOUNTS AND ALLOWANCES')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Freight')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('NET SALES REVENUE')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Unit cost')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Other Sales Cost of Goods Sold')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('COST OF SALES')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('GROSS MARGIN')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('GROSS MARGIN %')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('CUMULATIVE GROSS MARGIN')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Volume Discount %')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Cash Discount %')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Sales Returns and Allowances %')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Exchange Rate')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Price_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Commissionable Sales Revenue_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Other Sales Revenue_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('GROSS SALES REVENUE_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Cost_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Volume Discount_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Cash Discount_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Sales Returns and Allowances_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('TOTAL DISCOUNTS AND ALLOWANCES_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Freight_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('NET SALES REVENUE_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('Other Sales Cost of Goods Sold_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('COST OF SALES_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('GROSS MARGIN_USD')"
+					},
+					{
+						"@id":"Dimensions('Store Sales Plan')/Hierarchies('Store Sales Plan')/Elements('CUMULATIVE GROSS MARGIN_USD')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Countries_Currency')/Hierarchies('Countries_Currency')/Elements('United States')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Products')/Hierarchies('Products')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Products')/Hierarchies('Products')/Elements('Cooking Gear')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('Retailer Types')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Department Store')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

@@ -1,0 +1,44 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Existing Stores Revenue",
+	"Elements":
+	[
+		{
+			"Name":"Existing Stores Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS MARGIN %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Returns and Allowances",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Volume Discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Freight",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ESRWA",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Existing Stores Revenue.subsets/All Members.json",
+		"Existing Stores Revenue.subsets/Ingresos de las cadenas existentes_ES.json",
+		"Existing Stores Revenue.subsets/Revenu des magasins existants_FR.json",
+		"Existing Stores Revenue.subsets/Vorhandene Geschäfte - Einnahmen_DE.json",
+		"Existing Stores Revenue.subsets/既存店の収益_JA.json",
+		"Existing Stores Revenue.subsets/现有商店收入_SC.json"
+	]
+}
