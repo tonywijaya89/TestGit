@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"Información de moneda_ES",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Currency Info')/Hierarchies('Currency Info')/Elements('Currency')"
+		}
+	]
+}

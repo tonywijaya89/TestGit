@@ -1,0 +1,89 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Assumptions');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Assumptions'));
+      DimensionCreate('Assumptions');
+      AttrInsert('Assumptions', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Assumptions', 'DIMENSION_TYPE');
+      AttrInsert('Assumptions', '', 'Format', 'S');
+      AttrInsert('Assumptions', '', 'Picklist', 'S');
+      AttrInsert('Assumptions', '', 'calculation', 'S');
+      AttrInsert('Assumptions', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Assumptions].MEMBERS', 'Assumptions');
+      SubsetAliasSet('Assumptions', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Assumptions', '', 'Předpoklady_CS', 'A');
+   ATTRINSERT('Assumptions', '', 'Forudsætninger_DA', 'A');
+   ATTRINSERT('Assumptions', '', 'Übernahmen_DE', 'A');
+   ATTRINSERT('Assumptions', '', 'Suposiciones_ES', 'A');
+   ATTRINSERT('Assumptions', '', 'Oletukset_FI', 'A');
+   ATTRINSERT('Assumptions', '', 'Hypothèses_FR', 'A');
+   ATTRINSERT('Assumptions', '', '推定_JA', 'A');
+   ATTRINSERT('Assumptions', '', 'Pretpostavke_HR', 'A');
+   ATTRINSERT('Assumptions', '', 'Feltételezések_HU', 'A');
+   ATTRINSERT('Assumptions', '', 'Presupposti_IT', 'A');
+   ATTRINSERT('Assumptions', '', '추정_KO', 'A');
+   ATTRINSERT('Assumptions', '', 'Forutsetninger_NO', 'A');
+   ATTRINSERT('Assumptions', '', 'Założenia_PL', 'A');
+   ATTRINSERT('Assumptions', '', 'Suposições_PT', 'A');
+   ATTRINSERT('Assumptions', '', 'Supoziţii_RO', 'A');
+   ATTRINSERT('Assumptions', '', 'Предположения_RU', 'A');
+   ATTRINSERT('Assumptions', '', '假设_SC', 'A');
+   ATTRINSERT('Assumptions', '', 'Antaganden_SV', 'A');
+   ATTRINSERT('Assumptions', '', '假設_TC', 'A');
+   ATTRINSERT('Assumptions', '', 'Varsayımlar_TR', 'A');
+endif;
+CellPutS('Assumptions', '}DimensionAttributes', 'Assumptions', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Assumptions', '', '', 'ByInput', 'DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Assumptions', '', v_Assumptions_0, 'n');
+ATTRPUTS(v_P_edpoklady_CS_1, 'Assumptions', v_Assumptions_0, 'Předpoklady_CS');
+ATTRPUTS(v_Foruds_tninger_DA_2, 'Assumptions', v_Assumptions_0, 'Forudsætninger_DA');
+ATTRPUTS(v__bernahmen_DE_3, 'Assumptions', v_Assumptions_0, 'Übernahmen_DE');
+ATTRPUTS(v_Suposiciones_ES_4, 'Assumptions', v_Assumptions_0, 'Suposiciones_ES');
+ATTRPUTS(v_Oletukset_FI_5, 'Assumptions', v_Assumptions_0, 'Oletukset_FI');
+ATTRPUTS(v_Hypoth_ses_FR_6, 'Assumptions', v_Assumptions_0, 'Hypothèses_FR');
+ATTRPUTS(v____JA_7, 'Assumptions', v_Assumptions_0, '推定_JA');
+ATTRPUTS(v_Pretpostavke_HR_8, 'Assumptions', v_Assumptions_0, 'Pretpostavke_HR');
+ATTRPUTS(v_Felt_telez_sek_HU_9, 'Assumptions', v_Assumptions_0, 'Feltételezések_HU');
+ATTRPUTS(v_Presupposti_IT_10, 'Assumptions', v_Assumptions_0, 'Presupposti_IT');
+ATTRPUTS(v____KO_11, 'Assumptions', v_Assumptions_0, '추정_KO');
+ATTRPUTS(v_Forutsetninger_NO_12, 'Assumptions', v_Assumptions_0, 'Forutsetninger_NO');
+ATTRPUTS(v_Za_o_enia_PL_13, 'Assumptions', v_Assumptions_0, 'Założenia_PL');
+ATTRPUTS(v_Suposi__es_PT_14, 'Assumptions', v_Assumptions_0, 'Suposições_PT');
+ATTRPUTS(v_Supozi_ii_RO_15, 'Assumptions', v_Assumptions_0, 'Supoziţii_RO');
+ATTRPUTS(v_______________RU_16, 'Assumptions', v_Assumptions_0, 'Предположения_RU');
+ATTRPUTS(v____SC_17, 'Assumptions', v_Assumptions_0, '假设_SC');
+ATTRPUTS(v_Antaganden_SV_18, 'Assumptions', v_Assumptions_0, 'Antaganden_SV');
+ATTRPUTS(v____TC_19, 'Assumptions', v_Assumptions_0, '假設_TC');
+ATTRPUTS(v_Varsay_mlar_TR_20, 'Assumptions', v_Assumptions_0, 'Varsayımlar_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+if (DNLEV('Assumptions') = 1);
+   CellPutS('Assumptions', '}HierarchyProperties', 'Assumptions', 'hierarchy0', 'level000');
+else; itemReject('The resulting hierarchy for the dimension "Assumptions" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.');
+endif;
+RefreshMDXHierarchy('Assumptions');
+#****End: Generated Statements****
+#endregion

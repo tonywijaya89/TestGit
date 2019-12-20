@@ -1,0 +1,38 @@
+{
+	"@type":"NativeView",
+	"Name":"Produits_FR",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Price and Cost')/Hierarchies('Price and Cost')/Subsets('Prix et coûts_FR')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Products')/Hierarchies('Products')/Subsets('Produits_FR')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('Version du budget_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

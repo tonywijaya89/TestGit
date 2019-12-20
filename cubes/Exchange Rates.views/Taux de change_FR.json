@@ -1,0 +1,38 @@
+{
+	"@type":"NativeView",
+	"Name":"Taux de change_FR",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('Mois_FR')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Subsets('Devise locale_FR')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Subsets('Taux de change_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Elements('Exchange Rate')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

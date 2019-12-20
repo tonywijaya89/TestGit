@@ -1,0 +1,95 @@
+#region Prolog
+
+#****Begin: Generated Header****
+IMPORT_Cube_Created=0;
+if (param_destroy = 1);
+   DimensionDestroy('Exchange Rate');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Exchange Rate'));
+      DimensionCreate('Exchange Rate');
+      AttrInsert('Exchange Rate', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Exchange Rate', 'DIMENSION_TYPE');
+      AttrInsert('Exchange Rate', '', 'Format', 'S');
+      AttrInsert('Exchange Rate', '', 'Picklist', 'S');
+      AttrInsert('Exchange Rate', '', 'calculation', 'S');
+      AttrInsert('Exchange Rate', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Exchange Rate].MEMBERS', 'Exchange Rate');
+      SubsetAliasSet('Exchange Rate', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Exchange Rate', '', 'Směnný kurz_CS', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Vekselkurs_DA', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Wechselkurs_DE', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Tipo de cambio_ES', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Valuuttakurssi_FI', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Taux de change_FR', 'A');
+   ATTRINSERT('Exchange Rate', '', '交換レート_JA', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Stopa razmjene_HR', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Árfolyam_HU', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Tasso di scambio_IT', 'A');
+   ATTRINSERT('Exchange Rate', '', '환율_KO', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Valutakurs_NO', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Kurs wymiany_PL', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Taxa de Câmbio_PT', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Rată de schimb_RO', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Обменный курс_RU', 'A');
+   ATTRINSERT('Exchange Rate', '', '汇率_SC', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Växelkurs_SV', 'A');
+   ATTRINSERT('Exchange Rate', '', '匯率_TC', 'A');
+   ATTRINSERT('Exchange Rate', '', 'Döviz Kuru_TR', 'A');
+endif;
+CellPutS('Exchange Rate', '}DimensionAttributes', 'Exchange Rate', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Exchange Rate', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Exchange Rate', '', Exchange_Rate, 'n');
+ATTRPUTS(Směnný_kurz_CS, 'Exchange Rate', Exchange_Rate, 'Směnný kurz_CS', 0);
+ATTRPUTS(Vekselkurs_DA, 'Exchange Rate', Exchange_Rate, 'Vekselkurs_DA', 0);
+ATTRPUTS(Wechselkurs_DE, 'Exchange Rate', Exchange_Rate, 'Wechselkurs_DE', 0);
+ATTRPUTS(Tipo_de_cambio_ES, 'Exchange Rate', Exchange_Rate, 'Tipo de cambio_ES', 0);
+ATTRPUTS(Valuuttakurssi_FI, 'Exchange Rate', Exchange_Rate, 'Valuuttakurssi_FI', 0);
+ATTRPUTS(Taux_de_change_FR, 'Exchange Rate', Exchange_Rate, 'Taux de change_FR', 0);
+ATTRPUTS(交換レート_JA, 'Exchange Rate', Exchange_Rate, '交換レート_JA', 0);
+ATTRPUTS(Stopa_razmjene_HR, 'Exchange Rate', Exchange_Rate, 'Stopa razmjene_HR', 0);
+ATTRPUTS(Árfolyam_HU, 'Exchange Rate', Exchange_Rate, 'Árfolyam_HU', 0);
+ATTRPUTS(Tasso_di_scambio_IT, 'Exchange Rate', Exchange_Rate, 'Tasso di scambio_IT', 0);
+ATTRPUTS(환율_KO, 'Exchange Rate', Exchange_Rate, '환율_KO', 0);
+ATTRPUTS(Valutakurs_NO, 'Exchange Rate', Exchange_Rate, 'Valutakurs_NO', 0);
+ATTRPUTS(Kurs_wymiany_PL, 'Exchange Rate', Exchange_Rate, 'Kurs wymiany_PL', 0);
+ATTRPUTS(Taxa_de_Câmbio_PT, 'Exchange Rate', Exchange_Rate, 'Taxa de Câmbio_PT', 0);
+ATTRPUTS(Rată_de_schimb_RO, 'Exchange Rate', Exchange_Rate, 'Rată de schimb_RO', 0);
+ATTRPUTS(Обменный_курс_RU, 'Exchange Rate', Exchange_Rate, 'Обменный курс_RU', 0);
+ATTRPUTS(汇率_SC, 'Exchange Rate', Exchange_Rate, '汇率_SC', 0);
+ATTRPUTS(Växelkurs_SV, 'Exchange Rate', Exchange_Rate, 'Växelkurs_SV', 0);
+ATTRPUTS(匯率_TC, 'Exchange Rate', Exchange_Rate, '匯率_TC', 0);
+ATTRPUTS(Döviz_Kuru_TR, 'Exchange Rate', Exchange_Rate, 'Döviz Kuru_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Exchange Rate') = 1);
+   CellPutS('Exchange Rate', '}HierarchyProperties', 'Exchange Rate', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Exchange Rate" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Exchange Rate');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

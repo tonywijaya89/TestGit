@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Currency Info",
+	"Elements":
+	[
+		{
+			"Name":"Currency",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Currency Info.subsets/All Members.json",
+		"Currency Info.subsets/Información de moneda_ES.json",
+		"Currency Info.subsets/Informations relatives à la devise_FR.json",
+		"Currency Info.subsets/Währungsinformationen_DE.json",
+		"Currency Info.subsets/货币信息_SC.json",
+		"Currency Info.subsets/通貨情報_JA.json"
+	]
+}

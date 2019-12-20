@@ -1,0 +1,94 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Countries_Currency');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Countries_Currency'));
+      DimensionCreate('Countries_Currency');
+      AttrInsert('Countries_Currency', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Countries_Currency', 'DIMENSION_TYPE');
+      AttrInsert('Countries_Currency', '', 'Format', 'S');
+      AttrInsert('Countries_Currency', '', 'Picklist', 'S');
+      AttrInsert('Countries_Currency', '', 'calculation', 'S');
+      AttrInsert('Countries_Currency', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Countries_Currency].MEMBERS', 'Countries_Currency');
+      SubsetAliasSet('Countries_Currency', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Countries_Currency', '', 'Země_Měna_CS', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Lande_Valuta_DA', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Länder_Währung_DE', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Países_Moneda_ES', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Maat_Valuutta_FI', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Pays_Devise_FR', 'A');
+   ATTRINSERT('Countries_Currency', '', '国_通貨_JA', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Države_Valuta_HR', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Országok_Pénznem_HU', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Paesi_Valuta_IT', 'A');
+   ATTRINSERT('Countries_Currency', '', '국가_통화_KO', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Land_Valuta_NO', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Kraje_Waluta_PL', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Países_Moeda_PT', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Ţări_Monedă_RO', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Страны_Валюта_RU', 'A');
+   ATTRINSERT('Countries_Currency', '', '国家或地区_货币_SC', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Länder_Valuta_SV', 'A');
+   ATTRINSERT('Countries_Currency', '', '國家/地區_貨幣_TC', 'A');
+   ATTRINSERT('Countries_Currency', '', 'Ülkeler_Para Birimi_TR', 'A');
+endif;
+CellPutS('Countries_Currency', '}DimensionAttributes', 'Countries_Currency', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Countries_Currency', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Countries_Currency', '', Countries_Currency, 'n');
+ATTRPUTS(Země_Měna_CS, 'Countries_Currency', Countries_Currency, 'Země_Měna_CS', 0);
+ATTRPUTS(Lande_Valuta_DA, 'Countries_Currency', Countries_Currency, 'Lande_Valuta_DA', 0);
+ATTRPUTS(Länder_Währung_DE, 'Countries_Currency', Countries_Currency, 'Länder_Währung_DE', 0);
+ATTRPUTS(Países_Moneda_ES, 'Countries_Currency', Countries_Currency, 'Países_Moneda_ES', 0);
+ATTRPUTS(Maat_Valuutta_FI, 'Countries_Currency', Countries_Currency, 'Maat_Valuutta_FI', 0);
+ATTRPUTS(Pays_Devise_FR, 'Countries_Currency', Countries_Currency, 'Pays_Devise_FR', 0);
+ATTRPUTS(国_通貨_JA, 'Countries_Currency', Countries_Currency, '国_通貨_JA', 0);
+ATTRPUTS(Države_Valuta_HR, 'Countries_Currency', Countries_Currency, 'Države_Valuta_HR', 0);
+ATTRPUTS(Országok_Pénznem_HU, 'Countries_Currency', Countries_Currency, 'Országok_Pénznem_HU', 0);
+ATTRPUTS(Paesi_Valuta_IT, 'Countries_Currency', Countries_Currency, 'Paesi_Valuta_IT', 0);
+ATTRPUTS(국가_통화_KO, 'Countries_Currency', Countries_Currency, '국가_통화_KO', 0);
+ATTRPUTS(Land_Valuta_NO, 'Countries_Currency', Countries_Currency, 'Land_Valuta_NO', 0);
+ATTRPUTS(Kraje_Waluta_PL, 'Countries_Currency', Countries_Currency, 'Kraje_Waluta_PL', 0);
+ATTRPUTS(Países_Moeda_PT, 'Countries_Currency', Countries_Currency, 'Países_Moeda_PT', 0);
+ATTRPUTS(Ţări_Monedă_RO, 'Countries_Currency', Countries_Currency, 'Ţări_Monedă_RO', 0);
+ATTRPUTS(Страны_Валюта_RU, 'Countries_Currency', Countries_Currency, 'Страны_Валюта_RU', 0);
+ATTRPUTS(国家或地区_货币_SC, 'Countries_Currency', Countries_Currency, '国家或地区_货币_SC', 0);
+ATTRPUTS(Länder_Valuta_SV, 'Countries_Currency', Countries_Currency, 'Länder_Valuta_SV', 0);
+ATTRPUTS(國家_地區_貨幣_TC, 'Countries_Currency', Countries_Currency, '國家/地區_貨幣_TC', 0);
+ATTRPUTS(Ülkeler_Para_Birimi_TR, 'Countries_Currency', Countries_Currency, 'Ülkeler_Para Birimi_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Countries_Currency') = 1);
+   CellPutS('Countries_Currency', '}HierarchyProperties', 'Countries_Currency', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Countries_Currency" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Countries_Currency');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

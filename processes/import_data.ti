@@ -1,0 +1,94 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('DATA');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('DATA'));
+      DimensionCreate('DATA');
+      AttrInsert('DATA', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'DATA', 'DIMENSION_TYPE');
+      AttrInsert('DATA', '', 'Format', 'S');
+      AttrInsert('DATA', '', 'Picklist', 'S');
+      AttrInsert('DATA', '', 'calculation', 'S');
+      AttrInsert('DATA', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[DATA].MEMBERS', 'DATA');
+      SubsetAliasSet('DATA', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('DATA', '', 'DATA_CS', 'A');
+   ATTRINSERT('DATA', '', 'DATA_DA', 'A');
+   ATTRINSERT('DATA', '', 'DATEN_DE', 'A');
+   ATTRINSERT('DATA', '', 'DATOS_ES', 'A');
+   ATTRINSERT('DATA', '', 'TIEDOT_FI', 'A');
+   ATTRINSERT('DATA', '', 'DONNEES_FR', 'A');
+   ATTRINSERT('DATA', '', 'DATA_JA', 'A');
+   ATTRINSERT('DATA', '', 'PODACI_HR', 'A');
+   ATTRINSERT('DATA', '', 'ADATOK_HU', 'A');
+   ATTRINSERT('DATA', '', 'DATI_IT', 'A');
+   ATTRINSERT('DATA', '', '데이터_KO', 'A');
+   ATTRINSERT('DATA', '', 'DATA_NO', 'A');
+   ATTRINSERT('DATA', '', 'DANE_PL', 'A');
+   ATTRINSERT('DATA', '', 'DADOS_PT', 'A');
+   ATTRINSERT('DATA', '', 'DATE_RO', 'A');
+   ATTRINSERT('DATA', '', 'ДАННЫЕ_RU', 'A');
+   ATTRINSERT('DATA', '', '数据_SC', 'A');
+   ATTRINSERT('DATA', '', 'DATA_SV', 'A');
+   ATTRINSERT('DATA', '', '資料_TC', 'A');
+   ATTRINSERT('DATA', '', 'VERİ_TR', 'A');
+endif;
+CellPutS('DATA', '}DimensionAttributes', 'DATA', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('DATA', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('DATA', '', DATA, 'n');
+ATTRPUTS(DATA_CS, 'DATA', DATA, 'DATA_CS', 0);
+ATTRPUTS(DATA_DA, 'DATA', DATA, 'DATA_DA', 0);
+ATTRPUTS(DATEN_DE, 'DATA', DATA, 'DATEN_DE', 0);
+ATTRPUTS(DATOS_ES, 'DATA', DATA, 'DATOS_ES', 0);
+ATTRPUTS(TIEDOT_FI, 'DATA', DATA, 'TIEDOT_FI', 0);
+ATTRPUTS(DONNEES_FR, 'DATA', DATA, 'DONNEES_FR', 0);
+ATTRPUTS(DATA_JA, 'DATA', DATA, 'DATA_JA', 0);
+ATTRPUTS(PODACI_HR, 'DATA', DATA, 'PODACI_HR', 0);
+ATTRPUTS(ADATOK_HU, 'DATA', DATA, 'ADATOK_HU', 0);
+ATTRPUTS(DATI_IT, 'DATA', DATA, 'DATI_IT', 0);
+ATTRPUTS(데이터_KO, 'DATA', DATA, '데이터_KO', 0);
+ATTRPUTS(DATA_NO, 'DATA', DATA, 'DATA_NO', 0);
+ATTRPUTS(DANE_PL, 'DATA', DATA, 'DANE_PL', 0);
+ATTRPUTS(DADOS_PT, 'DATA', DATA, 'DADOS_PT', 0);
+ATTRPUTS(DATE_RO, 'DATA', DATA, 'DATE_RO', 0);
+ATTRPUTS(ДАННЫЕ_RU, 'DATA', DATA, 'ДАННЫЕ_RU', 0);
+ATTRPUTS(数据_SC, 'DATA', DATA, '数据_SC', 0);
+ATTRPUTS(DATA_SV, 'DATA', DATA, 'DATA_SV', 0);
+ATTRPUTS(資料_TC, 'DATA', DATA, '資料_TC', 0);
+ATTRPUTS(VERİ_TR, 'DATA', DATA, 'VERİ_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('DATA') = 1);
+   CellPutS('DATA', '}HierarchyProperties', 'DATA', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "DATA" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('DATA');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

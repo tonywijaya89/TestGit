@@ -1,0 +1,63 @@
+{
+	"@type":"Process",
+	"Name":"import_Products",
+	"Code@Code.link":"import_Products.ti",
+	"DataSource":
+	{
+		"Type":"ASCII",
+		"asciiDecimalSeparator":".",
+		"asciiDelimiterChar":",",
+		"asciiDelimiterType":"Character",
+		"asciiHeaderRecords":1,
+		"asciiQuoteCharacter":"\"",
+		"asciiThousandSeparator":",",
+		"dataSourceNameForClient":"C:\\Program Files\\IBM\\cognos\\tm1_64\\samples\\tm1\\GO_New_Stores\\sourcefiles\\common\\product_price_and_cost.csv",
+		"dataSourceNameForServer":"../sourcefiles/common/product_price_and_cost.csv"
+	},
+	"Parameters":
+	[
+		{
+			"Name":"param_destroy",
+			"Prompt":"Destroy cube and dimensions",
+			"Value":0,
+			"Type":"Numeric"
+		},
+		{
+			"Name":"param_createIfNotExist",
+			"Prompt":"Create cube and dimensions if they do not exist",
+			"Value":1,
+			"Type":"Numeric"
+		}
+	],
+	"Variables":
+	[
+		{
+			"Name":"Product",
+			"Type":"String",
+			"Position":1,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"Version",
+			"Type":"String",
+			"Position":2,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"Unit_cost",
+			"Type":"Numeric",
+			"Position":3,
+			"StartByte":0,
+			"EndByte":0
+		},
+		{
+			"Name":"Unit_sale_price",
+			"Type":"Numeric",
+			"Position":4,
+			"StartByte":0,
+			"EndByte":0
+		}
+	]
+}

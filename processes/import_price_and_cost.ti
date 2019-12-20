@@ -1,0 +1,94 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Price and Cost');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Price and Cost'));
+      DimensionCreate('Price and Cost');
+      AttrInsert('Price and Cost', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Price and Cost', 'DIMENSION_TYPE');
+      AttrInsert('Price and Cost', '', 'Format', 'S');
+      AttrInsert('Price and Cost', '', 'Picklist', 'S');
+      AttrInsert('Price and Cost', '', 'calculation', 'S');
+      AttrInsert('Price and Cost', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Price and Cost].MEMBERS', 'Price and Cost');
+      SubsetAliasSet('Price and Cost', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Price and Cost', '', 'Cena a náklady_CS', 'A');
+   ATTRINSERT('Price and Cost', '', 'Pris og omkostning_DA', 'A');
+   ATTRINSERT('Price and Cost', '', 'Preise und Kosten_DE', 'A');
+   ATTRINSERT('Price and Cost', '', 'Precio y coste_ES', 'A');
+   ATTRINSERT('Price and Cost', '', 'Hinta ja kustannukset_FI', 'A');
+   ATTRINSERT('Price and Cost', '', 'Prix et coûts_FR', 'A');
+   ATTRINSERT('Price and Cost', '', '価格と原価_JA', 'A');
+   ATTRINSERT('Price and Cost', '', 'Cijena i trošak_HR', 'A');
+   ATTRINSERT('Price and Cost', '', 'Ár és költség_HU', 'A');
+   ATTRINSERT('Price and Cost', '', 'Prezzo e costo_IT', 'A');
+   ATTRINSERT('Price and Cost', '', '가격 및 비용_KO', 'A');
+   ATTRINSERT('Price and Cost', '', 'Pris og kostnad_NO', 'A');
+   ATTRINSERT('Price and Cost', '', 'Cena i koszt_PL', 'A');
+   ATTRINSERT('Price and Cost', '', 'Preço e Custo_PT', 'A');
+   ATTRINSERT('Price and Cost', '', 'Preţ şi cost_RO', 'A');
+   ATTRINSERT('Price and Cost', '', 'Цена и стоимость_RU', 'A');
+   ATTRINSERT('Price and Cost', '', '价格和成本_SC', 'A');
+   ATTRINSERT('Price and Cost', '', 'Pris och kostnad_SV', 'A');
+   ATTRINSERT('Price and Cost', '', '價格與成本_TC', 'A');
+   ATTRINSERT('Price and Cost', '', 'Fiyat ve Maliyet_TR', 'A');
+endif;
+CellPutS('Price and Cost', '}DimensionAttributes', 'Price and Cost', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Price and Cost', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Price and Cost', '', Price_and_Cost, 'n');
+ATTRPUTS(Cena_a_náklady_CS, 'Price and Cost', Price_and_Cost, 'Cena a náklady_CS', 0);
+ATTRPUTS(Pris_og_omkostning_DA, 'Price and Cost', Price_and_Cost, 'Pris og omkostning_DA', 0);
+ATTRPUTS(Preise_und_Kosten_DE, 'Price and Cost', Price_and_Cost, 'Preise und Kosten_DE', 0);
+ATTRPUTS(Precio_y_coste_ES, 'Price and Cost', Price_and_Cost, 'Precio y coste_ES', 0);
+ATTRPUTS(Hinta_ja_kustannukset_FI, 'Price and Cost', Price_and_Cost, 'Hinta ja kustannukset_FI', 0);
+ATTRPUTS(Prix_et_coûts_FR, 'Price and Cost', Price_and_Cost, 'Prix et coûts_FR', 0);
+ATTRPUTS(価格と原価_JA, 'Price and Cost', Price_and_Cost, '価格と原価_JA', 0);
+ATTRPUTS(Cijena_i_trošak_HR, 'Price and Cost', Price_and_Cost, 'Cijena i trošak_HR', 0);
+ATTRPUTS(Ár_és_költség_HU, 'Price and Cost', Price_and_Cost, 'Ár és költség_HU', 0);
+ATTRPUTS(Prezzo_e_costo_IT, 'Price and Cost', Price_and_Cost, 'Prezzo e costo_IT', 0);
+ATTRPUTS(가격_및_비용_KO, 'Price and Cost', Price_and_Cost, '가격 및 비용_KO', 0);
+ATTRPUTS(Pris_og_kostnad_NO, 'Price and Cost', Price_and_Cost, 'Pris og kostnad_NO', 0);
+ATTRPUTS(Cena_i_koszt_PL, 'Price and Cost', Price_and_Cost, 'Cena i koszt_PL', 0);
+ATTRPUTS(Preço_e_Custo_PT, 'Price and Cost', Price_and_Cost, 'Preço e Custo_PT', 0);
+ATTRPUTS(Preţ_şi_cost_RO, 'Price and Cost', Price_and_Cost, 'Preţ şi cost_RO', 0);
+ATTRPUTS(Цена_и_стоимость_RU, 'Price and Cost', Price_and_Cost, 'Цена и стоимость_RU', 0);
+ATTRPUTS(价格和成本_SC, 'Price and Cost', Price_and_Cost, '价格和成本_SC', 0);
+ATTRPUTS(Pris_och_kostnad_SV, 'Price and Cost', Price_and_Cost, 'Pris och kostnad_SV', 0);
+ATTRPUTS(價格與成本_TC, 'Price and Cost', Price_and_Cost, '價格與成本_TC', 0);
+ATTRPUTS(Fiyat_ve_Maliyet_TR, 'Price and Cost', Price_and_Cost, 'Fiyat ve Maliyet_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Price and Cost') = 1);
+   CellPutS('Price and Cost', '}HierarchyProperties', 'Price and Cost', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Price and Cost" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Price and Cost');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

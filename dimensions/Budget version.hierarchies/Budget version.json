@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Budget version",
+	"Elements":
+	[
+		{
+			"Name":"Budget version 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget version 2",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Budget version.subsets/All Members.json",
+		"Budget version.subsets/Budgetplan Version_DE.json",
+		"Budget version.subsets/Presupuesto versión_ES.json",
+		"Budget version.subsets/Version du budget_FR.json",
+		"Budget version.subsets/予算案_JA.json",
+		"Budget version.subsets/预算版本_SC.json"
+	]
+}

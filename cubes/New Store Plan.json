@@ -1,0 +1,30 @@
+{
+	"@type":"Cube",
+	"Name":"New Store Plan",
+	"Rules@Code.link":"New Store Plan.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Country and Region')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')"
+		},
+		{
+			"@id":"Dimensions('Budget version')"
+		},
+		{
+			"@id":"Dimensions('New Stores')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"New Store Plan.views/All.json",
+		"New Store Plan.views/Neues Geschäft - Plan_DE.json",
+		"New Store Plan.views/New Store Plan.json",
+		"New Store Plan.views/Nouveau plan de magasin_FR.json",
+		"New Store Plan.views/Nuevo plan de tienda_ES.json",
+		"New Store Plan.views/新商店计划_SC.json",
+		"New Store Plan.views/新規店計画_JA.json"
+	]
+}

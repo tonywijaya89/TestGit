@@ -1,0 +1,38 @@
+{
+	"@type":"NativeView",
+	"Name":"Tipo de cambio_ES",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('Meses_ES')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Subsets('Moneda local_ES')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Subsets('Tipo de cambio_ES')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Elements('Exchange Rate')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

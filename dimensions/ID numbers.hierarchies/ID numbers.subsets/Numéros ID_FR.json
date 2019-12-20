@@ -1,0 +1,37 @@
+{
+	"@type":"Subset",
+	"Name":"Numéros ID_FR",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('1')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('2')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('3')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('4')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('5')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('6')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('7')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('8')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('9')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Elements('10')"
+		}
+	]
+}

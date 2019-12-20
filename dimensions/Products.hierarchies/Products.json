@@ -1,0 +1,275 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Products",
+	"Elements":
+	[
+		{
+			"Name":"TOTAL PRODUCTS",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Camping Equipment",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cooking Gear",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Lanterns",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Packs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sleeping Bags",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tents",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Golf Equipment",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Golf Accessories",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Irons",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Putters",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Woods",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mountaineering Equipment",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Climbing Accessories",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rope",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Safety",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tools",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Outdoor Protection",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"First Aid",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Insect Repellents",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sunscreen",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Personal Accessories",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Binoculars",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Eyewear",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Knives",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Navigation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Watches",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"NewItem",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"myitem2",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"TOTAL PRODUCTS",
+			"ComponentName":"Camping Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"TOTAL PRODUCTS",
+			"ComponentName":"Golf Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"TOTAL PRODUCTS",
+			"ComponentName":"Mountaineering Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"TOTAL PRODUCTS",
+			"ComponentName":"Outdoor Protection",
+			"Weight":1
+		},
+		{
+			"ParentName":"TOTAL PRODUCTS",
+			"ComponentName":"Personal Accessories",
+			"Weight":1
+		},
+		{
+			"ParentName":"Camping Equipment",
+			"ComponentName":"Cooking Gear",
+			"Weight":1
+		},
+		{
+			"ParentName":"Camping Equipment",
+			"ComponentName":"Lanterns",
+			"Weight":1
+		},
+		{
+			"ParentName":"Camping Equipment",
+			"ComponentName":"Packs",
+			"Weight":1
+		},
+		{
+			"ParentName":"Camping Equipment",
+			"ComponentName":"Sleeping Bags",
+			"Weight":1
+		},
+		{
+			"ParentName":"Camping Equipment",
+			"ComponentName":"Tents",
+			"Weight":1
+		},
+		{
+			"ParentName":"Golf Equipment",
+			"ComponentName":"Golf Accessories",
+			"Weight":1
+		},
+		{
+			"ParentName":"Golf Equipment",
+			"ComponentName":"Irons",
+			"Weight":1
+		},
+		{
+			"ParentName":"Golf Equipment",
+			"ComponentName":"Putters",
+			"Weight":1
+		},
+		{
+			"ParentName":"Golf Equipment",
+			"ComponentName":"Woods",
+			"Weight":1
+		},
+		{
+			"ParentName":"Mountaineering Equipment",
+			"ComponentName":"Climbing Accessories",
+			"Weight":1
+		},
+		{
+			"ParentName":"Mountaineering Equipment",
+			"ComponentName":"Rope",
+			"Weight":1
+		},
+		{
+			"ParentName":"Mountaineering Equipment",
+			"ComponentName":"Safety",
+			"Weight":1
+		},
+		{
+			"ParentName":"Mountaineering Equipment",
+			"ComponentName":"Tools",
+			"Weight":1
+		},
+		{
+			"ParentName":"Outdoor Protection",
+			"ComponentName":"First Aid",
+			"Weight":1
+		},
+		{
+			"ParentName":"Outdoor Protection",
+			"ComponentName":"Insect Repellents",
+			"Weight":1
+		},
+		{
+			"ParentName":"Outdoor Protection",
+			"ComponentName":"Sunscreen",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"Binoculars",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"Eyewear",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"Knives",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"Navigation",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"Watches",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"NewItem",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"myitem2",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Products.subsets/All Members.json",
+		"Products.subsets/Productos_ES.json",
+		"Products.subsets/Produits_FR.json",
+		"Products.subsets/Produkte_DE.json",
+		"Products.subsets/产品_SC.json",
+		"Products.subsets/製品_JA.json"
+	]
+}

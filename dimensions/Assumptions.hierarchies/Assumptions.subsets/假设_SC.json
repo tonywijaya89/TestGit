@@ -1,0 +1,19 @@
+{
+	"@type":"Subset",
+	"Name":"假设_SC",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Average Monthly Revenue')"
+		},
+		{
+			"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Opening Cost P&L')"
+		},
+		{
+			"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Opening Cost Capital')"
+		},
+		{
+			"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('GROSS MARGIN %')"
+		}
+	]
+}

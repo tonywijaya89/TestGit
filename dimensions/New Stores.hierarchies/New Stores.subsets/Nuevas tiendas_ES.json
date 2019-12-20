@@ -1,0 +1,61 @@
+{
+	"@type":"Subset",
+	"Name":"Nuevas tiendas_ES",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Retailer Type')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Franchise/Corporate')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Asset Type')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Size')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Month of Opening')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Months Remaining this year')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Number of New Stores')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Average Monthly Revenue')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Sum of Average Monthly Revenue')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Remaining Revenue this year')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Amount of Revenue increase this year')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('GROSS MARGIN %')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Average Monthly Gross Profit')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Total opening Costs per store')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Opening Cost P&L per store')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Opening Costs Capital per store')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Total Opening Costs P&L')"
+		},
+		{
+			"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Elements('Payback period (months)')"
+		}
+	]
+}

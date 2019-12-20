@@ -1,0 +1,86 @@
+{
+	"@type":"NativeView",
+	"Name":"Store Cost",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Size')/Hierarchies('Store Size')/Subsets('All Members')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('Retailers All')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Franchise Store')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Average Monthly Revenue')"
+					},
+					{
+						"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Opening Cost P&L')"
+					},
+					{
+						"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Opening Cost Capital')"
+					},
+					{
+						"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('GROSS MARGIN %')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Average Monthly Revenue')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Elements('DATA')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

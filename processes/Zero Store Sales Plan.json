@@ -1,0 +1,11 @@
+{
+	"@type":"Process",
+	"Name":"Zero Store Sales Plan",
+	"Code@Code.link":"Zero Store Sales Plan.ti",
+	"DataSource":
+	{
+		"Type":"None"
+	},
+	"Parameters":[],
+	"Variables":[]
+}

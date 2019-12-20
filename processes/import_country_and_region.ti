@@ -1,0 +1,94 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Country and Region');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Country and Region'));
+      DimensionCreate('Country and Region');
+      AttrInsert('Country and Region', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Country and Region', 'DIMENSION_TYPE');
+      AttrInsert('Country and Region', '', 'Format', 'S');
+      AttrInsert('Country and Region', '', 'Picklist', 'S');
+      AttrInsert('Country and Region', '', 'calculation', 'S');
+      AttrInsert('Country and Region', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Country and Region].MEMBERS', 'Country and Region');
+      SubsetAliasSet('Country and Region', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Country and Region', '', 'Země a region_CS', 'A');
+   ATTRINSERT('Country and Region', '', 'Land og region_DA', 'A');
+   ATTRINSERT('Country and Region', '', 'Land und Region_DE', 'A');
+   ATTRINSERT('Country and Region', '', 'País y región_ES', 'A');
+   ATTRINSERT('Country and Region', '', 'Maa ja alue_FI', 'A');
+   ATTRINSERT('Country and Region', '', 'Pays et région_FR', 'A');
+   ATTRINSERT('Country and Region', '', '国および地域_JA', 'A');
+   ATTRINSERT('Country and Region', '', 'Država i regija_HR', 'A');
+   ATTRINSERT('Country and Region', '', 'Ország és régió_HU', 'A');
+   ATTRINSERT('Country and Region', '', 'Paese e regione_IT', 'A');
+   ATTRINSERT('Country and Region', '', '국가 및 지역_KO', 'A');
+   ATTRINSERT('Country and Region', '', 'Land og region_NO', 'A');
+   ATTRINSERT('Country and Region', '', 'Kraj i region_PL', 'A');
+   ATTRINSERT('Country and Region', '', 'País e Região_PT', 'A');
+   ATTRINSERT('Country and Region', '', 'Ţară şi regiune_RO', 'A');
+   ATTRINSERT('Country and Region', '', 'Страна и регион_RU', 'A');
+   ATTRINSERT('Country and Region', '', '国家和地区_SC', 'A');
+   ATTRINSERT('Country and Region', '', 'Land och region_SV', 'A');
+   ATTRINSERT('Country and Region', '', '國家及地區_TC', 'A');
+   ATTRINSERT('Country and Region', '', 'Ülke ve Bölge_TR', 'A');
+endif;
+CellPutS('Country and Region', '}DimensionAttributes', 'Country and Region', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Country and Region', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Country and Region', '', Country_and_Region, 'n');
+ATTRPUTS(Země_a_region_CS, 'Country and Region', Country_and_Region, 'Země a region_CS', 0);
+ATTRPUTS(Land_og_region_DA, 'Country and Region', Country_and_Region, 'Land og region_DA', 0);
+ATTRPUTS(Land_und_Region_DE, 'Country and Region', Country_and_Region, 'Land und Region_DE', 0);
+ATTRPUTS(País_y_región_ES, 'Country and Region', Country_and_Region, 'País y región_ES', 0);
+ATTRPUTS(Maa_ja_alue_FI, 'Country and Region', Country_and_Region, 'Maa ja alue_FI', 0);
+ATTRPUTS(Pays_et_région_FR, 'Country and Region', Country_and_Region, 'Pays et région_FR', 0);
+ATTRPUTS(国および地域_JA, 'Country and Region', Country_and_Region, '国および地域_JA', 0);
+ATTRPUTS(Država_i_regija_HR, 'Country and Region', Country_and_Region, 'Država i regija_HR', 0);
+ATTRPUTS(Ország_és_régió_HU, 'Country and Region', Country_and_Region, 'Ország és régió_HU', 0);
+ATTRPUTS(Paese_e_regione_IT, 'Country and Region', Country_and_Region, 'Paese e regione_IT', 0);
+ATTRPUTS(국가_및_지역_KO, 'Country and Region', Country_and_Region, '국가 및 지역_KO', 0);
+ATTRPUTS(Land_og_region_NO, 'Country and Region', Country_and_Region, 'Land og region_NO', 0);
+ATTRPUTS(Kraj_i_region_PL, 'Country and Region', Country_and_Region, 'Kraj i region_PL', 0);
+ATTRPUTS(País_e_Região_PT, 'Country and Region', Country_and_Region, 'País e Região_PT', 0);
+ATTRPUTS(Ţară_şi_regiune_RO, 'Country and Region', Country_and_Region, 'Ţară şi regiune_RO', 0);
+ATTRPUTS(Страна_и_регион_RU, 'Country and Region', Country_and_Region, 'Страна и регион_RU', 0);
+ATTRPUTS(国家和地区_SC, 'Country and Region', Country_and_Region, '国家和地区_SC', 0);
+ATTRPUTS(Land_och_region_SV, 'Country and Region', Country_and_Region, 'Land och region_SV', 0);
+ATTRPUTS(國家及地區_TC, 'Country and Region', Country_and_Region, '國家及地區_TC', 0);
+ATTRPUTS(Ülke_ve_Bölge_TR, 'Country and Region', Country_and_Region, 'Ülke ve Bölge_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Country and Region') = 1);
+   CellPutS('Country and Region', '}HierarchyProperties', 'Country and Region', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Country and Region" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Country and Region');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

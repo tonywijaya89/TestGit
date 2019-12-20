@@ -1,0 +1,186 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   CubeDestroy('promotionsplan');
+   DimensionDestroy('Country and Region');
+   DimensionDestroy('Budget version');
+   DimensionDestroy('ID numbers');
+   DimensionDestroy('Promotions');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Country and Region'));
+      DimensionCreate('Country and Region');
+      AttrInsert('Country and Region', '', 'Caption_Default', 'A');
+      CellPutS('HIERARCHY', '}DimensionAttributes', 'Country and Region', 'DIMENSION_TYPE');
+      SubsetCreateByMDX('All Members', '[Country and Region].MEMBERS', 'Country and Region');
+      SubsetAliasSet('Country and Region', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = DimensionExists('Budget version'));
+      DimensionCreate('Budget version');
+      AttrInsert('Budget version', '', 'Caption_Default', 'A');
+      CellPutS('VERSIONS', '}DimensionAttributes', 'Budget version', 'DIMENSION_TYPE');
+      AttrInsert('Budget version', '', 'Format', 'S');
+      AttrInsert('Budget version', '', 'permittedcalculations_n_and_c', 'S');
+      SubsetCreateByMDX('All Members', '[Budget version].MEMBERS', 'Budget version');
+      SubsetAliasSet('Budget version', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = DimensionExists('ID numbers'));
+      DimensionCreate('ID numbers');
+      AttrInsert('ID numbers', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'ID numbers', 'DIMENSION_TYPE');
+      AttrInsert('ID numbers', '', 'Format', 'S');
+      AttrInsert('ID numbers', '', 'Picklist', 'S');
+      AttrInsert('ID numbers', '', 'calculation', 'S');
+      AttrInsert('ID numbers', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[ID numbers].MEMBERS', 'ID numbers');
+      SubsetAliasSet('ID numbers', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = DimensionExists('Promotions'));
+      DimensionCreate('Promotions');
+      AttrInsert('Promotions', '', 'Caption_Default', 'A');
+      CellPutS('CALCULATION', '}DimensionAttributes', 'Promotions', 'DIMENSION_TYPE');
+      AttrInsert('Promotions', '', 'Format', 'S');
+      AttrInsert('Promotions', '', 'Picklist', 'S');
+      AttrInsert('Promotions', '', 'signswitch', 'N');
+      AttrInsert('Promotions', '', 'calculation', 'S');
+      AttrInsert('Promotions', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Promotions].MEMBERS', 'Promotions');
+      SubsetAliasSet('Promotions', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = CubeExists('promotionsplan'));
+      CubeCreate('promotionsplan', 'Country and Region', 'ID numbers', 'Budget version', 'Promotions');
+      CubeSetLogChanges('promotionsplan', 1);
+      CellPutS('Promotions Plan', '}CubeAttributes', 'promotionsplan', 'Caption_Default');
+      if (0 = ViewExists('promotionsplan', 'All'));
+         ViewCreate('promotionsplan', 'All');
+         ViewRowDimensionSet('promotionsplan', 'All', 'Country and Region', 1);
+         if (1 = SubsetExists('Country and Region', 'All Members'));
+            ViewSubsetAssign('promotionsplan', 'All', 'Country and Region', 'All Members');
+         endif;
+         ViewColumnDimensionSet('promotionsplan', 'All', 'ID numbers', 1);
+         if (1 = SubsetExists('ID numbers', 'All Members'));
+            ViewSubsetAssign('promotionsplan', 'All', 'ID numbers', 'All Members');
+         endif;
+         ViewTitleDimensionSet('promotionsplan', 'All', 'Budget version');
+         if (1 = SubsetExists('Budget version', 'All Members'));
+            ViewSubsetAssign('promotionsplan', 'All', 'Budget version', 'All Members');
+         endif;
+         ViewTitleElementSet('promotionsplan', 'All', 'Budget version', 0);
+         ViewTitleDimensionSet('promotionsplan', 'All', 'Promotions');
+         if (1 = SubsetExists('Promotions', 'All Members'));
+            ViewSubsetAssign('promotionsplan', 'All', 'Promotions', 'All Members');
+         endif;
+         ViewTitleElementSet('promotionsplan', 'All', 'Promotions', 0);
+      endif;
+      if (0 = ViewExists('promotionsplan', 'promotionsplan'));
+         ViewCreate('promotionsplan', 'promotionsplan');
+         ViewRowDimensionSet('promotionsplan', 'promotionsplan', 'Country and Region', 1);
+         if (1 = SubsetExists('Country and Region', 'All Members'));
+            ViewSubsetAssign('promotionsplan', 'promotionsplan', 'Country and Region', 'All Members');
+         endif;
+         ViewColumnDimensionSet('promotionsplan', 'promotionsplan', 'Promotions', 1);
+         if (1 = SubsetExists('Promotions', 'All Members'));
+            ViewSubsetAssign('promotionsplan', 'promotionsplan', 'Promotions', 'All Members');
+         endif;
+         ViewTitleDimensionSet('promotionsplan', 'promotionsplan', 'ID numbers');
+         if (1 = SubsetExists('ID numbers', 'All Members'));
+            ViewSubsetAssign('promotionsplan', 'promotionsplan', 'ID numbers', 'All Members');
+         endif;
+         ViewTitleElementSet('promotionsplan', 'promotionsplan', 'ID numbers', 0);
+         ViewTitleDimensionSet('promotionsplan', 'promotionsplan', 'Budget version');
+         if (1 = SubsetExists('Budget version', 'All Members'));
+            ViewSubsetAssign('promotionsplan', 'promotionsplan', 'Budget version', 'All Members');
+         endif;
+         ViewTitleElementSet('promotionsplan', 'promotionsplan', 'Budget version', 0);
+      endif;
+      CellPutS('Promotions', '}CubeProperties', 'promotionsplan', 'MEASURES_DIMENSION');
+   endif;
+endif;
+CellPutS('Country and Region', '}DimensionAttributes', 'Country and Region', 'Caption_Default');
+CellPutS('Budget version', '}DimensionAttributes', 'Budget version', 'Caption_Default');
+CellPutS('ID numbers', '}DimensionAttributes', 'ID numbers', 'Caption_Default');
+CellPutS('Promotions', '}DimensionAttributes', 'Promotions', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+if (DIMIX('Promotions', 'Retailer Type') = 0);
+   DimensionElementInsertDirect('Promotions', '', 'Retailer Type', 's');
+endif;
+if (DIMIX('Promotions', 'Franchise/Corporate') = 0);
+   DimensionElementInsertDirect('Promotions', '', 'Franchise/Corporate', 's');
+endif;
+if (DIMIX('Promotions', 'Month of Promotion') = 0);
+   DimensionElementInsertDirect('Promotions', '', 'Month of Promotion', 's');
+endif;
+if (DIMIX('Promotions', 'Sales Increase %') = 0);
+   DimensionElementInsertDirect('Promotions', '', 'Sales Increase %', 'n');
+   AttrPutS('c:#,##0.###', 'Promotions', 'Sales Increase %', 'Format');
+endif;
+if (DIMIX('Promotions', 'Advertising Costs') = 0);
+   DimensionElementInsertDirect('Promotions', '', 'Advertising Costs', 'n');
+   AttrPutS('c:#,##0.###', 'Promotions', 'Advertising Costs', 'Format');
+endif;
+if (DIMIX('Promotions', 'Promotion Costs') = 0);
+   DimensionElementInsertDirect('Promotions', '', 'Promotion Costs', 'n');
+   AttrPutS('c:#,##0.###', 'Promotions', 'Promotion Costs', 'Format');
+endif;
+DimensionSortOrder('Country and Region', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Budget version', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('ID numbers', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Promotions', '', '', 'ByInput', 'Ascending');
+OldCubeLogChanges = CubeGetLogChanges('promotionsplan');
+CubeSetLogChanges('promotionsplan', 0);
+ViewZeroOut('promotionsplan', 'promotionsplan');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Country and Region', '', v_Country_and_Region_0, 'n');
+DimensionElementInsertDirect('Budget version', '', v_Budget_version_1, 'n');
+DimensionElementInsertDirect('ID numbers', '', v_ID_numbers_2, 'n');
+CellPutS(v_Retailer_Type_3, 'promotionsplan', v_Country_and_Region_0, v_ID_numbers_2, v_Budget_version_1, 'Retailer Type');
+CellPutS(v_Store_Type_4, 'promotionsplan', v_Country_and_Region_0, v_ID_numbers_2, v_Budget_version_1, 'Franchise/Corporate');
+CellPutS(v_Month_of_Promotion_5, 'promotionsplan', v_Country_and_Region_0, v_ID_numbers_2, v_Budget_version_1, 'Month of Promotion');
+CellPutN(v_Sales_Increase___6, 'promotionsplan', v_Country_and_Region_0, v_ID_numbers_2, v_Budget_version_1, 'Sales Increase %');
+CellPutN(v_Advertising_Costs_7, 'promotionsplan', v_Country_and_Region_0, v_ID_numbers_2, v_Budget_version_1, 'Advertising Costs');
+CellPutN(v_Promotion_Costs_8, 'promotionsplan', v_Country_and_Region_0, v_ID_numbers_2, v_Budget_version_1, 'Promotion Costs');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Country and Region') = 2);
+   CellPutS('level000', '}HierarchyProperties', 'Country and Region', 'hierarchy0', 'level000');
+   CellPutS('level001', '}HierarchyProperties', 'Country and Region', 'hierarchy0', 'level001');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Country and Region" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Country and Region');
+if (DNLEV('ID numbers') = 1);
+   CellPutS('level000', '}HierarchyProperties', 'ID numbers', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "ID numbers" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('ID numbers');
+if (DNLEV('Budget version') = 1);
+   CellPutS('level000', '}HierarchyProperties', 'Budget version', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Budget version" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Budget version');
+CubeSetLogChanges('promotionsplan', OldCubeLogChanges);
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

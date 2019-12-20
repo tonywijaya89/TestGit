@@ -1,0 +1,58 @@
+{
+	"@type":"Subset",
+	"Name":"Marge des ventes brutes_FR",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Existing Stores Revenue')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('New Store Opening (hide)')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('New Stores revenue')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('GROSS REVENUE')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Population Growth')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Economic Growth')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Effect of  Single Retailer Promotions')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Effect of All Store Promotions')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('ADJUSTED GROSS REVENUE')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('GROSS MARGIN %')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('GROSS MARGIN BEFORE COSTS')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('TOTAL DISCOUNTS AND ALLOWANCES')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Returns and Allowances')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Volume Discount')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Cash Discount')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('Freight')"
+		},
+		{
+			"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Elements('GROSS MARGIN')"
+		}
+	]
+}

@@ -1,0 +1,225 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   CubeDestroy('storecost');
+   DimensionDestroy('Country and Region');
+   DimensionDestroy('Retailers');
+   DimensionDestroy('Store Type');
+   DimensionDestroy('Store Size');
+   DimensionDestroy('Assumptions');
+   DimensionDestroy('DATA');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Country and Region'));
+      DimensionCreate('Country and Region');
+      AttrInsert('Country and Region', '', 'Caption_Default', 'A');
+      CellPutS('HIERARCHY', '}DimensionAttributes', 'Country and Region', 'DIMENSION_TYPE');
+      SubsetCreateByMDX('All Members', '[Country and Region].MEMBERS', 'Country and Region');
+      SubsetAliasSet('Country and Region', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = DimensionExists('Retailers'));
+      DimensionCreate('Retailers');
+      AttrInsert('Retailers', '', 'Caption_Default', 'A');
+      CellPutS('HIERARCHY', '}DimensionAttributes', 'Retailers', 'DIMENSION_TYPE');
+      SubsetCreateByMDX('All Members', '[Retailers].MEMBERS', 'Retailers');
+      SubsetAliasSet('Retailers', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = DimensionExists('Store Type'));
+      DimensionCreate('Store Type');
+      AttrInsert('Store Type', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Store Type', 'DIMENSION_TYPE');
+      AttrInsert('Store Type', '', 'Format', 'S');
+      AttrInsert('Store Type', '', 'Picklist', 'S');
+      AttrInsert('Store Type', '', 'calculation', 'S');
+      AttrInsert('Store Type', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Store Type].MEMBERS', 'Store Type');
+      SubsetAliasSet('Store Type', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = DimensionExists('Store Size'));
+      DimensionCreate('Store Size');
+      AttrInsert('Store Size', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Store Size', 'DIMENSION_TYPE');
+      AttrInsert('Store Size', '', 'Format', 'S');
+      AttrInsert('Store Size', '', 'Picklist', 'S');
+      AttrInsert('Store Size', '', 'calculation', 'S');
+      AttrInsert('Store Size', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Store Size].MEMBERS', 'Store Size');
+      SubsetAliasSet('Store Size', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = DimensionExists('Assumptions'));
+      DimensionCreate('Assumptions');
+      AttrInsert('Assumptions', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Assumptions', 'DIMENSION_TYPE');
+      AttrInsert('Assumptions', '', 'Format', 'S');
+      AttrInsert('Assumptions', '', 'Picklist', 'S');
+      AttrInsert('Assumptions', '', 'calculation', 'S');
+      AttrInsert('Assumptions', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Assumptions].MEMBERS', 'Assumptions');
+      SubsetAliasSet('Assumptions', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = DimensionExists('DATA'));
+      DimensionCreate('DATA');
+      AttrInsert('DATA', '', 'Caption_Default', 'A');
+      CellPutS('CALCULATION', '}DimensionAttributes', 'DATA', 'DIMENSION_TYPE');
+      AttrInsert('DATA', '', 'Format', 'S');
+      AttrInsert('DATA', '', 'Picklist', 'S');
+      AttrInsert('DATA', '', 'signswitch', 'N');
+      AttrInsert('DATA', '', 'calculation', 'S');
+      AttrInsert('DATA', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[DATA].MEMBERS', 'DATA');
+      SubsetAliasSet('DATA', 'All Members', 'Caption_Default');
+   endif;
+   if (0 = CubeExists('storecost'));
+      CubeCreate('storecost', 'Country and Region', 'Retailers', 'Assumptions', 'Store Size', 'Store Type', 'DATA');
+      CubeSetLogChanges('storecost', 1);
+      CellPutS('Store Cost', '}CubeAttributes', 'storecost', 'Caption_Default');
+      if (0 = ViewExists('storecost', 'All'));
+         ViewCreate('storecost', 'All');
+         ViewRowDimensionSet('storecost', 'All', 'Country and Region', 1);
+         if (1 = SubsetExists('Country and Region', 'All Members'));
+            ViewSubsetAssign('storecost', 'All', 'Country and Region', 'All Members');
+         endif;
+         ViewColumnDimensionSet('storecost', 'All', 'Retailers', 1);
+         if (1 = SubsetExists('Retailers', 'All Members'));
+            ViewSubsetAssign('storecost', 'All', 'Retailers', 'All Members');
+         endif;
+         ViewTitleDimensionSet('storecost', 'All', 'Assumptions');
+         if (1 = SubsetExists('Assumptions', 'All Members'));
+            ViewSubsetAssign('storecost', 'All', 'Assumptions', 'All Members');
+         endif;
+         ViewTitleElementSet('storecost', 'All', 'Assumptions', 0);
+         ViewTitleDimensionSet('storecost', 'All', 'Store Size');
+         if (1 = SubsetExists('Store Size', 'All Members'));
+            ViewSubsetAssign('storecost', 'All', 'Store Size', 'All Members');
+         endif;
+         ViewTitleElementSet('storecost', 'All', 'Store Size', 0);
+         ViewTitleDimensionSet('storecost', 'All', 'Store Type');
+         if (1 = SubsetExists('Store Type', 'All Members'));
+            ViewSubsetAssign('storecost', 'All', 'Store Type', 'All Members');
+         endif;
+         ViewTitleElementSet('storecost', 'All', 'Store Type', 0);
+         ViewTitleDimensionSet('storecost', 'All', 'DATA');
+         if (1 = SubsetExists('DATA', 'All Members'));
+            ViewSubsetAssign('storecost', 'All', 'DATA', 'All Members');
+         endif;
+         ViewTitleElementSet('storecost', 'All', 'DATA', 0);
+      endif;
+      if (0 = ViewExists('storecost', 'storecost'));
+         ViewCreate('storecost', 'storecost');
+         ViewRowDimensionSet('storecost', 'storecost', 'Country and Region', 1);
+         if (1 = SubsetExists('Country and Region', 'All Members'));
+            ViewSubsetAssign('storecost', 'storecost', 'Country and Region', 'All Members');
+         endif;
+         ViewColumnDimensionSet('storecost', 'storecost', 'DATA', 1);
+         if (1 = SubsetExists('DATA', 'All Members'));
+            ViewSubsetAssign('storecost', 'storecost', 'DATA', 'All Members');
+         endif;
+         ViewTitleDimensionSet('storecost', 'storecost', 'Retailers');
+         if (1 = SubsetExists('Retailers', 'All Members'));
+            ViewSubsetAssign('storecost', 'storecost', 'Retailers', 'All Members');
+         endif;
+         ViewTitleElementSet('storecost', 'storecost', 'Retailers', 0);
+         ViewTitleDimensionSet('storecost', 'storecost', 'Assumptions');
+         if (1 = SubsetExists('Assumptions', 'All Members'));
+            ViewSubsetAssign('storecost', 'storecost', 'Assumptions', 'All Members');
+         endif;
+         ViewTitleElementSet('storecost', 'storecost', 'Assumptions', 0);
+         ViewTitleDimensionSet('storecost', 'storecost', 'Store Size');
+         if (1 = SubsetExists('Store Size', 'All Members'));
+            ViewSubsetAssign('storecost', 'storecost', 'Store Size', 'All Members');
+         endif;
+         ViewTitleElementSet('storecost', 'storecost', 'Store Size', 0);
+         ViewTitleDimensionSet('storecost', 'storecost', 'Store Type');
+         if (1 = SubsetExists('Store Type', 'All Members'));
+            ViewSubsetAssign('storecost', 'storecost', 'Store Type', 'All Members');
+         endif;
+         ViewTitleElementSet('storecost', 'storecost', 'Store Type', 0);
+      endif;
+      CellPutS('DATA', '}CubeProperties', 'storecost', 'MEASURES_DIMENSION');
+   endif;
+endif;
+CellPutS('Country and Region', '}DimensionAttributes', 'Country and Region', 'Caption_Default');
+CellPutS('Retailers', '}DimensionAttributes', 'Retailers', 'Caption_Default');
+CellPutS('Store Type', '}DimensionAttributes', 'Store Type', 'Caption_Default');
+CellPutS('Store Size', '}DimensionAttributes', 'Store Size', 'Caption_Default');
+CellPutS('Assumptions', '}DimensionAttributes', 'Assumptions', 'Caption_Default');
+CellPutS('DATA', '}DimensionAttributes', 'DATA', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+if (DIMIX('DATA', 'DATA') = 0);
+   DimensionElementInsertDirect('DATA', '', 'DATA', 'n');
+   AttrPutS('c:#,##0.###', 'DATA', 'DATA', 'Format');
+endif;
+DimensionSortOrder('Country and Region', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Retailers', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Store Type', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Store Size', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Assumptions', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('DATA', '', '', 'ByInput', 'Ascending');
+OldCubeLogChanges = CubeGetLogChanges('storecost');
+CubeSetLogChanges('storecost', 0);
+ViewZeroOut('storecost', 'storecost');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Country and Region', '', v_Regions_0, 'n');
+DimensionElementInsertDirect('Retailers', '', v_Retailers_1, 'n');
+DimensionElementInsertDirect('Store Type', '', v_Store_Types_2, 'n');
+DimensionElementInsertDirect('Store Size', '', v_Store_Size_3, 'n');
+DimensionElementInsertDirect('Assumptions', '', v_Assumptions_4, 'n');
+CellPutN(v_DATA_5, 'storecost', v_Regions_0, v_Retailers_1, v_Assumptions_4, v_Store_Size_3, v_Store_Types_2, 'DATA');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Country and Region') = 2);
+   CellPutS('level000', '}HierarchyProperties', 'Country and Region', 'hierarchy0', 'level000');
+   CellPutS('level001', '}HierarchyProperties', 'Country and Region', 'hierarchy0', 'level001');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Country and Region" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Country and Region');
+if (DNLEV('Retailers') = 2);
+   CellPutS('level000', '}HierarchyProperties', 'Retailers', 'hierarchy0', 'level000');
+   CellPutS('level001', '}HierarchyProperties', 'Retailers', 'hierarchy0', 'level001');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Retailers" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Retailers');
+if (DNLEV('Assumptions') = 1);
+   CellPutS('level000', '}HierarchyProperties', 'Assumptions', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Assumptions" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Assumptions');
+if (DNLEV('Store Size') = 1);
+   CellPutS('level000', '}HierarchyProperties', 'Store Size', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Store Size" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Store Size');
+if (DNLEV('Store Type') = 1);
+   CellPutS('level000', '}HierarchyProperties', 'Store Type', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Store Type" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Store Type');
+CubeSetLogChanges('storecost', OldCubeLogChanges);
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

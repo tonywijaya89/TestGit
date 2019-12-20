@@ -1,0 +1,48 @@
+{
+	"@type":"NativeView",
+	"Name":"Nuevo plan de tienda_ES",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Subsets('Números de ID_ES')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('New Stores')/Hierarchies('New Stores')/Subsets('Nuevas tiendas_ES')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('País y región_ES')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('Presupuesto versión_ES')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

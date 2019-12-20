@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Store Type",
+	"Elements":
+	[
+		{
+			"Name":"Franchise Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Corporate Store",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Store Type.subsets/All Members.json",
+		"Store Type.subsets/Geschäftstyp_DE.json",
+		"Store Type.subsets/Tipo de tienda_ES.json",
+		"Store Type.subsets/Type de magasin_FR.json",
+		"Store Type.subsets/商店类型_SC.json",
+		"Store Type.subsets/店舗タイプ_JA.json"
+	]
+}
