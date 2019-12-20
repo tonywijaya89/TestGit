@@ -114,6 +114,18 @@
 		{
 			"Name":"NewItem",
 			"Type":"Numeric"
+		},
+		{
+			"Name":"myitem2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"myitem3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"myitem4",
+			"Type":"Numeric"
 		}
 	],
 	"Edges":
@@ -251,6 +263,21 @@
 		{
 			"ParentName":"Personal Accessories",
 			"ComponentName":"NewItem",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"myitem2",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"myitem3",
+			"Weight":1
+		},
+		{
+			"ParentName":"Personal Accessories",
+			"ComponentName":"myitem4",
 			"Weight":1
 		}
 	],
