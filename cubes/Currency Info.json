@@ -1,0 +1,24 @@
+{
+	"@type":"Cube",
+	"Name":"Currency Info",
+	"Rules@Code.link":"Currency Info.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Countries_Currency')"
+		},
+		{
+			"@id":"Dimensions('Currency Info')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Currency Info.views/All.json",
+		"Currency Info.views/Currency Info.json",
+		"Currency Info.views/Información de moneda_ES.json",
+		"Currency Info.views/Informations relatives à la devise_FR.json",
+		"Currency Info.views/Währungsinformationen_DE.json",
+		"Currency Info.views/货币信息_SC.json",
+		"Currency Info.views/通貨情報_JA.json"
+	]
+}

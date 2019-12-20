@@ -1,0 +1,31 @@
+{
+	"@type":"Subset",
+	"Name":"Retailer Types",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Department Store')"
+		},
+		{
+			"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Direct Marketing')"
+		},
+		{
+			"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Equipment Rental Store')"
+		},
+		{
+			"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Eyewear Store')"
+		},
+		{
+			"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Golf Shop')"
+		},
+		{
+			"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Outdoors Shop')"
+		},
+		{
+			"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Sports Store')"
+		},
+		{
+			"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('Warehouse Store')"
+		}
+	]
+}

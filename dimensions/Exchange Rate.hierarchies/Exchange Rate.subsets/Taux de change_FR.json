@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"Taux de change_FR",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Elements('Exchange Rate')"
+		}
+	]
+}

@@ -1,0 +1,276 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Countries_Currency",
+	"Elements":
+	[
+		{
+			"Name":"China",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Singapore",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Japan",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Korea",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Australia",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mexico",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"United States",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Brazil",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Canada",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Austria",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Italy",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Spain",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Switzerland",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Finland",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sweden",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"United Kingdom",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"France",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Germany",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Netherlands",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Belgium",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Switzerland (Genève)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TOTAL COMPANY",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Asia Pacific",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Americas",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"All Europe",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Southern Europe",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Northern Europe",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Central Europe",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"GO Accessories",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"TOTAL COMPANY",
+			"ComponentName":"Asia Pacific",
+			"Weight":1
+		},
+		{
+			"ParentName":"TOTAL COMPANY",
+			"ComponentName":"Americas",
+			"Weight":1
+		},
+		{
+			"ParentName":"TOTAL COMPANY",
+			"ComponentName":"All Europe",
+			"Weight":1
+		},
+		{
+			"ParentName":"Asia Pacific",
+			"ComponentName":"China",
+			"Weight":1
+		},
+		{
+			"ParentName":"Asia Pacific",
+			"ComponentName":"Singapore",
+			"Weight":1
+		},
+		{
+			"ParentName":"Asia Pacific",
+			"ComponentName":"Japan",
+			"Weight":1
+		},
+		{
+			"ParentName":"Asia Pacific",
+			"ComponentName":"Korea",
+			"Weight":1
+		},
+		{
+			"ParentName":"Asia Pacific",
+			"ComponentName":"Australia",
+			"Weight":1
+		},
+		{
+			"ParentName":"Americas",
+			"ComponentName":"Mexico",
+			"Weight":1
+		},
+		{
+			"ParentName":"Americas",
+			"ComponentName":"United States",
+			"Weight":1
+		},
+		{
+			"ParentName":"Americas",
+			"ComponentName":"Brazil",
+			"Weight":1
+		},
+		{
+			"ParentName":"Americas",
+			"ComponentName":"Canada",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Europe",
+			"ComponentName":"Southern Europe",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Europe",
+			"ComponentName":"Northern Europe",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Europe",
+			"ComponentName":"Central Europe",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Europe",
+			"ComponentName":"GO Accessories",
+			"Weight":1
+		},
+		{
+			"ParentName":"Southern Europe",
+			"ComponentName":"Austria",
+			"Weight":1
+		},
+		{
+			"ParentName":"Southern Europe",
+			"ComponentName":"Italy",
+			"Weight":1
+		},
+		{
+			"ParentName":"Southern Europe",
+			"ComponentName":"Spain",
+			"Weight":1
+		},
+		{
+			"ParentName":"Southern Europe",
+			"ComponentName":"Switzerland",
+			"Weight":1
+		},
+		{
+			"ParentName":"Northern Europe",
+			"ComponentName":"Finland",
+			"Weight":1
+		},
+		{
+			"ParentName":"Northern Europe",
+			"ComponentName":"Sweden",
+			"Weight":1
+		},
+		{
+			"ParentName":"Northern Europe",
+			"ComponentName":"United Kingdom",
+			"Weight":1
+		},
+		{
+			"ParentName":"Central Europe",
+			"ComponentName":"France",
+			"Weight":1
+		},
+		{
+			"ParentName":"Central Europe",
+			"ComponentName":"Germany",
+			"Weight":1
+		},
+		{
+			"ParentName":"Central Europe",
+			"ComponentName":"Netherlands",
+			"Weight":1
+		},
+		{
+			"ParentName":"Central Europe",
+			"ComponentName":"Belgium",
+			"Weight":1
+		},
+		{
+			"ParentName":"GO Accessories",
+			"ComponentName":"Switzerland (Genève)",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Countries_Currency.subsets/All_Countries.json",
+		"Countries_Currency.subsets/All Members.json",
+		"Countries_Currency.subsets/Länder_Währung_DE.json",
+		"Countries_Currency.subsets/Pays_Devise_FR.json",
+		"Countries_Currency.subsets/Países_Moneda_ES.json",
+		"Countries_Currency.subsets/国_通貨_JA.json",
+		"Countries_Currency.subsets/国家或地区_货币_SC.json"
+	]
+}

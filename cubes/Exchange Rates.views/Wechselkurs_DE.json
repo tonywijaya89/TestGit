@@ -1,0 +1,38 @@
+{
+	"@type":"NativeView",
+	"Name":"Wechselkurs_DE",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('Monate_DE')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Local Currency')/Hierarchies('Local Currency')/Subsets('Lokale Währung_DE')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Subsets('Wechselkurs_DE')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Elements('Exchange Rate')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

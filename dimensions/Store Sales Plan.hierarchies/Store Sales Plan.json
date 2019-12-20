@@ -1,0 +1,172 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Store Sales Plan",
+	"Elements":
+	[
+		{
+			"Name":"Currency",
+			"Type":"String"
+		},
+		{
+			"Name":"Quantity",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unit sale price",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Commissionable Sales Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Sales Revenue",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS SALES REVENUE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Volume Discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Discount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sales Returns and Allowances",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TOTAL DISCOUNTS AND ALLOWANCES",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Freight",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"NET SALES REVENUE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Unit cost",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Sales Cost of Goods Sold",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"COST OF SALES",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS MARGIN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS MARGIN %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUMULATIVE GROSS MARGIN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Volume Discount %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Discount %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sales Returns and Allowances %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"COGS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Exchange Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Commissionable Sales Revenue_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Sales Revenue_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS SALES REVENUE_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cost_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Volume Discount_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Discount_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sales Returns and Allowances_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TOTAL DISCOUNTS AND ALLOWANCES_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Freight_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"NET SALES REVENUE_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Sales Cost of Goods Sold_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"COST OF SALES_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GROSS MARGIN_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CUMULATIVE GROSS MARGIN_USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"COGS_USD",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Store Sales Plan.subsets/Absatzplan des Geschäfts_DE.json",
+		"Store Sales Plan.subsets/All Members.json",
+		"Store Sales Plan.subsets/Plan de ventas de tienda_ES.json",
+		"Store Sales Plan.subsets/Prévisions de ventes du magasin_FR.json",
+		"Store Sales Plan.subsets/商店销售计划_SC.json",
+		"Store Sales Plan.subsets/店舗販売計画_JA.json"
+	]
+}

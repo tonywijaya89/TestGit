@@ -1,0 +1,68 @@
+{
+	"@type":"NativeView",
+	"Name":"Coste de la tienda_ES",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Size')/Hierarchies('Store Size')/Subsets('Tamaño de la tienda_ES')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('Minoristas_ES')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('País y región_ES')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Average Monthly Revenue')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Subsets('Tipo de tienda_ES')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Franchise Store')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Subsets('DATOS_ES')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Elements('DATA')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

@@ -1,0 +1,30 @@
+{
+	"@type":"Cube",
+	"Name":"Promotions Plan",
+	"Rules@Code.link":"Promotions Plan.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Country and Region')"
+		},
+		{
+			"@id":"Dimensions('ID numbers')"
+		},
+		{
+			"@id":"Dimensions('Budget version')"
+		},
+		{
+			"@id":"Dimensions('Promotions')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Promotions Plan.views/All.json",
+		"Promotions Plan.views/Plan de promociones_ES.json",
+		"Promotions Plan.views/Plan promotions_FR.json",
+		"Promotions Plan.views/Promotions Plan.json",
+		"Promotions Plan.views/Werbeaktionsplan_DE.json",
+		"Promotions Plan.views/プロモーション計画_JA.json",
+		"Promotions Plan.views/促销计划_SC.json"
+	]
+}

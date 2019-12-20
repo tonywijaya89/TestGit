@@ -1,0 +1,13 @@
+{
+	"@type":"Subset",
+	"Name":"Tipo de activo_ES",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Asset Type')/Hierarchies('Asset Type')/Elements('Freehold')"
+		},
+		{
+			"@id":"Dimensions('Asset Type')/Hierarchies('Asset Type')/Elements('Leasehold')"
+		}
+	]
+}

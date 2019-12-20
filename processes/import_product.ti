@@ -1,0 +1,84 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Products');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Products'));
+      DimensionCreate('Products');
+      AttrInsert('Products', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Products', 'DIMENSION_TYPE');
+      AttrInsert('Products', '', 'Format', 'S');
+      AttrInsert('Products', '', 'Picklist', 'S');
+      AttrInsert('Products', '', 'calculation', 'S');
+      AttrInsert('Products', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Products].MEMBERS', 'Products');
+      SubsetAliasSet('Products', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Products', '', 'Produkty_CS', 'A');
+   ATTRINSERT('Products', '', 'Produkter_DA', 'A');
+   ATTRINSERT('Products', '', 'Produkte_DE', 'A');
+   ATTRINSERT('Products', '', 'Productos_ES', 'A');
+   ATTRINSERT('Products', '', 'Tuotteet_FI', 'A');
+   ATTRINSERT('Products', '', 'Produits_FR', 'A');
+   ATTRINSERT('Products', '', '製品_JA', 'A');
+   ATTRINSERT('Products', '', 'Proizvodi_HR', 'A');
+   ATTRINSERT('Products', '', 'Termékek_HU', 'A');
+   ATTRINSERT('Products', '', 'Prodotti_IT', 'A');
+   ATTRINSERT('Products', '', '제품_KO', 'A');
+   ATTRINSERT('Products', '', 'Produkter_NO', 'A');
+   ATTRINSERT('Products', '', 'Produkty_PL', 'A');
+   ATTRINSERT('Products', '', 'Produtos_PT', 'A');
+   ATTRINSERT('Products', '', 'Produse_RO', 'A');
+   ATTRINSERT('Products', '', 'Продукты_RU', 'A');
+   ATTRINSERT('Products', '', '产品_SC', 'A');
+   ATTRINSERT('Products', '', 'Produkter_SV', 'A');
+   ATTRINSERT('Products', '', '產品_TC', 'A');
+   ATTRINSERT('Products', '', 'Ürünler_TR', 'A');
+endif;
+CellPutS('Products', '}DimensionAttributes', 'Products', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DIMENSIONSORTORDER('Products','','','BYINPUT','ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+DIMENSIONELEMENTINSERT('Products','',Products,'n');
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+ATTRPUTS(Produkty_CS,'Products',Products,'Produkty_CS');
+ATTRPUTS(Produkter_DA,'Products',Products,'Produkter_DA');
+ATTRPUTS(Produkte_DE,'Products',Products,'Produkte_DE');
+ATTRPUTS(Productos_ES,'Products',Products,'Productos_ES');
+ATTRPUTS(Tuotteet_FI,'Products',Products,'Tuotteet_FI');
+ATTRPUTS(Produits_FR,'Products',Products,'Produits_FR');
+ATTRPUTS(製品_JA,'Products',Products,'製品_JA');
+ATTRPUTS(Proizvodi_HR,'Products',Products,'Proizvodi_HR');
+ATTRPUTS(Termékek_HU,'Products',Products,'Termékek_HU');
+ATTRPUTS(Prodotti_IT,'Products',Products,'Prodotti_IT');
+ATTRPUTS(제품_KO,'Products',Products,'제품_KO');
+ATTRPUTS(Produkter_NO,'Products',Products,'Produkter_NO');
+ATTRPUTS(Produkty_PL,'Products',Products,'Produkty_PL');
+ATTRPUTS(Produtos_PT,'Products',Products,'Produtos_PT');
+ATTRPUTS(Produse_RO,'Products',Products,'Produse_RO');
+ATTRPUTS(Продукты_RU,'Products',Products,'Продукты_RU');
+ATTRPUTS(产品_SC,'Products',Products,'产品_SC');
+ATTRPUTS(Produkter_SV,'Products',Products,'Produkter_SV');
+ATTRPUTS(產品_TC,'Products',Products,'產品_TC');
+ATTRPUTS(Ürünler_TR,'Products',Products,'Ürünler_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion

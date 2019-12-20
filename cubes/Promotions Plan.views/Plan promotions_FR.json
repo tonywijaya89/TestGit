@@ -1,0 +1,48 @@
+{
+	"@type":"NativeView",
+	"Name":"Plan promotions_FR",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('ID numbers')/Hierarchies('ID numbers')/Subsets('Numéros ID_FR')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Promotions')/Hierarchies('Promotions')/Subsets('Promotions_FR')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('Pays et région_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('Version du budget_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

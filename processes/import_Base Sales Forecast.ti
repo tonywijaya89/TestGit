@@ -1,0 +1,273 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   CubeDestroy('basesalesforecast');
+   DimensionDestroy('Country and Region');
+   DimensionDestroy('Existing Stores Revenue');
+   DimensionDestroy('Store Type');
+   DimensionDestroy('Budget version');
+   DimensionDestroy('Retailers');
+   DimensionDestroy('Month');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Country and Region'));
+      DimensionCreate('Country and Region');
+      AttrInsert('Country and Region', '', 'Caption_Default', 'A');
+      CellPutS('HIERARCHY', '}DimensionAttributes', 'Country and Region', 'DIMENSION_TYPE');
+      SubsetCreateByMDX('All Members', '[Country and Region].MEMBERS', 'Country and Region');
+   endif;
+   if (0 = DimensionExists('Existing Stores Revenue'));
+      DimensionCreate('Existing Stores Revenue');
+      AttrInsert('Existing Stores Revenue', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Existing Stores Revenue', 'DIMENSION_TYPE');
+      AttrInsert('Existing Stores Revenue', '', 'Format', 'S');
+      AttrInsert('Existing Stores Revenue', '', 'Picklist', 'S');
+      AttrInsert('Existing Stores Revenue', '', 'calculation', 'S');
+      AttrInsert('Existing Stores Revenue', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Existing Stores Revenue].MEMBERS', 'Existing Stores Revenue');
+   endif;
+   if (0 = DimensionExists('Store Type'));
+      DimensionCreate('Store Type');
+      AttrInsert('Store Type', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Store Type', 'DIMENSION_TYPE');
+      AttrInsert('Store Type', '', 'Format', 'S');
+      AttrInsert('Store Type', '', 'Picklist', 'S');
+      AttrInsert('Store Type', '', 'calculation', 'S');
+      AttrInsert('Store Type', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Store Type].MEMBERS', 'Store Type');
+   endif;
+   if (0 = DimensionExists('Budget version'));
+      DimensionCreate('Budget version');
+      AttrInsert('Budget version', '', 'Caption_Default', 'A');
+      CellPutS('VERSIONS', '}DimensionAttributes', 'Budget version', 'DIMENSION_TYPE');
+      AttrInsert('Budget version', '', 'Format', 'S');
+      AttrInsert('Budget version', '', 'permittedcalculations_n_and_c', 'S');
+      SubsetCreateByMDX('All Members', '[Budget version].MEMBERS', 'Budget version');
+   endif;
+   if (0 = DimensionExists('Retailers'));
+      DimensionCreate('Retailers');
+      AttrInsert('Retailers', '', 'Caption_Default', 'A');
+      CellPutS('HIERARCHY', '}DimensionAttributes', 'Retailers', 'DIMENSION_TYPE');
+      SubsetCreateByMDX('All Members', '[Retailers].MEMBERS', 'Retailers');
+   endif;
+   if (0 = DimensionExists('Month'));
+      DimensionCreate('Month');
+      AttrInsert('Month', '', 'Caption_Default', 'A');
+      CellPutS('CALCULATION', '}DimensionAttributes', 'Month', 'DIMENSION_TYPE');
+      AttrInsert('Month', '', 'Format', 'S');
+      AttrInsert('Month', '', 'Picklist', 'S');
+      AttrInsert('Month', '', 'signswitch', 'N');
+      AttrInsert('Month', '', 'calculation', 'S');
+      AttrInsert('Month', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Month].MEMBERS', 'Month');
+   endif;
+   if (0 = CubeExists('basesalesforecast'));
+      CubeCreate('basesalesforecast', 'Country and Region', 'Retailers', 'Existing Stores Revenue', 'Store Type', 'Budget version', 'Month');
+      CubeSetLogChanges('basesalesforecast', 1);
+      CellPutS('Base Sales Forecast', '}CubeAttributes', 'basesalesforecast', 'Caption_Default');
+      if (0 = ViewExists('basesalesforecast', 'All'));
+         ViewCreate('basesalesforecast', 'All');
+         ViewRowDimensionSet('basesalesforecast', 'All', 'Country and Region', 1);
+         if (1 = SubsetExists('Country and Region', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'All', 'Country and Region', 'All Members');
+         endif;
+         ViewColumnDimensionSet('basesalesforecast', 'All', 'Retailers', 1);
+         if (1 = SubsetExists('Retailers', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'All', 'Retailers', 'All Members');
+         endif;
+         ViewTitleDimensionSet('basesalesforecast', 'All', 'Existing Stores Revenue');
+         if (1 = SubsetExists('Existing Stores Revenue', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'All', 'Existing Stores Revenue', 'All Members');
+         endif;
+         ViewTitleElementSet('basesalesforecast', 'All', 'Existing Stores Revenue', 0);
+         ViewTitleDimensionSet('basesalesforecast', 'All', 'Store Type');
+         if (1 = SubsetExists('Store Type', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'All', 'Store Type', 'All Members');
+         endif;
+         ViewTitleElementSet('basesalesforecast', 'All', 'Store Type', 0);
+         ViewTitleDimensionSet('basesalesforecast', 'All', 'Budget version');
+         if (1 = SubsetExists('Budget version', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'All', 'Budget version', 'All Members');
+         endif;
+         ViewTitleElementSet('basesalesforecast', 'All', 'Budget version', 0);
+         ViewTitleDimensionSet('basesalesforecast', 'All', 'Month');
+         if (1 = SubsetExists('Month', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'All', 'Month', 'All Members');
+         endif;
+         ViewTitleElementSet('basesalesforecast', 'All', 'Month', 0);
+      endif;
+      if (0 = ViewExists('basesalesforecast', 'basesalesforecast'));
+         ViewCreate('basesalesforecast', 'basesalesforecast');
+         ViewRowDimensionSet('basesalesforecast', 'basesalesforecast', 'Country and Region', 1);
+         if (1 = SubsetExists('Country and Region', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'basesalesforecast', 'Country and Region', 'All Members');
+         endif;
+         ViewColumnDimensionSet('basesalesforecast', 'basesalesforecast', 'Month', 1);
+         if (1 = SubsetExists('Month', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'basesalesforecast', 'Month', 'All Members');
+         endif;
+         ViewTitleDimensionSet('basesalesforecast', 'basesalesforecast', 'Retailers');
+         if (1 = SubsetExists('Retailers', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'basesalesforecast', 'Retailers', 'All Members');
+         endif;
+         ViewTitleElementSet('basesalesforecast', 'basesalesforecast', 'Retailers', 0);
+         ViewTitleDimensionSet('basesalesforecast', 'basesalesforecast', 'Existing Stores Revenue');
+         if (1 = SubsetExists('Existing Stores Revenue', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'basesalesforecast', 'Existing Stores Revenue', 'All Members');
+         endif;
+         ViewTitleElementSet('basesalesforecast', 'basesalesforecast', 'Existing Stores Revenue', 0);
+         ViewTitleDimensionSet('basesalesforecast', 'basesalesforecast', 'Store Type');
+         if (1 = SubsetExists('Store Type', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'basesalesforecast', 'Store Type', 'All Members');
+         endif;
+         ViewTitleElementSet('basesalesforecast', 'basesalesforecast', 'Store Type', 0);
+         ViewTitleDimensionSet('basesalesforecast', 'basesalesforecast', 'Budget version');
+         if (1 = SubsetExists('Budget version', 'All Members'));
+            ViewSubsetAssign('basesalesforecast', 'basesalesforecast', 'Budget version', 'All Members');
+         endif;
+         ViewTitleElementSet('basesalesforecast', 'basesalesforecast', 'Budget version', 0);
+      endif;
+      CellPutS('Month', '}CubeProperties', 'basesalesforecast', 'MEASURES_DIMENSION');
+   endif;
+endif;
+CellPutS('Country and Region', '}DimensionAttributes', 'Country and Region', 'Caption_Default');
+CellPutS('Existing Stores Revenue', '}DimensionAttributes', 'Existing Stores Revenue', 'Caption_Default');
+CellPutS('Store Type', '}DimensionAttributes', 'Store Type', 'Caption_Default');
+CellPutS('Budget version', '}DimensionAttributes', 'Budget version', 'Caption_Default');
+CellPutS('Retailers', '}DimensionAttributes', 'Retailers', 'Caption_Default');
+CellPutS('Month', '}DimensionAttributes', 'Month', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+if (DIMIX('Month', 'Jan') = 0);
+   DimensionElementInsertDirect('Month', '', 'Jan', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Jan', 'Format');
+endif;
+if (DIMIX('Month', 'Feb') = 0);
+   DimensionElementInsertDirect('Month', '', 'Feb', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Feb', 'Format');
+endif;
+if (DIMIX('Month', 'Mar') = 0);
+   DimensionElementInsertDirect('Month', '', 'Mar', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Mar', 'Format');
+endif;
+if (DIMIX('Month', 'Apr') = 0);
+   DimensionElementInsertDirect('Month', '', 'Apr', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Apr', 'Format');
+endif;
+if (DIMIX('Month', 'May') = 0);
+   DimensionElementInsertDirect('Month', '', 'May', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'May', 'Format');
+endif;
+if (DIMIX('Month', 'Jun') = 0);
+   DimensionElementInsertDirect('Month', '', 'Jun', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Jun', 'Format');
+endif;
+if (DIMIX('Month', 'Jul') = 0);
+   DimensionElementInsertDirect('Month', '', 'Jul', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Jul', 'Format');
+endif;
+if (DIMIX('Month', 'Aug') = 0);
+   DimensionElementInsertDirect('Month', '', 'Aug', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Aug', 'Format');
+endif;
+if (DIMIX('Month', 'Sep') = 0);
+   DimensionElementInsertDirect('Month', '', 'Sep', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Sep', 'Format');
+endif;
+if (DIMIX('Month', 'Oct') = 0);
+   DimensionElementInsertDirect('Month', '', 'Oct', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Oct', 'Format');
+endif;
+if (DIMIX('Month', 'Nov') = 0);
+   DimensionElementInsertDirect('Month', '', 'Nov', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Nov', 'Format');
+endif;
+if (DIMIX('Month', 'Dec') = 0);
+   DimensionElementInsertDirect('Month', '', 'Dec', 'n');
+   AttrPutS('d:#,##0.###' | CHARW(12) | 'IC', 'Month', 'Dec', 'Format');
+endif;
+DimensionSortOrder('Country and Region', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Existing Stores Revenue', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Store Type', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Budget version', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Retailers', '', '', 'ByInput', 'DESCENDING');
+DimensionSortOrder('Month', '', '', 'ByInput', 'Ascending');
+OldCubeLogChanges = CubeGetLogChanges('basesalesforecast');
+CubeSetLogChanges('basesalesforecast', 0);
+ViewZeroOut('basesalesforecast', 'basesalesforecast');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Country and Region', '', v_Regions_0, 'n');
+DimensionElementInsertDirect('Existing Stores Revenue', '', v_Existing_Stores_Revenue_1, 'n');
+DimensionElementInsertDirect('Store Type', '', v_Store_Type_2, 'n');
+DimensionElementInsertDirect('Budget version', '', v_Budget_Version_3, 'n');
+DimensionElementInsertDirect('Retailers', '', v_Retailers_4, 'n');
+CellPutN(Jan, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Jan');
+CellPutN(v_Jan_5, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Feb');
+CellPutN(Feb, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Mar');
+CellPutN(v_Feb_6, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Apr');
+CellPutN(Mar, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'May');
+CellPutN(v_Mar_7, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Jun');
+CellPutN(Apr, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Jul');
+CellPutN(v_Apr_8, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Aug');
+CellPutN(May, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Sep');
+CellPutN(v_May_9, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Oct');
+CellPutN(Jun, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Nov');
+CellPutN(v_Jun_10, 'basesalesforecast', v_Regions_0, v_Retailers_4, v_Existing_Stores_Revenue_1, v_Store_Type_2, v_Budget_Version_3, 'Dec');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Country and Region') = 3);
+   CellPutS('level000', '}HierarchyProperties', 'Country and Region', 'hierarchy0', 'level000');
+   CellPutS('level001', '}HierarchyProperties', 'Country and Region', 'hierarchy0', 'level001');
+   CellPutS('level002', '}HierarchyProperties', 'Country and Region', 'hierarchy0', 'level002');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Country and Region" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Country and Region');
+if (DNLEV('Retailers') = 2);
+   CellPutS('level000', '}HierarchyProperties', 'Retailers', 'hierarchy0', 'level000');
+   CellPutS('level001', '}HierarchyProperties', 'Retailers', 'hierarchy0', 'level001');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Retailers" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Retailers');
+if (DNLEV('Existing Stores Revenue') = 1);
+   CellPutS('level000', '}HierarchyProperties', 'Existing Stores Revenue', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Existing Stores Revenue" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Existing Stores Revenue');
+if (DNLEV('Store Type') = 1);
+   CellPutS('level000', '}HierarchyProperties', 'Store Type', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Store Type" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Store Type');
+if (DNLEV('Budget version') = 1);
+   CellPutS('level000', '}HierarchyProperties', 'Budget version', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Budget version" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Budget version');
+CubeSetLogChanges('basesalesforecast', OldCubeLogChanges);
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

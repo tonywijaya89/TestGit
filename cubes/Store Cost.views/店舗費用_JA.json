@@ -1,0 +1,68 @@
+{
+	"@type":"NativeView",
+	"Name":"店舗費用_JA",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Size')/Hierarchies('Store Size')/Subsets('店舗サイズ_JA')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('小売業者_JA')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('国および地域_JA')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Subsets('All Members')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Assumptions')/Hierarchies('Assumptions')/Elements('Average Monthly Revenue')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Subsets('店舗タイプ_JA')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Franchise Store')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Subsets('DATA_JA')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('DATA')/Hierarchies('DATA')/Elements('DATA')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

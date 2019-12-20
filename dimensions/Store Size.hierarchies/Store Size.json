@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Store Size",
+	"Elements":
+	[
+		{
+			"Name":"Full Size Store",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mini Size Store",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Store Size.subsets/All Members.json",
+		"Store Size.subsets/Geschäftsgröße_DE.json",
+		"Store Size.subsets/Taille de magasin_FR.json",
+		"Store Size.subsets/Tamaño de la tienda_ES.json",
+		"Store Size.subsets/商店规模_SC.json",
+		"Store Size.subsets/店舗サイズ_JA.json"
+	]
+}

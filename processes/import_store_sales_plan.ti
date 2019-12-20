@@ -1,0 +1,94 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Store Sales Plan');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Store Sales Plan'));
+      DimensionCreate('Store Sales Plan');
+      AttrInsert('Store Sales Plan', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Store Sales Plan', 'DIMENSION_TYPE');
+      AttrInsert('Store Sales Plan', '', 'Format', 'S');
+      AttrInsert('Store Sales Plan', '', 'Picklist', 'S');
+      AttrInsert('Store Sales Plan', '', 'calculation', 'S');
+      AttrInsert('Store Sales Plan', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Store Sales Plan].MEMBERS', 'Store Sales Plan');
+      SubsetAliasSet('Store Sales Plan', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Store Sales Plan', '', 'Prodejní plán obchodu_CS', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Salgsplan for butik_DA', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Absatzplan des Geschäfts_DE', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Plan de ventas de tienda_ES', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Myymälän myyntisuunnitelma_FI', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Prévisions de ventes du magasin_FR', 'A');
+   ATTRINSERT('Store Sales Plan', '', '店舗販売計画_JA', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Plan prodaje za prodavaonice_HR', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Áruházi értékesítési terv_HU', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Piano vendite negozio_IT', 'A');
+   ATTRINSERT('Store Sales Plan', '', '상점 영업 계획_KO', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Salgsplan for butikk_NO', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Plan sprzedaży salonu_PL', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Plano de Vendas de Armazenamento_PT', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Plan de vânzări magazin_RO', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'План продаж по магазинам_RU', 'A');
+   ATTRINSERT('Store Sales Plan', '', '商店销售计划_SC', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Butiksförsäljningsplan_SV', 'A');
+   ATTRINSERT('Store Sales Plan', '', '儲存銷售計劃_TC', 'A');
+   ATTRINSERT('Store Sales Plan', '', 'Mağaza Satış Planı_TR', 'A');
+endif;
+CellPutS('Store Sales Plan', '}DimensionAttributes', 'Store Sales Plan', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Store Sales Plan', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Store Sales Plan', '', Store_Sales_Plan, 'n');
+ATTRPUTS(Prodejní_plán_obchodu_CS, 'Store Sales Plan', Store_Sales_Plan, 'Prodejní plán obchodu_CS', 0);
+ATTRPUTS(Salgsplan_for_butik_DA, 'Store Sales Plan', Store_Sales_Plan, 'Salgsplan for butik_DA', 0);
+ATTRPUTS(Absatzplan_des_Geschäfts_DE, 'Store Sales Plan', Store_Sales_Plan, 'Absatzplan des Geschäfts_DE', 0);
+ATTRPUTS(Plan_de_ventas_de_tienda_ES, 'Store Sales Plan', Store_Sales_Plan, 'Plan de ventas de tienda_ES', 0);
+ATTRPUTS(Myymälän_myyntisuunnitelma_FI, 'Store Sales Plan', Store_Sales_Plan, 'Myymälän myyntisuunnitelma_FI', 0);
+ATTRPUTS(Prévisions_de_ventes_du_magasin_FR, 'Store Sales Plan', Store_Sales_Plan, 'Prévisions de ventes du magasin_FR', 0);
+ATTRPUTS(店舗販売計画_JA, 'Store Sales Plan', Store_Sales_Plan, '店舗販売計画_JA', 0);
+ATTRPUTS(Plan_prodaje_za_prodavaonice_HR, 'Store Sales Plan', Store_Sales_Plan, 'Plan prodaje za prodavaonice_HR', 0);
+ATTRPUTS(Áruházi_értékesítési_terv_HU, 'Store Sales Plan', Store_Sales_Plan, 'Áruházi értékesítési terv_HU', 0);
+ATTRPUTS(Piano_vendite_negozio_IT, 'Store Sales Plan', Store_Sales_Plan, 'Piano vendite negozio_IT', 0);
+ATTRPUTS(상점_영업_계획_KO, 'Store Sales Plan', Store_Sales_Plan, '상점 영업 계획_KO', 0);
+ATTRPUTS(Salgsplan_for_butikk_NO, 'Store Sales Plan', Store_Sales_Plan, 'Salgsplan for butikk_NO', 0);
+ATTRPUTS(Plan_sprzedaży_salonu_PL, 'Store Sales Plan', Store_Sales_Plan, 'Plan sprzedaży salonu_PL', 0);
+ATTRPUTS(Plano_de_Vendas_de_Armazenamento_PT, 'Store Sales Plan', Store_Sales_Plan, 'Plano de Vendas de Armazenamento_PT', 0);
+ATTRPUTS(Plan_de_vânzări_magazin_RO, 'Store Sales Plan', Store_Sales_Plan, 'Plan de vânzări magazin_RO', 0);
+ATTRPUTS(План_продаж_по_магазинам_RU, 'Store Sales Plan', Store_Sales_Plan, 'План продаж по магазинам_RU', 0);
+ATTRPUTS(商店销售计划_SC, 'Store Sales Plan', Store_Sales_Plan, '商店销售计划_SC', 0);
+ATTRPUTS(Butiksförsäljningsplan_SV, 'Store Sales Plan', Store_Sales_Plan, 'Butiksförsäljningsplan_SV', 0);
+ATTRPUTS(儲存銷售計劃_TC, 'Store Sales Plan', Store_Sales_Plan, '儲存銷售計劃_TC', 0);
+ATTRPUTS(Mağaza_Satış_Planı_TR, 'Store Sales Plan', Store_Sales_Plan, 'Mağaza Satış Planı_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Store Sales Plan') = 1);
+   CellPutS('Store Sales Plan', '}HierarchyProperties', 'Store Sales Plan', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Store Sales Plan" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Store Sales Plan');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

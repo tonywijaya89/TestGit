@@ -1,0 +1,27 @@
+{
+	"@type":"Cube",
+	"Name":"Product",
+	"Rules@Code.link":"Product.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Products')"
+		},
+		{
+			"@id":"Dimensions('Budget version')"
+		},
+		{
+			"@id":"Dimensions('Price and Cost')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Product.views/All.json",
+		"Product.views/Product.json",
+		"Product.views/Productos_ES.json",
+		"Product.views/Produits_FR.json",
+		"Product.views/Produkte_DE.json",
+		"Product.views/产品_SC.json",
+		"Product.views/製品_JA.json"
+	]
+}

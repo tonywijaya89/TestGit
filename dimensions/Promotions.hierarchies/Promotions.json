@@ -1,0 +1,68 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Promotions",
+	"Elements":
+	[
+		{
+			"Name":"Retailer Type",
+			"Type":"String"
+		},
+		{
+			"Name":"Franchise/Corporate",
+			"Type":"String"
+		},
+		{
+			"Name":"Month of Promotion",
+			"Type":"String"
+		},
+		{
+			"Name":"Sales Increase %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Advertising Costs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Promotion Costs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Base Monthly Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Planned Promotion Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Min % Planned Promotion Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"% Planned Promotion Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Test flag",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Select Comment",
+			"Type":"String"
+		},
+		{
+			"Name":"SIWA",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Promotions.subsets/All Members.json",
+		"Promotions.subsets/Promociones_ES.json",
+		"Promotions.subsets/Promotions_FR.json",
+		"Promotions.subsets/Werbeaktionen_DE.json",
+		"Promotions.subsets/プロモーション_JA.json",
+		"Promotions.subsets/促销_SC.json"
+	]
+}

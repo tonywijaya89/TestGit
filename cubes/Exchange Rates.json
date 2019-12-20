@@ -1,0 +1,27 @@
+{
+	"@type":"Cube",
+	"Name":"Exchange Rates",
+	"Rules@Code.link":"Exchange Rates.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Exchange Rate')"
+		},
+		{
+			"@id":"Dimensions('Month')"
+		},
+		{
+			"@id":"Dimensions('Local Currency')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Exchange Rates.views/All.json",
+		"Exchange Rates.views/Exchange Rates.json",
+		"Exchange Rates.views/Taux de change_FR.json",
+		"Exchange Rates.views/Tipo de cambio_ES.json",
+		"Exchange Rates.views/Wechselkurs_DE.json",
+		"Exchange Rates.views/交換レート_JA.json",
+		"Exchange Rates.views/汇率_SC.json"
+	]
+}

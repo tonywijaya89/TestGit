@@ -1,0 +1,93 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Error flag');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Error flag'));
+      DimensionCreate('Error flag');
+      AttrInsert('Error flag', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Error flag', 'DIMENSION_TYPE');
+      AttrInsert('Error flag', '', 'Format', 'S');
+      AttrInsert('Error flag', '', 'Picklist', 'S');
+      AttrInsert('Error flag', '', 'calculation', 'S');
+      AttrInsert('Error flag', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Error flag].MEMBERS', 'Error flag');
+      SubsetAliasSet('Error flag', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Error flag', '', 'Příznak chyby_CS', 'S');
+   ATTRINSERT('Error flag', '', 'Fejlmarkering_DA', 'A');
+   ATTRINSERT('Error flag', '', 'Fehlerkennzeichen_DE', 'A');
+   ATTRINSERT('Error flag', '', 'Distintivo de error_ES', 'A');
+   ATTRINSERT('Error flag', '', 'Virhelippu_FI', 'A');
+   ATTRINSERT('Error flag', '', 'Indicateur d''erreur_FR', 'A');
+   ATTRINSERT('Error flag', '', 'エラー・フラグ_JA', 'A');
+   ATTRINSERT('Error flag', '', 'Oznaka greške_HR', 'A');
+   ATTRINSERT('Error flag', '', 'Hibajelző_HU', 'A');
+   ATTRINSERT('Error flag', '', 'Indicatore errori_IT', 'A');
+   ATTRINSERT('Error flag', '', '오류 플래그_KO', 'A');
+   ATTRINSERT('Error flag', '', 'Feilflagg_NO', 'A');
+   ATTRINSERT('Error flag', '', 'Flaga błędu_PL', 'A');
+   ATTRINSERT('Error flag', '', 'Sinalizador de erro_PT', 'A');
+   ATTRINSERT('Error flag', '', 'Eroare flag_RO', 'S');
+   ATTRINSERT('Error flag', '', 'Флаг ошибки_RU', 'A');
+   ATTRINSERT('Error flag', '', '错误标记_SC', 'A');
+   ATTRINSERT('Error flag', '', 'Felflagga_SV', 'A');
+   ATTRINSERT('Error flag', '', '錯誤旗標_TC', 'A');
+   ATTRINSERT('Error flag', '', 'Hata işareti_TR', 'A');
+endif;
+CellPutS('Error flag', '}DimensionAttributes', 'Error flag', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Error flag', '', '', 'ByInput', 'DESCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+#****Begin: Generated Header****
+If(v_Error_flag_0@='');
+   v_Error_flag_0='Default Error flag';
+EndIf;
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Error flag', '', v_Error_flag_0, 'n');
+ATTRPUTS(v_P__znak_chyby_CS_1, 'Error flag', v_Error_flag_0, 'Příznak chyby_CS');
+ATTRPUTS(v_Fejlmarkering_DA_2, 'Error flag', v_Error_flag_0, 'Fejlmarkering_DA');
+ATTRPUTS(v_Fehlerkennzeichen_DE_3, 'Error flag', v_Error_flag_0, 'Fehlerkennzeichen_DE');
+ATTRPUTS(v_Distintivo_de_error_ES_4, 'Error flag', v_Error_flag_0, 'Distintivo de error_ES');
+ATTRPUTS(v_Virhelippu_FI_5, 'Error flag', v_Error_flag_0, 'Virhelippu_FI');
+ATTRPUTS(v_Indicateur_d_erreur_FR_6, 'Error flag', v_Error_flag_0, 'Indicateur d''erreur_FR');
+ATTRPUTS(v_________JA_7, 'Error flag', v_Error_flag_0, 'エラー・フラグ_JA');
+ATTRPUTS(v_Oznaka_gre_ke_HR_8, 'Error flag', v_Error_flag_0, 'Oznaka greške_HR');
+ATTRPUTS(v_Hibajelz__HU_9, 'Error flag', v_Error_flag_0, 'Hibajelző_HU');
+ATTRPUTS(v_Indicatore_errori_IT_10, 'Error flag', v_Error_flag_0, 'Indicatore errori_IT');
+ATTRPUTS(v________KO_11, 'Error flag', v_Error_flag_0, '오류 플래그_KO');
+ATTRPUTS(v_Feilflagg_NO_12, 'Error flag', v_Error_flag_0, 'Feilflagg_NO');
+ATTRPUTS(v_Flaga_b__du_PL_13, 'Error flag', v_Error_flag_0, 'Flaga błędu_PL');
+ATTRPUTS(v_Sinalizador_de_erro_PT_14, 'Error flag', v_Error_flag_0, 'Sinalizador de erro_PT');
+ATTRPUTS(v_Eroare_flag_RO_15, 'Error flag', v_Error_flag_0, 'Eroare flag_RO');
+ATTRPUTS(v_____________RU_16, 'Error flag', v_Error_flag_0, 'Флаг ошибки_RU');
+ATTRPUTS(v______SC_17, 'Error flag', v_Error_flag_0, '错误标记_SC');
+ATTRPUTS(v_Felflagga_SV_18, 'Error flag', v_Error_flag_0, 'Felflagga_SV');
+ATTRPUTS(v______TC_19, 'Error flag', v_Error_flag_0, '錯誤旗標_TC');
+ATTRPUTS(v_Hata_i_areti_TR_20, 'Error flag', v_Error_flag_0, 'Hata işareti_TR');
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+if (DNLEV('Error flag') = 1);
+   CellPutS('Error flag', '}HierarchyProperties', 'Error flag', 'hierarchy0', 'level000');
+else; itemReject('The resulting hierarchy for the dimension "Error flag" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.');
+endif;
+RefreshMDXHierarchy('Error flag');
+#****End: Generated Statements****
+#endregion

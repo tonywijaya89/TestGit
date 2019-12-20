@@ -1,0 +1,14 @@
+{
+	"@type":"Cube",
+	"Name":"mycube",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Products')"
+		},
+		{
+			"@id":"Dimensions('Store Sales Plan')"
+		}
+	],
+	"Views@Code.links":[]
+}

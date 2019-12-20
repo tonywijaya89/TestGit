@@ -1,0 +1,94 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Promotions');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Promotions'));
+      DimensionCreate('Promotions');
+      AttrInsert('Promotions', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Promotions', 'DIMENSION_TYPE');
+      AttrInsert('Promotions', '', 'Format', 'S');
+      AttrInsert('Promotions', '', 'Picklist', 'S');
+      AttrInsert('Promotions', '', 'calculation', 'S');
+      AttrInsert('Promotions', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Promotions].MEMBERS', 'Promotions');
+      SubsetAliasSet('Promotions', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Promotions', '', 'Propagace_CS', 'A');
+   ATTRINSERT('Promotions', '', 'Salgskampagner_DA', 'A');
+   ATTRINSERT('Promotions', '', 'Werbeaktionen_DE', 'A');
+   ATTRINSERT('Promotions', '', 'Promociones_ES', 'A');
+   ATTRINSERT('Promotions', '', 'Myynninedistäminen_FI', 'A');
+   ATTRINSERT('Promotions', '', 'Promotions_FR', 'A');
+   ATTRINSERT('Promotions', '', 'プロモーション_JA', 'A');
+   ATTRINSERT('Promotions', '', 'Promocije_HR', 'A');
+   ATTRINSERT('Promotions', '', 'Reklámok_HU', 'A');
+   ATTRINSERT('Promotions', '', 'Promozioni_IT', 'A');
+   ATTRINSERT('Promotions', '', '판촉_KO', 'A');
+   ATTRINSERT('Promotions', '', 'Salgskampanjer_NO', 'A');
+   ATTRINSERT('Promotions', '', 'Promocje produktów_PL', 'A');
+   ATTRINSERT('Promotions', '', 'Promoções_PT', 'A');
+   ATTRINSERT('Promotions', '', 'Promoţii_RO', 'A');
+   ATTRINSERT('Promotions', '', 'Продвижение_RU', 'A');
+   ATTRINSERT('Promotions', '', '促销_SC', 'A');
+   ATTRINSERT('Promotions', '', 'Kampanjer_SV', 'A');
+   ATTRINSERT('Promotions', '', '促銷_TC', 'A');
+   ATTRINSERT('Promotions', '', 'Promosyonlar_TR', 'A');
+endif;
+CellPutS('Promotions', '}DimensionAttributes', 'Promotions', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Promotions', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Promotions', '', Promotions, 'n');
+ATTRPUTS(Propagace_CS, 'Promotions', Promotions, 'Propagace_CS', 0);
+ATTRPUTS(Salgskampagner_DA, 'Promotions', Promotions, 'Salgskampagner_DA', 0);
+ATTRPUTS(Werbeaktionen_DE, 'Promotions', Promotions, 'Werbeaktionen_DE', 0);
+ATTRPUTS(Promociones_ES, 'Promotions', Promotions, 'Promociones_ES', 0);
+ATTRPUTS(Myynninedistäminen_FI, 'Promotions', Promotions, 'Myynninedistäminen_FI', 0);
+ATTRPUTS(Promotions_FR, 'Promotions', Promotions, 'Promotions_FR', 0);
+ATTRPUTS(プロモーション_JA, 'Promotions', Promotions, 'プロモーション_JA', 0);
+ATTRPUTS(Promocije_HR, 'Promotions', Promotions, 'Promocije_HR', 0);
+ATTRPUTS(Reklámok_HU, 'Promotions', Promotions, 'Reklámok_HU', 0);
+ATTRPUTS(Promozioni_IT, 'Promotions', Promotions, 'Promozioni_IT', 0);
+ATTRPUTS(판촉_KO, 'Promotions', Promotions, '판촉_KO', 0);
+ATTRPUTS(Salgskampanjer_NO, 'Promotions', Promotions, 'Salgskampanjer_NO', 0);
+ATTRPUTS(Promocje_produktów_PL, 'Promotions', Promotions, 'Promocje produktów_PL', 0);
+ATTRPUTS(Promoções_PT, 'Promotions', Promotions, 'Promoções_PT', 0);
+ATTRPUTS(Promoţii_RO, 'Promotions', Promotions, 'Promoţii_RO', 0);
+ATTRPUTS(Продвижение_RU, 'Promotions', Promotions, 'Продвижение_RU', 0);
+ATTRPUTS(促销_SC, 'Promotions', Promotions, '促销_SC', 0);
+ATTRPUTS(Kampanjer_SV, 'Promotions', Promotions, 'Kampanjer_SV', 0);
+ATTRPUTS(促銷_TC, 'Promotions', Promotions, '促銷_TC', 0);
+ATTRPUTS(Promosyonlar_TR, 'Promotions', Promotions, 'Promosyonlar_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Promotions') = 1);
+   CellPutS('Promotions', '}HierarchyProperties', 'Promotions', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Promotions" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Promotions');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

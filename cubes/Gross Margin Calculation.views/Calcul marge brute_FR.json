@@ -1,0 +1,68 @@
+{
+	"@type":"NativeView",
+	"Name":"Calcul marge brute_FR",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Month')/Hierarchies('Month')/Subsets('Mois_FR')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Gross Sales Margin')/Hierarchies('Gross Sales Margin')/Subsets('Marge des ventes brutes_FR')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Subsets('Version du budget_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Budget version')/Hierarchies('Budget version')/Elements('Budget version 1')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Subsets('Pays et région_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Country and Region')/Hierarchies('Country and Region')/Elements('All Subsidiaries')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Subsets('Détaillants_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Retailers')/Hierarchies('Retailers')/Elements('ALL RETAILERS')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Subsets('Type de magasin_FR')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Store Type')/Hierarchies('Store Type')/Elements('Franchise Store')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.00"
+}

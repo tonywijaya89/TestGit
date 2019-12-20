@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"数据_SC",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('DATA')/Hierarchies('DATA')/Elements('DATA')"
+		}
+	]
+}

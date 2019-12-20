@@ -1,0 +1,94 @@
+#region Prolog
+
+#****Begin: Generated Header****
+if (param_destroy = 1);
+   DimensionDestroy('Existing Stores Revenue');
+endif;
+if (param_createIfNotExist = 1);
+   if (0 = DimensionExists('Existing Stores Revenue'));
+      DimensionCreate('Existing Stores Revenue');
+      AttrInsert('Existing Stores Revenue', '', 'Caption_Default', 'A');
+      CellPutS('GENERIC', '}DimensionAttributes', 'Existing Stores Revenue', 'DIMENSION_TYPE');
+      AttrInsert('Existing Stores Revenue', '', 'Format', 'S');
+      AttrInsert('Existing Stores Revenue', '', 'Picklist', 'S');
+      AttrInsert('Existing Stores Revenue', '', 'calculation', 'S');
+      AttrInsert('Existing Stores Revenue', '', 'crossdimcalc', 'S');
+      SubsetCreateByMDX('All Members', '[Existing Stores Revenue].MEMBERS', 'Existing Stores Revenue');
+      SubsetAliasSet('Existing Stores Revenue', 'All Members', 'Caption_Default');
+   endif;
+   ATTRINSERT('Existing Stores Revenue', '', 'Výnosy existujících prodejen_CS', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Eksisterende butiksindtægt_DA', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Vorhandene Geschäfte - Einnahmen_DE', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Ingresos de las cadenas existentes_ES', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Nykyisten myymälöiden tuotto_FI', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Revenu des magasins existants_FR', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', '既存店の収益_JA', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Prihod postojećih dućana_HR', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Meglévő áruházak bevétele_HU', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Fatturato negozi esistente_IT', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', '기존 상점 수익_KO', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Inntekst eksisterende butikker_NO', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Przychody z istniejących salonów_PL', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Renda de Lojas Existentes_PT', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Venituri Magazine Existente_RO', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Доход по существующим магазинам_RU', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', '现有商店收入_SC', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Befintliga butiksintäkter_SV', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', '現有商店收入_TC', 'A');
+   ATTRINSERT('Existing Stores Revenue', '', 'Var Olan Mağazaların Geliri_TR', 'A');
+endif;
+CellPutS('Existing Stores Revenue', '}DimensionAttributes', 'Existing Stores Revenue', 'Caption_Default');
+#****End: Generated Header****
+
+#****Begin: Generated Statements***
+DimensionSortOrder('Existing Stores Revenue', '', '', 'ByInput', 'ASCENDING');
+#****End: Generated Statements****
+#endregion
+#region Metadata
+
+#****Begin: Generated Statements***
+#****End: Generated Statements****
+#endregion
+#region Data
+
+
+
+#****Begin: Generated Statements***
+DimensionElementInsertDirect('Existing Stores Revenue', '', Existing_Stores_Revenue, 'n');
+ATTRPUTS(Výnosy_existujících_prodejen_CS, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Výnosy existujících prodejen_CS', 0);
+ATTRPUTS(Eksisterende_butiksindtægt_DA, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Eksisterende butiksindtægt_DA', 0);
+ATTRPUTS(Vorhandene_Geschäfte___Einnahmen_DE, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Vorhandene Geschäfte - Einnahmen_DE', 0);
+ATTRPUTS(Ingresos_de_las_cadenas_existentes_ES, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Ingresos de las cadenas existentes_ES', 0);
+ATTRPUTS(Nykyisten_myymälöiden_tuotto_FI, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Nykyisten myymälöiden tuotto_FI', 0);
+ATTRPUTS(Revenu_des_magasins_existants_FR, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Revenu des magasins existants_FR', 0);
+ATTRPUTS(既存店の収益_JA, 'Existing Stores Revenue', Existing_Stores_Revenue, '既存店の収益_JA', 0);
+ATTRPUTS(Prihod_postojećih_dućana_HR, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Prihod postojećih dućana_HR', 0);
+ATTRPUTS(Meglévő_áruházak_bevétele_HU, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Meglévő áruházak bevétele_HU', 0);
+ATTRPUTS(Fatturato_negozi_esistente_IT, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Fatturato negozi esistente_IT', 0);
+ATTRPUTS(기존_상점_수익_KO, 'Existing Stores Revenue', Existing_Stores_Revenue, '기존 상점 수익_KO', 0);
+ATTRPUTS(Inntekst_eksisterende_butikker_NO, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Inntekst eksisterende butikker_NO', 0);
+ATTRPUTS(Przychody_z_istniejących_salonów_PL, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Przychody z istniejących salonów_PL', 0);
+ATTRPUTS(Renda_de_Lojas_Existentes_PT, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Renda de Lojas Existentes_PT', 0);
+ATTRPUTS(Venituri_Magazine_Existente_RO, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Venituri Magazine Existente_RO', 0);
+ATTRPUTS(Доход_по_существующим_магазинам_RU, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Доход по существующим магазинам_RU', 0);
+ATTRPUTS(现有商店收入_SC, 'Existing Stores Revenue', Existing_Stores_Revenue, '现有商店收入_SC', 0);
+ATTRPUTS(Befintliga_butiksintäkter_SV, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Befintliga butiksintäkter_SV', 0);
+ATTRPUTS(現有商店收入_TC, 'Existing Stores Revenue', Existing_Stores_Revenue, '現有商店收入_TC', 0);
+ATTRPUTS(Var_Olan_Mağazaların_Geliri_TR, 'Existing Stores Revenue', Existing_Stores_Revenue, 'Var Olan Mağazaların Geliri_TR', 0);
+#****End: Generated Statements****
+#endregion
+#region Epilog
+
+#****Begin: Generated Statements***
+v_errMsgs = '';
+if (DNLEV('Existing Stores Revenue') = 1);
+   CellPutS('Existing Stores Revenue', '}HierarchyProperties', 'Existing Stores Revenue', 'hierarchy0', 'level000');
+else; v_errMsgs = v_errMsgs | 'The resulting hierarchy for the dimension "Existing Stores Revenue" does not align with the level structure defined in the mapping.  When parent-child dimensions are being treated as level based or when level based dimensions are being constructed using source data containing non-unique member identifiers, unexpected hierarchy structures may result. For the case when non-unique member identifiers exist in the source data, turn on the "Qualify member names" dimension property in the mapping page.
+';
+endif;
+RefreshMDXHierarchy('Existing Stores Revenue');
+if (v_errMsgs @<> '');
+   itemReject(v_errMsgs);
+endif;
+#****End: Generated Statements****
+#endregion

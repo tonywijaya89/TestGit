@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"通貨情報_JA",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Currency Info')/Hierarchies('Currency Info')/Elements('Currency')"
+		}
+	]
+}

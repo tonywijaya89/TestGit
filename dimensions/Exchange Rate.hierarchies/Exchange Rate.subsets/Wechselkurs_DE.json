@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"Wechselkurs_DE",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Exchange Rate')/Hierarchies('Exchange Rate')/Elements('Exchange Rate')"
+		}
+	]
+}
