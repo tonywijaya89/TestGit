@@ -1,0 +1,20 @@
+{
+  "Version": "1.0",
+  "Tasks":
+  {
+    "Task_A":
+    {
+      "Process": "Process('savedata')"
+    }
+  },
+  "Objects":
+  {
+    "Cubes('cube_push')":
+    {
+      "Dependencies":
+      [
+        "Tasks('Task_A')"
+      ]
+    }
+  }
+}
